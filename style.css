@@ -357,7 +357,8 @@ section {
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
+  justify-items: center;
   gap: 20px;
 }
 
@@ -483,7 +484,8 @@ section {
   margin-top: 10px;
 }
 .grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
+  justify-items: center;
   gap: 20px;
 }
 
@@ -689,4 +691,62 @@ p#heroSubtitle {
     border-right: none; /* hide cursor on mobile */
     animation: none; /* optional: remove typing animation on mobile */
   }
+}
+
+/*last hope*/
+
+/* related resource: style.css?_cacheOverride=1755258721578:371:1 */
+.card {
+  /* the element was form#contactForm */
+  width: 100%;
+  max-width: 800px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+/* related resource: style.css?_cacheOverride=1755258721578:371:1 */
+.card {
+  /* the element was aside.card */
+  width: 100%;
+  max-width: 800px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+/* related resource: style.css?_cacheOverride=1755258721578:611:3 */
+.grid {
+  /* the element was div#skillsGrid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* related resource: style.css?_cacheOverride=1755258721578:398:1 */
+.skill-cat {
+  /* the element was .card.skill-cat */
+  width: 100%;
+  margin: 0px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* related resource: style.css?_cacheOverride=1755258721578:398:1 */
+.skill-cat {
+  /* the element was .card.skill-cat */
+  width: 100%;
+  margin: 0px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* related resource: style.css?_cacheOverride=1755258721578:398:1 */
+.skill-cat {
+  /* the element was .card.skill-cat */
+  width: 100%;
+  margin: 0px;
+  padding: 15px;
+  box-sizing: border-box;
 }
