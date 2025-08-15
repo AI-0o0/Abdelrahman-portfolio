@@ -483,11 +483,44 @@ section {
   gap: 10px;
   margin-top: 10px;
 }
-/* related resource: style.css?_cacheOverride=1755257987460:572:3 */
 .grid {
-  /* the element was .grid */
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
+}
+
+/* Ensure buttons take full width in column layout */
+.links .btn {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+
+/* Mobile responsive styles with higher specificity */
+@media only screen and (max-width: 768px) {
+  .links {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .links .btn {
+    width: 100% !important;
+    flex: none !important;
+    box-sizing: border-box;
+  }
+}
+
+/* Force cache refresh and ensure mobile compatibility */
+@media only screen and (max-device-width: 768px) {
+  .links {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 15px;
+  }
 }
 /* Contact */
 form {
