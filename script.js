@@ -1,5 +1,5 @@
-const BOT_TOKEN = "API"; // from BotFather
-const CHAT_ID = "Chat_ID"; // from @userinfobot or getUpdates
+const BOT_TOKEN = "${{ secrets.TELE_API }}"; // from BotFather
+const CHAT_ID = "${{ secrets.CHAT_ID }}"; // from @userinfobot or getUpdates
 const TELEGRAM_URL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
