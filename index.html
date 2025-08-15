@@ -475,16 +475,39 @@
       <section id="contact">
         <h3 class="section-title">Contact</h3>
         <div class="grid" style="grid-template-columns: 1.1fr 1fr">
-          <form class="card" id="contactForm" action="https://formspree.io/f/xdkdjbre" method="POST" novalidate>
-              <input type="text" id="name" name="name" placeholder="Your name" required />
-              <input type="email" id="email" name="email" placeholder="Email address" required />
-              <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
-              <button class="btn primary" type="submit">Send Message</button>
-              <div class="success-badge" id="formSuccess" style="display: none">
+          <form
+            class="card"
+            id="contactForm"
+            action="https://formspree.io/f/xdkdjbre"
+            method="POST"
+            novalidate
+          >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email address"
+              required
+            />
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Message"
+              required
+            ></textarea>
+            <button class="btn primary" type="submit">Send Message</button>
+            <div class="success-badge" id="formSuccess" style="display: none">
               Thanks! I’ll reply within 1–2 business days.
-              </div>
+            </div>
           </form>
-
 
           <script src="script.js"></script>
 
