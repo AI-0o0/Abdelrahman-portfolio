@@ -858,10 +858,11 @@
       window.addEventListener(
         "mousemove",
         (e) => {
-          document.body.style.setProperty(
-            "--mx",
-            (e.clientX / window.innerWidth) * 100 + "%"
-          );
+          const mx = (e.clientX / window.innerWidth) * 100;
+          const my = (e.clientY / window.innerHeight) * 100;
+
+          document.body.style.setProperty("--mx", mx + "%");
+          document.body.style.setProperty("--my", my + "%");
         },
         { passive: true }
       );
