@@ -483,10 +483,11 @@ section {
   gap: 10px;
   margin-top: 10px;
 }
-/* related resource: style.css:572:3 */
+/* related resource: style.css?_cacheOverride=1755257987460:572:3 */
 .grid {
   /* the element was .grid */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 /* Contact */
 form {
