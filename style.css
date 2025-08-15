@@ -710,12 +710,11 @@ p#heroSubtitle {
   }
 
   .mobile-menu {
-    position: fixed;
-    inset: 64px 12px auto 12px;
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
     background: var(--glass);
     border: 1px solid var(--border);
     border-radius: 16px;
-    backdrop-filter: blur(100px);
     padding: 14px;
     display: none;
     flex-direction: column;
@@ -727,7 +726,7 @@ p#heroSubtitle {
   .mobile-menu a {
     padding: 10px 12px;
     border-radius: 10px;
-    background: rgba(3, 3, 3, 0.836);
+    background: rgba(0, 0, 0, 0.434);
     border: 1px solid transparent;
     text-decoration: none;
     font-weight: bold;
