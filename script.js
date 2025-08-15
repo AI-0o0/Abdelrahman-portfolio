@@ -168,14 +168,23 @@ const mobileMenu = document.getElementById("mobileMenu");
 
 if (burger && mobileMenu) {
   burger.addEventListener("click", () => {
-    mobileMenu.style.display =
-      mobileMenu.style.display === "flex" ? "none" : "flex";
+    mobileMenu.classList.toggle("open");
   });
 
   // Hide menu when a link is clicked
   mobileMenu.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
-      mobileMenu.style.display = "none";
+      mobileMenu.classList.remove("open");
     });
   });
 }
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  if (loader) {
+    loader.style.opacity = "0";
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500); // Match CSS transition
+  }
+});

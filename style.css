@@ -710,31 +710,47 @@ p#heroSubtitle {
   }
 
   .mobile-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 18px;
+    right: 18px;
     backdrop-filter: blur(var(--blur));
     -webkit-backdrop-filter: blur(var(--blur));
-    background: var(--glass);
+    background: var(--bg-2);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 14px;
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 12px;
     z-index: 998;
     box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  }
+
+  .mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .mobile-menu a {
     padding: 10px 12px;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.434);
+    background: var(--card);
     border: 1px solid transparent;
     text-decoration: none;
     font-weight: bold;
-    color: rgb(249, 249, 249);
+    color: var(--text);
+    transition: background 0.2s ease, border-color 0.2s ease;
   }
 
+  .mobile-menu a:hover,
   .mobile-menu a:active {
-    background: var(--card);
+    background: var(--bg-2);
     border-color: var(--border);
   }
 }
