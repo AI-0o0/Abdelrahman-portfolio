@@ -1,22 +1,22 @@
-name: Run JS with Secrets
+name: Send Telegram Message
 
 on:
-  push:
+  workflow_dispatch: # You can also use push or other events
 
 jobs:
-  run-script:
+  send-message:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3 # Get your repo
+      - uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
 
-      - name: Run JS script with secrets
+      - name: Run Telegram script
         env:
           TELE_API: ${{ secrets.TELE_API }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
-        run: node script.js
+        run: node sendTelegram.js
