@@ -1,7 +1,7 @@
 name: Run JS with Secrets
 
 on:
-  push: # Or any event you like
+  push:
 
 jobs:
   run-script:
@@ -15,11 +15,8 @@ jobs:
         with:
           node-version: "18"
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Run JS script with secrets
         env:
-          TELE_API: ${{ secrets.TELE_API }} # Inject TELE_API
-          CHAT_ID: ${{ secrets.CHAT_ID }} # Inject CHAT_ID
+          TELE_API: ${{ secrets.TELE_API }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
         run: node script.js
