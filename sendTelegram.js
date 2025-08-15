@@ -1,31 +1,35 @@
-// sendTelegram.js (Node.js only)
-const TELE_API = process.env.TELE_API; // GitHub Secret
-const CHAT_ID = process.env.CHAT_ID; // GitHub Secret
+const BOT_TOKEN = process.env.TELE_API; // from BotFather
+const CHAT_ID = process.env.CHAT_ID; // from @userinfobot or getUpdates
+const TELEGRAM_URL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
-import fetch from "node-fetch";
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-async function sendMessage(name, email, message) {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
   const text = `📩 *New Contact Form Submission*\n\n👤 Name: ${name}\n📧 Email: ${email}\n💬 Message: ${message}`;
 
-  try {
-    const response = await fetch(
-      `https://api.telegram.org/bot${TELE_API}/sendMessage`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: text,
-          parse_mode: "Markdown",
-        }),
+  fetch(TELEGRAM_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      chat_id: CHAT_ID,
+      text: text,
+      parse_mode: "Markdown",
+    }),
+  })
+    .then((response) => {
+      if (response.ok) {
+        document.getElementById("formSuccess").style.display = "block";
+        document.getElementById("contactForm").reset();
+      } else {
+        alert("Error sending message. Please try again.");
       }
-    );
-    const data = await response.json();
-    console.log(data);
-  } catch (err) {
-    console.error("Failed to send message:", err);
-  }
-}
-
-// Example usage
-sendMessage("John Doe", "john@example.com", "Hello from GitHub Actions!");
+    })
+    .catch((err) => {
+      console.error(err);
+      alert("Failed to send message.");
+    });
+});
