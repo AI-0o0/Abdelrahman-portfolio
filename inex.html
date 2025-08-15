@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+  <body data-theme="dark" style="--my: NaN%; --mx: 99.87789987789988%">
+    &lt;
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdelrahman — Data Analyst</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress" style="width: 100%"></div>
+
+    <!-- Loader -->
+
+    <!-- Parallax/Particle canvas lives in hero -->
+
+    <header>
+      <nav class="nav">
+        <div class="brand">
+          <div class="logo">A</div>
+          <span id="brandName">Abdelrahman Eslam</span>
+        </div>
+        <div class="menu" id="menu">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="actions">
+          <button
+            id="themeToggle"
+            class="icon-btn"
+            aria-label="Toggle dark mode"
+          >
+            🌙 Theme
+          </button>
+          <button id="burger" class="icon-btn burger" aria-label="Open menu">
+            ☰
+          </button>
+        </div>
+      </nav>
+      <div
+        class="mobile-menu ai-style-change-1"
+        id="mobileMenu"
+        style="display: none"
+      >
+        <a href="#about" class="ai-style-change-1">About</a>
+        <a href="#skills" class="ai-style-change-2">Skills</a>
+        <a href="#projects" class="ai-style-change-3">Projects</a>
+        <a href="#contact" class="ai-style-change-4">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <canvas
+          id="particles"
+          aria-hidden="true"
+          width="960"
+          height="370"
+        ></canvas>
+        <div
+          class="float-shape shape-a"
+          data-parallax="8"
+          style="transform: translateY(0px)"
+        ></div>
+        <div
+          class="float-shape shape-b"
+          data-parallax="-6"
+          style="transform: translateY(0px)"
+        ></div>
+
+        <div class="left">
+          <h1 class="title" id="heroTitle">
+            Hi, I’m
+            <span
+              style="
+                background: linear-gradient(
+                  90deg,
+                  var(--primary),
+                  var(--accent)
+                );
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+              "
+              >Abdelrahman Eslam</span
+            >
+          </h1>
+          <p class="subtitle" id="heroSubtitle">
+            junior Data Analyst • Turning messy data into clear decisions.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn" href="#contact">Contact Me</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" id="heroCard">
+          <div class="stat">
+            <span>🏫</span>
+            <div>
+              <b id="Education">Education</b>
+              <div class="muted">Alexandria university</div>
+            </div>
+          </div>
+          <div class="stat">
+          <div class="stat">
+            <div>
+              <b id="projectsCount">4</b>
+              <div class="muted">projects</div>
+            </div>
+          </div>
+          <div class="stat">
+            <div>
+              <b id="impactMetric">$3.2M</b>
+              <div class="muted">value unlocked</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <h3 class="section-title">About</h3>
+        <div class="about">
+          <article class="card">
+            <p id="aboutText">
+              I turn data into decisions with SQL, Python and crisp dashboards.
+              I enjoy designing experiments and measuring real business impact.
+            </p>
+          </article>
+          <aside class="card">
+            <div class="info-list" id="infoList">
+              <div>
+                <b>Role</b><br /><span style="color: var(--muted)"
+                  >junior Data Analyst</span
+                >
+              </div>
+              <div>
+                <b>Email</b><br /><span style="color: var(--muted)"
+                  >abdelrahmaneslamomar@gmail.com</span
+                >
+              </div>
+              <div>
+                <b>Location</b><br /><span style="color: var(--muted)"
+                  >Alexandria , Egypt</span
+                >
+              </div>
+              <div>
+                <b>Phone</b><br /><span style="color: var(--muted)"
+                  >+20 111 222 3333</span
+                >
+              </div>
+              <div>
+                <b>Availability</b><br /><span style="color: var(--muted)"
+                  >Open to freelance &amp; remote</span
+                >
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h3 class="section-title">Skills</h3>
+        <div class="grid skills" id="skillsGrid">
+          <div class="card skill-cat" tabindex="0">
+            <h4>Programming &amp; Analytics</h4>
+
+            <div class="skill">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 14px;
+                "
+              >
+                <span>Python</span>
+                <span>92%</span>
+              </div>
+              <div class="bar">
+                <span style="width: 92%" data-target="92"></span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 14px;
+                "
+              >
+                <span>SQL</span>
+                <span>95%</span>
+              </div>
+              <div class="bar">
+                <span style="width: 95%" data-target="95"></span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 14px;
+                "
+              >
+                <span>R</span>
+                <span>70%</span>
+              </div>
+              <div class="bar">
+                <span style="width: 70%" data-target="70"></span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 14px;
+                "
+              >
+                <span>Pandas</span>
+                <span>90%</span>
+              </div>
+              <div class="bar">
+                <span style="width: 90%" data-target="90"></span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 14px;
+                "
+              >
+                <span>NumPy</span>
+                <span>86%</span>
+              </div>
+              <div class="bar">
+                <span style="width: 86%" data-target="86"></span>
+              </div>
+            </div>
+          </div>
+          <div class="card skill-cat" tabindex="0">
+            <h4>Visualization</h4>
+
+            <div class="skill">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 14px;
+                "
+              >
+                <span>Power BI</span>
+                <span>88%</span>
+              </div>
+              <div class="bar">
+                <span style="width: 88%" data-target="88"></span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 14px;
+                "
+              >
+                <span>Tableau</span>
+                <span>84%</span>
+              </div>
+              <div class="bar">
+                <span style="width: 84%" data-target="84"></span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 14px;
+                "
+              >
+                <span>Matplotlib</span>
+                <span>80%</span>
+              </div>
+              <div class="bar">
+                <span style="width: 80%" data-target="80"></span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 14px;
+                "
+              >
+                <span>Looker Studio</span>
+                <span>78%</span>
+              </div>
+              <div class="bar">
+                <span style="width: 78%" data-target="78"></span>
+              </div>
+            </div>
+          </div>
+          <div class="card skill-cat" tabindex="0">
+            <h4>Data Engineering</h4>
+
+            <div class="skill">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 14px;
+                "
+              >
+                <span>ETL / Airflow</span>
+                <span>74%</span>
+              </div>
+              <div class="bar">
+                <span style="width: 74%" data-target="74"></span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 14px;
+                "
+              >
+                <span>DBT</span>
+                <span>72%</span>
+              </div>
+              <div class="bar">
+                <span style="width: 72%" data-target="72"></span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 14px;
+                "
+              >
+                <span>BigQuery</span>
+                <span>76%</span>
+              </div>
+              <div class="bar">
+                <span style="width: 76%" data-target="76"></span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 14px;
+                "
+              >
+                <span>Snowflake</span>
+                <span>70%</span>
+              </div>
+              <div class="bar">
+                <span style="width: 70%" data-target="70"></span>
+              </div>
+            </div>
+          </div>
+          <div class="card skill-cat" tabindex="0">
+            <h4>Test Category</h4>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h3 class="section-title">Projects</h3>
+        <div class="grid projects" id="projectsGrid">
+          <article class="project-card" tabindex="0">
+            <div class="project-top">
+              <div style="display: flex; align-items: center; gap: 10px">
+                <div style="font-size: 22px">📉</div>
+                <div>
+                  <b>Customer Churn Prediction Model</b>
+                  <div style="color: var(--muted); font-size: 14px">
+                    Built and deployed a churn classifier to flag high-risk
+                    users and trigger retention offers.
+                  </div>
+                </div>
+              </div>
+              <div class="chips">
+                <span class="chip">ml</span><span class="chip">product</span>
+              </div>
+            </div>
+            <div class="metrics">
+              <div class="metric">
+                <div style="font-size: 12px; color: var(--muted)">AUC</div>
+                <div style="font-weight: 700">0.89</div>
+              </div>
+              <div class="metric">
+                <div style="font-size: 12px; color: var(--muted)">Lift</div>
+                <div style="font-weight: 700">2.4x</div>
+              </div>
+              <div class="metric">
+                <div style="font-size: 12px; color: var(--muted)">Churn↓</div>
+                <div style="font-weight: 700">-17%</div>
+              </div>
+            </div>
+            <div class="chips" style="margin-top: 8px">
+              <span class="chip">Python</span
+              ><span class="chip">scikit-learn</span
+              ><span class="chip">Airflow</span
+              ><span class="chip">BigQuery</span>
+            </div>
+            <div class="links">
+              <a class="btn" href="#" target="_blank">Live</a>
+              <a class="btn" href="#" target="_blank">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0">
+            <div class="project-top">
+              <div style="display: flex; align-items: center; gap: 10px">
+                <div style="font-size: 22px">📊</div>
+                <div>
+                  <b>Executive BI Dashboard Suite</b>
+                  <div style="color: var(--muted); font-size: 14px">
+                    Interactive KPI suite for revenue, funnel, and cohort
+                    analysis used weekly by leadership.
+                  </div>
+                </div>
+              </div>
+              <div class="chips"><span class="chip">bi</span></div>
+            </div>
+            <div class="metrics">
+              <div class="metric">
+                <div style="font-size: 12px; color: var(--muted)">Adoption</div>
+                <div style="font-weight: 700">42 users</div>
+              </div>
+              <div class="metric">
+                <div style="font-size: 12px; color: var(--muted)">NPS</div>
+                <div style="font-weight: 700">+61</div>
+              </div>
+              <div class="metric">
+                <div style="font-size: 12px; color: var(--muted)">Latency</div>
+                <div style="font-weight: 700">&lt;2s</div>
+              </div>
+            </div>
+            <div class="chips" style="margin-top: 8px">
+              <span class="chip">Power BI</span><span class="chip">DAX</span
+              ><span class="chip">SQL Server</span>
+            </div>
+            <div class="links">
+              <a class="btn" href="#" target="_blank">Live</a>
+              <a class="btn" href="#" target="_blank">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0">
+            <div class="project-top">
+              <div style="display: flex; align-items: center; gap: 10px">
+                <div style="font-size: 22px">🧪</div>
+                <div>
+                  <b>Pricing Experimentation Platform</b>
+                  <div style="color: var(--muted); font-size: 14px">
+                    A/B testing framework with automated checks and sequential
+                    analysis reports.
+                  </div>
+                </div>
+              </div>
+              <div class="chips"><span class="chip">experiments</span></div>
+            </div>
+            <div class="metrics">
+              <div class="metric">
+                <div style="font-size: 12px; color: var(--muted)">Uplift</div>
+                <div style="font-weight: 700">+4.6%</div>
+              </div>
+              <div class="metric">
+                <div style="font-size: 12px; color: var(--muted)">Tests</div>
+                <div style="font-weight: 700">120+</div>
+              </div>
+              <div class="metric">
+                <div style="font-size: 12px; color: var(--muted)">
+                  p-hacking
+                </div>
+                <div style="font-weight: 700">0</div>
+              </div>
+            </div>
+            <div class="chips" style="margin-top: 8px">
+              <span class="chip">Python</span><span class="chip">Pandas</span
+              ><span class="chip">Prophet</span
+              ><span class="chip">Redshift</span>
+            </div>
+            <div class="links">
+              <a class="btn" href="#" target="_blank">Live</a>
+              <a class="btn" href="#" target="_blank">Code</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h3 class="section-title">Contact</h3>
+        <div class="grid" style="grid-template-columns: 1.1fr 1fr">
+          <form class="card" id="contactForm" novalidate>
+  <input type="text" id="name" placeholder="Your name" required>
+  <input type="email" id="email" placeholder="Email address" required>
+  <textarea id="message" rows="5" placeholder="Message" required></textarea>
+  <button class="btn primary" type="submit">Send Message</button>
+  <div class="success-badge" id="formSuccess" style="display:none;">
+    Thanks! I’ll reply within 1–2 business days.
+  </div>
+</form>
+
+<script src="script.js"> </script>
+
+          <aside class="card">
+            <h4>Prefer email?</h4>
+            <p>
+              Drop a line at
+              <a
+                id="emailLink"
+                href="mailto:abdelrahmaneslamomar@gmail.com"
+                class="ai-style-change-1"
+                >abdelrahmaneslamomar@gmail.com</a
+              >
+            </p>
+            <div class="links">
+              <a class="btn" href="#" aria-label="GitHub">GitHub</a>
+              <a class="btn" href="#" aria-label="LinkedIn">LinkedIn</a>
+              <a class="btn" href="#" aria-label="Whatsapp">Whatsapp</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <footer>
+        <small
+          >© <span id="year">2025</span>
+          <span id="footerName">Abdelrahman Eslam</span> — Built with ❤️ and
+          vanilla HTML/CSS/JS.</small
+        >
+        <div
+          style="
+            margin-top: 10px;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <button class="icon-btn" id="exportBtn">📦 Export Data</button>
+          <label class="icon-btn" for="importFile" style="cursor: pointer"
+            >📥 Import Data</label
+          >
+          <input
+            type="file"
+            id="importFile"
+            accept="application/json"
+            style="display: none"
+          />
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      /*********************
+       * Data & State
+       *********************/
+      const state = {
+        personal: {
+          name: "Abdelrahman Eslam",
+          title: "junior Data Analyst",
+          email: "abdelrahmaneslamomar@gmail.com",
+          location: "Alexandria , Egypt",
+          phone: "+201279929056",
+          availability: "Open to freelance & remote",
+          about:
+            "I turn data into decisions with SQL, Python and crisp dashboards. I enjoy designing experiments and measuring real business impact.",
+          metrics: {},
+          links: { github: "#", linkedin: "#" },
+        },
+        skills: {
+          "Programming & Analytics": [
+            { name: "Python", level: 92 },
+            { name: "SQL", level: 95 },
+            { name: "R", level: 70 },
+            { name: "Pandas", level: 90 },
+            { name: "NumPy", level: 86 },
+          ],
+          Visualization: [
+            { name: "Power BI", level: 88 },
+            { name: "Tableau", level: 84 },
+            { name: "Matplotlib", level: 80 },
+            { name: "Looker Studio", level: 78 },
+          ],
+        },
+        projects: [
+          {
+            title: "Customer Churn Prediction Model",
+            description:
+              "Built and deployed a churn classifier to flag high-risk users and trigger retention offers.",
+            icon: "📉",
+            category: ["ml", "product"],
+            metrics: [
+              { label: "AUC", value: "0.89" },
+              { label: "Lift", value: "2.4x" },
+              { label: "Churn↓", value: "-17%" },
+            ],
+            technologies: ["Python", "scikit-learn", "Airflow", "BigQuery"],
+            links: { demo: "#", github: "#" },
+          },
+          {
+            title: "Executive BI Dashboard Suite",
+            description:
+              "Interactive KPI suite for revenue, funnel, and cohort analysis used weekly by leadership.",
+            icon: "📊",
+            category: ["bi"],
+            metrics: [
+              { label: "Adoption", value: "42 users" },
+              { label: "NPS", value: "+61" },
+              { label: "Latency", value: "<2s" },
+            ],
+            technologies: ["Power BI", "DAX", "SQL Server"],
+            links: { demo: "#", github: "#" },
+          },
+          {
+            title: "Pricing Experimentation Platform",
+            description:
+              "A/B testing framework with automated checks and sequential analysis reports.",
+            icon: "🧪",
+            category: ["experiments"],
+            metrics: [
+              { label: "Uplift", value: "+4.6%" },
+              { label: "Tests", value: "120+" },
+              { label: "p-hacking", value: "0" },
+            ],
+            technologies: ["Python", "Pandas", "Prophet", "Redshift"],
+            links: { demo: "#", github: "#" },
+          },
+        ],
+      };
+
+      /*********************
+       * DOM Helpers
+       *********************/
+      const $ = (sel, root = document) => root.querySelector(sel);
+      const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+
+      function renderPersonal() {
+        $("#brandName").textContent = state.personal.name;
+        $(
+          "#heroTitle"
+        ).innerHTML = `Hi, I’m <span style="background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent;">${state.personal.name}</span>`;
+        $(
+          "#heroSubtitle"
+        ).textContent = `${state.personal.title} • Turning messy data into clear decisions.`;
+        $("#aboutText").textContent = state.personal.about;
+        $("#emailLink").href = `mailto:${state.personal.email}`;
+        $("#emailLink").textContent = state.personal.email;
+        $("#footerName").textContent = state.personal.name;
+
+        const info = [
+          ["Role", state.personal.title],
+          ["Email", state.personal.email],
+          ["Location", state.personal.location],
+          ["Phone", state.personal.phone],
+          ["Availability", state.personal.availability],
+        ];
+        const wrap = $("#infoList");
+        wrap.innerHTML = info
+          .map(
+            ([k, v]) =>
+              `<div><b>${k}</b><br><span style="color:var(--muted)">${v}</span></div>`
+          )
+          .join("");
+      }
+
+      function renderSkills() {
+        const grid = $("#skillsGrid");
+        grid.innerHTML = Object.entries(state.skills)
+          .map(([cat, items]) => {
+            return `<div class="card skill-cat" tabindex="0">
+          <h4>${cat}</h4>
+          ${items
+            .map(
+              (s) => `
+            <div class="skill">
+              <div style="display:flex; justify-content:space-between; font-size:14px;">
+                <span>${s.name}</span>
+                <span>${s.level}%</span>
+              </div>
+              <div class="bar"><span style="width:0" data-target="${s.level}"></span></div>
+            </div>
+          `
+            )
+            .join("")}
+        </div>`;
+          })
+          .join("");
+        setupProgressObservers();
+      }
+
+      function renderProjects() {
+        const grid = $("#projectsGrid");
+        grid.innerHTML = state.projects
+          .map(
+            (p) => `
+        <article class="project-card" tabindex="0">
+          <div class="project-top">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="font-size:22px">${p.icon || "📦"}</div>
+              <div>
+                <b>${p.title}</b>
+                <div style="color:var(--muted); font-size:14px;">${
+                  p.description
+                }</div>
+              </div>
+            </div>
+            <div class="chips">${(p.category || [])
+              .map((c) => `<span class="chip">${c}</span>`)
+              .join("")}</div>
+          </div>
+          <div class="metrics">
+            ${(p.metrics || [])
+              .map(
+                (m) =>
+                  `<div class="metric"><div style="font-size:12px; color:var(--muted)">${m.label}</div><div style="font-weight:700">${m.value}</div></div>`
+              )
+              .join("")}
+          </div>
+          <div class="chips" style="margin-top:8px;">${(p.technologies || [])
+            .map((t) => `<span class="chip">${t}</span>`)
+            .join("")}</div>
+          <div class="links">
+            ${
+              p?.links?.demo
+                ? `<a class="btn" href="${p.links.demo}" target="_blank">Live</a>`
+                : ""
+            }
+            ${
+              p?.links?.github
+                ? `<a class="btn" href="${p.links.github}" target="_blank">Code</a>`
+                : ""
+            }
+          </div>
+        </article>
+      `
+          )
+          .join("");
+      }
+
+      function renderAll() {
+        renderPersonal();
+        renderSkills();
+        renderProjects();
+      }
+
+      /*********************
+       * Progress bars on scroll
+       *********************/
+      let progressObserver;
+      function setupProgressObservers() {
+        if (progressObserver) progressObserver.disconnect();
+        progressObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                $$(".bar > span", entry.target).forEach((span) => {
+                  const target = +span.getAttribute("data-target");
+                  requestAnimationFrame(() => {
+                    span.style.width = target + "%";
+                  });
+                });
+                progressObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.3 }
+        );
+        $$(".skill-cat").forEach((cat) => progressObserver.observe(cat));
+      }
+
+      /*********************
+       * Theme (Dark/Light)
+       *********************/
+      const root = document.documentElement;
+      const THEME_KEY = "portfolio-theme";
+      function setTheme(mode) {
+        document.body.setAttribute("data-theme", mode);
+        localStorage.setItem(THEME_KEY, mode);
+        $("#themeToggle").textContent =
+          mode === "light" ? "☀️ Theme" : "🌙 Theme";
+      }
+      function initTheme() {
+        const saved = localStorage.getItem(THEME_KEY);
+        setTheme(saved || "dark");
+      }
+
+      /*********************
+       * Mobile nav
+       *********************/
+      $("#burger").addEventListener("click", () => {
+        const m = $("#mobileMenu");
+        m.style.display = m.style.display === "flex" ? "none" : "flex";
+      });
+      $$("#mobileMenu a").forEach((a) =>
+        a.addEventListener(
+          "click",
+          () => ($("#mobileMenu").style.display = "none")
+        )
+      );
+
+      /*********************
+       * Scroll progress & gradient motion
+       *********************/
+      window.addEventListener(
+        "scroll",
+        () => {
+          const scrolled =
+            document.documentElement.scrollTop || document.body.scrollTop;
+          const height =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+          const p = (scrolled / height) * 100;
+          $("#scrollProgress").style.width = p + "%";
+          // Move gradient focus subtly with scroll
+          document.body.style.setProperty("--my", 20 + p * 0.5 + "%");
+        },
+        { passive: true }
+      );
+
+      window.addEventListener(
+        "mousemove",
+        (e) => {
+          document.body.style.setProperty(
+            "--mx",
+            (e.clientX / window.innerWidth) * 100 + "%"
+          );
+        },
+        { passive: true }
+      );
+
+      /*********************
+       * Parallax shapes
+       *********************/
+      window.addEventListener(
+        "scroll",
+        () => {
+          const y = window.scrollY;
+          $$("[data-parallax]").forEach((el) => {
+            const depth = parseFloat(el.getAttribute("data-parallax")) || 6;
+            el.style.transform = `translateY(${y / depth}px)`;
+          });
+        },
+        { passive: true }
+      );
+
+      /*********************
+       * Particles (canvas) — FIXED ResizeObserver loop
+       * Defers DOM writes with requestAnimationFrame and guards against redundant updates.
+       *********************/
+      function initParticles() {
+        const canvas = $("#particles");
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        const DPR = Math.min(window.devicePixelRatio || 1, 2);
+        let W = 0,
+          H = 0; // canvas pixel size (DPR-scaled)
+        let particles = [];
+        let rafDraw = 0;
+        let rafResize = 0;
+
+        function measure() {
+          const rect = canvas.getBoundingClientRect();
+          const newW = Math.max(1, Math.floor(rect.width * DPR));
+          const newH = Math.max(1, Math.floor(rect.height * DPR));
+          return { newW, newH };
+        }
+
+        function applySize(newW, newH) {
+          const changed = newW !== W || newH !== H;
+          if (!changed) return false;
+          W = newW;
+          H = newH;
+          // Only write to canvas size inside rAF to avoid RO feedback loops
+          canvas.width = W;
+          canvas.height = H;
+          return true;
+        }
+
+        function spawn() {
+          particles = new Array(60).fill(0).map(() => ({
+            x: Math.random() * W,
+            y: Math.random() * H,
+            r: (Math.random() * 2 + 0.5) * DPR,
+            vx: (Math.random() - 0.5) * 0.2 * DPR,
+            vy: (Math.random() - 0.5) * 0.2 * DPR,
+            a: Math.random() * 0.6 + 0.2,
+          }));
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, W, H);
+          ctx.globalCompositeOperation = "lighter";
+          for (const p of particles) {
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0 || p.x > W) p.vx *= -1;
+            if (p.y < 0 || p.y > H) p.vy *= -1;
+            const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 6);
+            g.addColorStop(0, "rgba(122,162,255," + p.a + ")");
+            g.addColorStop(1, "rgba(122,162,255,0)");
+            ctx.fillStyle = g;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r * 4, 0, Math.PI * 2);
+            ctx.fill();
+          }
+          rafDraw = requestAnimationFrame(draw);
+        }
+
+        // ResizeObserver guarded with rAF to prevent "ResizeObserver loop" error
+        const ro = new ResizeObserver(() => {
+          if (rafResize) cancelAnimationFrame(rafResize);
+          rafResize = requestAnimationFrame(() => {
+            const { newW, newH } = measure();
+            const changed = applySize(newW, newH);
+            if (changed) spawn();
+          });
+        });
+        ro.observe(canvas);
+
+        // Initial size & start
+        const { newW, newH } = measure();
+        applySize(newW, newH);
+        spawn();
+        draw();
+
+        // Optional: clean up on page hide
+        document.addEventListener("visibilitychange", () => {
+          if (document.hidden) {
+            cancelAnimationFrame(rafDraw);
+          } else {
+            rafDraw = requestAnimationFrame(draw);
+          }
+        });
+      }
+
+      /*********************
+       * Contact form (validation + visual feedback)
+       *********************/
+      $("#contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = $("#name");
+        const email = $("#email");
+        const message = $("#message");
+        const fields = [name, email, message];
+        let ok = true;
+        fields.forEach((f) => {
+          f.classList.remove("error");
+          if (!f.value.trim()) {
+            ok = false;
+            f.classList.add("error");
+          }
+        });
+        if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+          ok = false;
+          email.classList.add("error");
+        }
+        if (!ok) return;
+        // Simulate success
+        $("#formSuccess").style.display = "block";
+        e.target.reset();
+        setTimeout(() => ($("#formSuccess").style.display = "none"), 4000);
+      });
+
+      /*********************
+       * Easy Content Management API (Live updates)
+       *********************/
+      const portfolioManager = {
+        updatePersonalInfo(data) {
+          Object.assign(state.personal, data);
+          renderPersonal();
+          return state.personal;
+        },
+        addSkill(category, name, level) {
+          if (!state.skills[category]) state.skills[category] = [];
+          state.skills[category].push({ name, level: +level || 0 });
+          renderSkills();
+          return state.skills[category];
+        },
+        updateSkill(category, name, level) {
+          const list = state.skills[category] || [];
+          const item = list.find((s) => s.name === name);
+          if (item) {
+            item.level = +level || 0;
+            renderSkills();
+            return item;
+          }
+          return null;
+        },
+        deleteSkill(category, name) {
+          if (!state.skills[category]) return false;
+          const i = state.skills[category].findIndex((s) => s.name === name);
+          if (i > -1) {
+            state.skills[category].splice(i, 1);
+            renderSkills();
+            return true;
+          }
+          return false;
+        },
+        addProject(project) {
+          state.projects.unshift(project);
+          renderProjects();
+          return state.projects[0];
+        },
+        deleteProject(title) {
+          const i = state.projects.findIndex((p) => p.title === title);
+          if (i > -1) {
+            state.projects.splice(i, 1);
+            renderProjects();
+            return true;
+          }
+          return false;
+        },
+        updatePersonalMetric(key, value) {
+          if (state.personal.metrics[key] !== undefined) {
+            state.personal.metrics[key] = value;
+            renderPersonal();
+            return true;
+          }
+          return false;
+        },
+        export() {
+          const data = JSON.stringify(state, null, 2);
+          const blob = new Blob([data], { type: "application/json" });
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = "portfolio-data.json";
+          a.click();
+        },
+        import(file) {
+          return new Promise((res, rej) => {
+            const r = new FileReader();
+            r.onload = () => {
+              try {
+                const data = JSON.parse(r.result);
+                Object.assign(state, data);
+                renderAll();
+                res(state);
+              } catch (e) {
+                rej(e);
+              }
+            };
+            r.onerror = rej;
+            r.readAsText(file);
+          });
+        },
+      };
+
+      // Expose helpers globally with friendly wrappers
+      window.updatePersonalInfo = (data) =>
+        portfolioManager.updatePersonalInfo(data);
+      window.addSkill = (cat, name, level) =>
+        portfolioManager.addSkill(cat, name, level);
+      window.updateSkill = (cat, name, level) =>
+        portfolioManager.updateSkill(cat, name, level);
+      window.deleteSkill = (cat, name) =>
+        portfolioManager.deleteSkill(cat, name);
+      window.addProject = (p) => portfolioManager.addProject(p);
+      window.deleteProject = (title) => portfolioManager.deleteProject(title);
+
+      // Export/Import UI
+      $("#exportBtn").addEventListener("click", () =>
+        portfolioManager.export()
+      );
+      $("#importFile").addEventListener("change", (e) => {
+        const f = e.target.files[0];
+        if (f)
+          portfolioManager.import(f).catch(() => alert("Invalid JSON file."));
+      });
+
+      /*********************
+       * Micro-interactions & accessibility
+       *********************/
+      // Keyboard support for 3D hover (simulate focus motion)
+      $$("#projectsGrid").forEach((grid) => {
+        grid.addEventListener("focusin", (e) => {
+          if (e.target.closest(".project-card"))
+            e.target.closest(".project-card").style.transform =
+              "translateY(-6px)";
+        });
+        grid.addEventListener("focusout", (e) => {
+          if (e.target.closest(".project-card"))
+            e.target.closest(".project-card").style.transform = "";
+        });
+      });
+
+      // Smooth anchor scrolling offset for sticky header
+      function offsetAnchor() {
+        if (location.hash.length !== 0)
+          window.scrollTo({
+            top: document.querySelector(location.hash).offsetTop - 70,
+            behavior: "smooth",
+          });
+      }
+      window.addEventListener("hashchange", offsetAnchor);
+
+      // Theme toggle click
+      $("#themeToggle").addEventListener("click", () => {
+        const now =
+          document.body.getAttribute("data-theme") === "light"
+            ? "dark"
+            : "light";
+        setTheme(now);
+      });
+
+      /*********************
+       * Init
+       *********************/
+      function initConsoleHelp() {
+        console.log(
+          "%cEditing your portfolio is easy!",
+          "font-weight:700; font-size:16px"
+        );
+        console.log("Examples:");
+        console.log("\n// Update personal info");
+        console.log(
+          'updatePersonalInfo({ name: "John Doe", title: "Senior Data Scientist", email: "john@example.com" })'
+        );
+        console.log("\n// Add a new skill");
+        console.log('addSkill("Programming & Analytics", "JavaScript", 85)');
+        console.log("\n// Update existing skill");
+        console.log('updateSkill("Programming & Analytics", "Python", 98)');
+        console.log("\n// Delete a skill");
+        console.log('deleteSkill("Programming & Analytics", "R")');
+        console.log("\n// Add a new project");
+        console.log(
+          'addProject({ title: "AI Recommendation System", description: "Built ML recommendation engine...", icon: "🤖", category: ["ml"], metrics: [{label:"Accuracy", value:"94%"}], technologies: ["Python","TensorFlow","Redis"], links: { demo: "#", github: "#" } })'
+        );
+        console.log("\n// Delete a project");
+        console.log('deleteProject("Customer Churn Prediction Model")');
+        console.log("\n// Export / Import");
+        console.log("Use the buttons at the bottom to export/import JSON.");
+      }
+
+      function hideLoader() {
+        const l = $("#loader");
+        l.style.opacity = "0";
+        setTimeout(() => l.remove(), 500);
+      }
+
+      function init() {
+        initTheme();
+        renderAll();
+        initParticles();
+        initConsoleHelp();
+        $("#year").textContent = new Date().getFullYear();
+        setTimeout(hideLoader, 700);
+      }
+
+      // Kick off!
+      window.addEventListener("DOMContentLoaded", init);
+
+      /*********************
+       * Self-tests (added)
+       * These run after init and help ensure the API works and the RO fix is stable.
+       *********************/
+      function runSelfTests() {
+        try {
+          console.groupCollapsed("[Self-tests] Portfolio Manager & Canvas");
+          console.assert(
+            typeof portfolioManager.updatePersonalInfo === "function",
+            "updatePersonalInfo exists"
+          );
+          const before = $("#brandName").textContent;
+          portfolioManager.updatePersonalInfo({ name: "Abdelrahman" });
+          console.assert(
+            $("#brandName").textContent === "Test Name",
+            "Personal name updates"
+          );
+          portfolioManager.updatePersonalInfo({ name: before });
+
+          // Skills add/update/delete
+          portfolioManager.addSkill("Test Category", "Foo", 50);
+          console.assert(
+            (state.skills["Test Category"] || []).some((s) => s.name === "Foo"),
+            "Skill added"
+          );
+          portfolioManager.updateSkill("Test Category", "Foo", 60);
+          console.assert(
+            (state.skills["Test Category"] || []).find((s) => s.name === "Foo")
+              ?.level === 60,
+            "Skill updated"
+          );
+          portfolioManager.deleteSkill("Test Category", "Foo");
+          console.assert(
+            !(state.skills["Test Category"] || []).some(
+              (s) => s.name === "Foo"
+            ),
+            "Skill deleted"
+          );
+
+          // Projects add/remove
+          portfolioManager.addProject({
+            title: "__Test Project__",
+            description: "tmp",
+            icon: "🧪",
+            category: ["test"],
+            metrics: [],
+            technologies: [],
+            links: {},
+          });
+          console.assert(
+            state.projects[0]?.title === "__Test Project__",
+            "Project added to top"
+          );
+          portfolioManager.deleteProject("__Test Project__");
+          console.assert(
+            state.projects[0]?.title !== "__Test Project__",
+            "Project removed"
+          );
+
+          // Canvas resize stress (should not throw RO loop)
+          const hero = $("#hero");
+          const prev = hero.style.minHeight;
+          hero.style.minHeight = "70vh";
+          setTimeout(() => {
+            hero.style.minHeight = prev;
+          }, 50);
+          console.groupEnd();
+        } catch (e) {
+          console.error("[Self-tests] failed", e);
+        }
+      }
+      window.addEventListener("DOMContentLoaded", () =>
+        setTimeout(runSelfTests, 300)
+      );
+    </script>
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+  </body>
+</html>
