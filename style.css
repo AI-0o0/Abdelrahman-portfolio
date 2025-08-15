@@ -380,6 +380,43 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 18px;
 }
+/*gpt test*/
+
+#about .about {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#about .card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  flex: 1 1 300px; /* responsive */
+}
+
+#aboutText {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.info-list div {
+  margin-bottom: 12px;
+}
+
+.info-list b {
+  font-weight: bold;
+}
+
+.info-list span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
 
 aside.card {
   grid-row: 2;
@@ -750,42 +787,4 @@ p#heroSubtitle {
   .info-list {
     grid-template-columns: 1fr;
   }
-}
-
-/*test*/
-
-#about .about {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-#about .card {
-  background: var(--glass);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: var(--shadow);
-  flex: 1 1 300px; /* responsive */
-}
-
-#aboutText {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: var(--text);
-}
-
-.info-list div {
-  margin-bottom: 12px;
-}
-
-.info-list b {
-  font-weight: bold;
-}
-
-.info-list span {
-  display: block;
-  margin-top: 2px;
-  font-size: 0.9rem;
-  color: var(--muted);
 }
