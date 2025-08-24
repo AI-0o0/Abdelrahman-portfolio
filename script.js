@@ -7,7 +7,7 @@ function setTheme(mode) {
   document.body.setAttribute("data-theme", mode);
   localStorage.setItem(THEME_KEY, mode);
   const btn = document.getElementById("themeToggle");
-  // if (btn) btn.textContent = mode === "light" ? "☀️ Theme" : "🌙 Theme";
+  if (btn) btn.textContent = mode === "light" ? "☀️ Theme" : "🌙 Theme";
 }
 
 function initTheme() {
