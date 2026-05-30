@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /blog-editor.html
+Disallow: /admin.js
+Disallow: /blog-editor.js
+Disallow: /env.js
+
+Sitemap: https://abdelrahman.is-a.dev/sitemap.xml
