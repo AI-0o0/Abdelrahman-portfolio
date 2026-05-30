@@ -2,4 +2,4 @@
 .gitignore
 env.js
 admin.*
-blog-editor.js
+blog-editor.*
