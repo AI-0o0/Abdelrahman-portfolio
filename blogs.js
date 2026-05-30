@@ -21,6 +21,18 @@ const CAT_BADGE_CLASS = {
   Career: "badge-gray",
 };
 
+let REMOTE_DATA = null;
+
+async function loadRemoteData() {
+  try {
+    const response = await fetch("data.json", { cache: "no-cache" });
+    if (!response.ok) return null;
+    return await response.json();
+  } catch {
+    return null;
+  }
+}
+
 let BLOGS = readStoredJson(STORAGE_KEY, DEFAULT_BLOGS);
 let blogCat = "All";
 
@@ -86,15 +98,17 @@ function renderBlogs() {
     <article class="card blog-card">
       <div class="blog-card-body">
         <div class="blog-card-top">
-          <span class="badge ${CAT_BADGE_CLASS[blog.category] || "badge-gray"}">${
-        blog.category
-      }</span>
+          <span class="badge ${
+            CAT_BADGE_CLASS[blog.category] || "badge-gray"
+          }">${blog.category}</span>
           <span class="blog-date">${formatDate(blog.date)}</span>
         </div>
         <h3 class="blog-title">${blog.title}</h3>
         <p class="blog-summary">${blog.summary}</p>
         <div class="blog-tags">
-          ${(blog.tags || []).map((tag) => `<span class="tag"># ${tag}</span>`).join("")}
+          ${(blog.tags || [])
+            .map((tag) => `<span class="tag"># ${tag}</span>`)
+            .join("")}
         </div>
         <div class="blog-footer">
           <span class="reading-time">
@@ -128,3 +142,13 @@ function filterBlogs() {
 
 initTheme();
 renderBlogs();
+
+async function refreshFromRemoteData() {
+  const data = await loadRemoteData();
+  if (!data) return;
+  REMOTE_DATA = data;
+  BLOGS = readStoredJson(STORAGE_KEY, data.blogs || DEFAULT_BLOGS);
+  renderBlogs();
+}
+
+refreshFromRemoteData();

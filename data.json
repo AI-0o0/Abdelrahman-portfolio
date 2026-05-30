@@ -1,0 +1,245 @@
+{
+  "profile": {
+    "name": "Abdelrahman Eslam Omar",
+    "rolePrefix": "Data Science student at Alexandria University",
+    "heroBio": "Data Science student at <strong>Alexandria University</strong> building ML pipelines, uncovering insights from data, and learning something new every day. Currently seeking <strong>internships</strong> and hands-on AI projects.",
+    "aboutHtml": "<p>I'm <strong>Abdelrahman Eslam Omar</strong>, a first-year Data Science student at <strong>Alexandria University</strong> (Class of 2028) with a real passion for turning messy data into meaningful insights.</p><p>I've built ML pipelines that achieved <strong>96% R2</strong> on regression tasks, led a 10-member team project, and completed practical training in data analysis.</p><p>I'm currently focused on strengthening my machine learning foundations, learning deep learning, and building a portfolio that shows clear, practical problem-solving.</p><div class=\"about-tags\"><span class=\"badge badge-blue\">Open to Internships</span><span class=\"badge badge-green\">Open to Research</span><span class=\"badge badge-gray\">Remote-Friendly</span></div>",
+    "email": "abdelrahmaneslamomar@gmail.com",
+    "footerText": "Built by Abdelrahman Eslam"
+  },
+  "homepage": {
+    "stats": [
+      { "value": "3", "label": "Projects" },
+      { "value": "3.5", "label": "GPA" },
+      { "value": "'28", "label": "Graduation" }
+    ],
+    "skills": [
+      {
+        "title": "Programming",
+        "color": "var(--accent)",
+        "items": ["Python", "SQL"]
+      },
+      {
+        "title": "Data Science",
+        "color": "#0891b2",
+        "items": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "EDA"]
+      },
+      {
+        "title": "Machine Learning",
+        "color": "#7c3aed",
+        "items": [
+          "Scikit-learn",
+          "Regression",
+          "Classification",
+          "Feature Engineering"
+        ]
+      },
+      {
+        "title": "Tools & Workflow",
+        "color": "#059669",
+        "items": ["Jupyter Notebook", "Google Colab", "Git", "GitHub"]
+      },
+      {
+        "title": "Soft Skills",
+        "color": "#d97706",
+        "items": [
+          "Problem Solving",
+          "Communication",
+          "Critical Thinking",
+          "Research",
+          "Teamwork"
+        ]
+      },
+      {
+        "title": "Mathematics",
+        "color": "#db2777",
+        "items": ["Linear Algebra", "Statistics", "Probability", "Calculus"]
+      }
+    ],
+    "learning": [
+      "Deep Learning",
+      "Neural Networks",
+      "PyTorch",
+      "NLP Fundamentals",
+      "TensorFlow"
+    ],
+    "education": [
+      {
+        "icon": "🎓",
+        "colorClass": "blue",
+        "title": "Alexandria University",
+        "subtitle": "BSc in Data Science",
+        "period": "Sep 2024 - Jun 2028",
+        "badges": ["GPA 3.5 / 4.0", "Alexandria, Egypt"],
+        "bullets": [
+          "Focusing on machine learning, statistics, and data engineering",
+          "Active in AI-related student communities on campus",
+          "Maintaining strong academic performance from day one"
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "icon": "💼",
+        "colorClass": "cyan",
+        "title": "Data Analyst Trainee",
+        "subtitle": "Skills Dynamics (DEPI)",
+        "period": "May 2025 - Oct 2025",
+        "badges": [],
+        "bullets": [
+          "Completing hands-on projects in data analysis using Python and SQL",
+          "Cleaning, analyzing, and visualizing datasets with thousands of records"
+        ]
+      }
+    ],
+    "research": [
+      {
+        "emoji": "🗣️",
+        "badge": "Exploring",
+        "badgeClass": "badge-blue",
+        "title": "Natural Language Processing",
+        "text": "Understanding how machines process, interpret, and generate human language."
+      },
+      {
+        "emoji": "🤖",
+        "badge": "Learning",
+        "badgeClass": "badge-blue",
+        "title": "Large Language Models",
+        "text": "Studying foundation model architecture, prompting, and efficient inference."
+      },
+      {
+        "emoji": "🧠",
+        "badge": "Learning",
+        "badgeClass": "badge-amber",
+        "title": "Deep Learning",
+        "text": "Building neural networks from scratch and learning attention mechanisms."
+      }
+    ],
+    "contactIntro": "I'm actively looking for data science and AI internships, research positions, and open-source collaborations. I usually respond within 24 hours.",
+    "contactItems": [
+      {
+        "icon": "📧",
+        "label": "Email",
+        "value": "abdelrahmaneslamomar@gmail.com",
+        "href": "mailto:abdelrahmaneslamomar@gmail.com"
+      },
+      {
+        "icon": "💻",
+        "label": "GitHub",
+        "value": "github.com/AI-0o0",
+        "href": "https://github.com/AI-0o0"
+      },
+      {
+        "icon": "🔗",
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/abdelrahmaneslam",
+        "href": "https://linkedin.com/in/abdelrahmaneslam"
+      },
+      {
+        "icon": "📱",
+        "label": "Phone",
+        "value": "+20 127 992 9056",
+        "href": "tel:+201279929056"
+      },
+      {
+        "icon": "📍",
+        "label": "Location",
+        "value": "Alexandria, Egypt",
+        "href": ""
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Nobel Prize Winners Analysis",
+      "description": "Analyzed over 100 years of Nobel Prize data using Python, Pandas, and Seaborn to uncover trends in U.S. Nobel Prize winners. Created insightful visualizations and published a comprehensive report.",
+      "category": "Data Science",
+      "difficulty": "Intermediate",
+      "status": "Completed",
+      "icon": "🏆",
+      "technologies": ["Python", "Pandas", "Seaborn", "Matplotlib", "Jupyter"],
+      "highlights": [
+        "100+ years of data",
+        "Trend analysis",
+        "Published report"
+      ],
+      "github": "https://github.com/AI-0o0",
+      "demo": ""
+    },
+    {
+      "id": 2,
+      "title": "FIFA Player Value Prediction",
+      "description": "End-to-end ML pipeline to predict FIFA player market values and classify performance levels. Applied feature engineering, log transformation, GridSearchCV, and ensemble learning.",
+      "category": "Machine Learning",
+      "difficulty": "Advanced",
+      "status": "Completed",
+      "icon": "⚽",
+      "technologies": [
+        "Python",
+        "Scikit-learn",
+        "Pandas",
+        "GridSearchCV",
+        "Ensemble Learning"
+      ],
+      "highlights": ["96.0% R²", "85.6% accuracy", "End-to-end pipeline"],
+      "github": "https://github.com/AI-0o0",
+      "demo": ""
+    },
+    {
+      "id": 3,
+      "title": "House Price Prediction",
+      "description": "Led a 10-member team to predict house prices using the Ames Housing dataset (1,460 properties, 81 features). Implemented linear regression from scratch using NumPy — including Gradient Descent, Normal Equation, and L1/L2 regularization.",
+      "category": "Machine Learning",
+      "difficulty": "Intermediate",
+      "status": "Completed",
+      "icon": "🏠",
+      "technologies": [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "Scikit-learn",
+        "Matplotlib"
+      ],
+      "highlights": [
+        "Team lead (10 members)",
+        "0.85 R²",
+        "From-scratch implementation"
+      ],
+      "github": "https://github.com/AI-0o0",
+      "demo": ""
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Getting Started with Machine Learning: A Practical Guide",
+      "date": "2025-05-01",
+      "category": "Machine Learning",
+      "tags": ["Python", "Scikit-learn", "Beginners"],
+      "readingTime": "8 min read",
+      "summary": "A beginner-friendly walkthrough of the ML workflow — from data preprocessing to model evaluation — using real-world examples in Python.",
+      "link": "blog-post-1.html"
+    },
+    {
+      "id": 2,
+      "title": "Feature Engineering Secrets That Boosted My Model to 96% R²",
+      "date": "2025-04-15",
+      "category": "Data Science",
+      "tags": ["Feature Engineering", "Regression", "Tips"],
+      "readingTime": "6 min read",
+      "summary": "Lessons from the FIFA player value prediction project — how log transformation and domain-driven features made all the difference.",
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "title": "Linear Regression From Scratch with NumPy",
+      "date": "2025-03-20",
+      "category": "Machine Learning",
+      "tags": ["NumPy", "Math", "Implementation"],
+      "readingTime": "10 min read",
+      "summary": "Implementing gradient descent, the normal equation, and L1/L2 regularization from scratch in NumPy — and understanding the math behind them.",
+      "link": "#"
+    }
+  ]
+}

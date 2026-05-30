@@ -99,6 +99,22 @@ const STORAGE_KEYS = {
   homepage: "portfolio.homepage",
 };
 
+let REMOTE_DATA = null;
+
+function getRemoteSection(key) {
+  return REMOTE_DATA ? REMOTE_DATA[key] : null;
+}
+
+async function loadRemoteData() {
+  try {
+    const response = await fetch("data.json", { cache: "no-cache" });
+    if (!response.ok) return null;
+    return await response.json();
+  } catch {
+    return null;
+  }
+}
+
 const DEFAULT_PROFILE = {
   name: "Abdelrahman Eslam Omar",
   rolePrefix: "Data Science student at Alexandria University",
@@ -259,12 +275,19 @@ function readStoredJson(key, fallback) {
   }
 }
 
-let PROJECTS = readStoredJson(STORAGE_KEYS.projects, DEFAULT_PROJECTS);
-let BLOGS = readStoredJson(STORAGE_KEYS.blogs, DEFAULT_BLOGS);
+let PROJECTS = readStoredJson(
+  STORAGE_KEYS.projects,
+  getRemoteSection("projects") || DEFAULT_PROJECTS
+);
+let BLOGS = readStoredJson(
+  STORAGE_KEYS.blogs,
+  getRemoteSection("blogs") || DEFAULT_BLOGS
+);
 
 function getProfile() {
+  const baseProfile = getRemoteSection("profile") || DEFAULT_PROFILE;
   return {
-    ...DEFAULT_PROFILE,
+    ...baseProfile,
     ...readStoredJson(STORAGE_KEYS.profile, {}),
   };
 }
@@ -278,8 +301,9 @@ window.PORTFOLIO_DEFAULTS = {
 };
 
 function getHomepage() {
+  const baseHomepage = getRemoteSection("homepage") || DEFAULT_HOMEPAGE;
   return {
-    ...DEFAULT_HOMEPAGE,
+    ...baseHomepage,
     ...readStoredJson(STORAGE_KEYS.homepage, {}),
   };
 }
@@ -677,7 +701,9 @@ function formatDate(str) {
 function renderBlogs() {
   const search = document.getElementById("blog-search").value.toLowerCase();
   const grid = document.getElementById("blog-grid");
-  const allBlogs = [...BLOGS].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const allBlogs = [...BLOGS].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
   const filtered = allBlogs
     .filter((b) => {
       const matchCat = blogCat === "All" || b.category === blogCat;
@@ -827,3 +853,20 @@ revealEls.forEach((el) => {
   el.style.transition = "opacity 0.5s ease, transform 0.5s ease";
   revealObs.observe(el);
 });
+
+async function refreshFromRemoteData() {
+  const data = await loadRemoteData();
+  if (!data) return;
+  REMOTE_DATA = data;
+  PROJECTS = readStoredJson(
+    STORAGE_KEYS.projects,
+    data.projects || DEFAULT_PROJECTS
+  );
+  BLOGS = readStoredJson(STORAGE_KEYS.blogs, data.blogs || DEFAULT_BLOGS);
+  applyProfile();
+  applyHomepage();
+  renderProjects();
+  renderBlogs();
+}
+
+refreshFromRemoteData();
