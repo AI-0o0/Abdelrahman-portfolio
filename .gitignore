@@ -1,2 +1,5 @@
 .env
+.gitignore
 env.js
+admin.*
+blog-editor.js
