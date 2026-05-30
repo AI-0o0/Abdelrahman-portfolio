@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="All blog posts by Abdelrahman Eslam about machine learning, data science, and AI."
+    />
+    <title>All Blog Posts | Abdelrahman Eslam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="nav" class="scrolled">
+      <div class="nav-inner">
+        <a href="index.html#hero" class="nav-logo">AE<span>.</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+          <button id="theme-btn" aria-label="Toggle dark mode">🌙</button>
+          <a href="index.html#blog" class="btn btn-outline">Back Home</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="blogs-page">
+      <header class="blogs-page-head">
+        <p class="section-label">Writing</p>
+        <h1>All Blog Posts</h1>
+        <p>
+          Notes, project lessons, and practical thoughts about data science,
+          machine learning, and AI.
+        </p>
+      </header>
+
+      <div class="projects-controls">
+        <div class="search-box">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input
+            type="search"
+            id="blog-search"
+            placeholder="Search articles..."
+            oninput="filterBlogs()"
+          />
+        </div>
+        <div class="filter-pills" id="blog-filters">
+          <button class="filter-pill active" data-cat="All" onclick="setBlogFilter(this)">
+            All
+          </button>
+          <button class="filter-pill" data-cat="Machine Learning" onclick="setBlogFilter(this)">
+            ML
+          </button>
+          <button class="filter-pill" data-cat="Data Science" onclick="setBlogFilter(this)">
+            Data Science
+          </button>
+          <button class="filter-pill" data-cat="Deep Learning" onclick="setBlogFilter(this)">
+            Deep Learning
+          </button>
+          <button class="filter-pill" data-cat="Career" onclick="setBlogFilter(this)">
+            Career
+          </button>
+        </div>
+      </div>
+
+      <div class="blog-grid" id="blog-grid"></div>
+    </main>
+
+    <script src="blogs.js"></script>
+  </body>
+</html>
