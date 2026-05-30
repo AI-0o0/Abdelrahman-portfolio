@@ -1,28 +1,45 @@
 {
   "profile": {
     "name": "Abdelrahman Eslam Omar",
-    "rolePrefix": "Data Science student at Alexandria University",
     "heroBio": "Data Science student at <strong>Alexandria University</strong> building ML pipelines, uncovering insights from data, and learning something new every day. Currently seeking <strong>internships</strong> and hands-on AI projects.",
-    "aboutHtml": "<p>I'm <strong>Abdelrahman Eslam Omar</strong>, a first-year Data Science student at <strong>Alexandria University</strong> (Class of 2028) with a real passion for turning messy data into meaningful insights.</p><p>I've built ML pipelines that achieved <strong>96% R2</strong> on regression tasks, led a 10-member team project, and completed practical training in data analysis.</p><p>I'm currently focused on strengthening my machine learning foundations, learning deep learning, and building a portfolio that shows clear, practical problem-solving.</p><div class=\"about-tags\"><span class=\"badge badge-blue\">Open to Internships</span><span class=\"badge badge-green\">Open to Research</span><span class=\"badge badge-gray\">Remote-Friendly</span></div>",
+    "aboutHtml": "<p>I'm <strong>Abdelrahman Eslam Omar</strong>, a first-year Data Science student at <strong>Alexandria University</strong> (Class of 2028) with a real passion for turning messy data into useful insights.</p><p>I enjoy building machine learning projects, explaining ideas clearly, and improving my skills through practical work.</p>",
     "email": "abdelrahmaneslamomar@gmail.com",
-    "footerText": "Built by Abdelrahman Eslam"
+    "footerText": "Built by Mohamed Elsayed"
   },
   "homepage": {
     "stats": [
-      { "value": "3", "label": "Projects" },
-      { "value": "3.5", "label": "GPA" },
-      { "value": "'28", "label": "Graduation" }
+      {
+        "value": "10+",
+        "label": "Projects"
+      },
+      {
+        "value": "3.5",
+        "label": "GPA"
+      },
+      {
+        "value": "'28",
+        "label": "Graduation"
+      }
     ],
     "skills": [
       {
         "title": "Programming",
         "color": "var(--accent)",
-        "items": ["Python", "SQL"]
+        "items": [
+          "Python",
+          "SQL"
+        ]
       },
       {
         "title": "Data Science",
         "color": "#0891b2",
-        "items": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "EDA"]
+        "items": [
+          "Pandas",
+          "NumPy",
+          "Matplotlib",
+          "Seaborn",
+          "EDA"
+        ]
       },
       {
         "title": "Machine Learning",
@@ -37,7 +54,12 @@
       {
         "title": "Tools & Workflow",
         "color": "#059669",
-        "items": ["Jupyter Notebook", "Google Colab", "Git", "GitHub"]
+        "items": [
+          "Jupyter Notebook",
+          "Google Colab",
+          "Git",
+          "GitHub"
+        ]
       },
       {
         "title": "Soft Skills",
@@ -53,7 +75,12 @@
       {
         "title": "Mathematics",
         "color": "#db2777",
-        "items": ["Linear Algebra", "Statistics", "Probability", "Calculus"]
+        "items": [
+          "Linear Algebra",
+          "Statistics",
+          "Probability",
+          "Calculus"
+        ]
       }
     ],
     "learning": [
@@ -70,7 +97,10 @@
         "title": "Alexandria University",
         "subtitle": "BSc in Data Science",
         "period": "Sep 2024 - Jun 2028",
-        "badges": ["GPA 3.5 / 4.0", "Alexandria, Egypt"],
+        "badges": [
+          "GPA 3.5 / 4.0",
+          "Alexandria, Egypt"
+        ],
         "bullets": [
           "Focusing on machine learning, statistics, and data engineering",
           "Active in AI-related student communities on campus",
@@ -153,12 +183,18 @@
     {
       "id": 1,
       "title": "Nobel Prize Winners Analysis",
-      "description": "Analyzed over 100 years of Nobel Prize data using Python, Pandas, and Seaborn to uncover trends in U.S. Nobel Prize winners. Created insightful visualizations and published a comprehensive report.",
+      "description": "Analyzed over 100 years of Nobel Prize data using Python, Pandas, and Seaborn to uncover trends in U.S. Nobel Prize winners.",
       "category": "Data Science",
       "difficulty": "Intermediate",
       "status": "Completed",
-      "icon": "🏆",
-      "technologies": ["Python", "Pandas", "Seaborn", "Matplotlib", "Jupyter"],
+      "icon": "AI",
+      "technologies": [
+        "Python",
+        "Pandas",
+        "Seaborn",
+        "Matplotlib",
+        "Jupyter"
+      ],
       "highlights": [
         "100+ years of data",
         "Trend analysis",
@@ -170,30 +206,33 @@
     {
       "id": 2,
       "title": "FIFA Player Value Prediction",
-      "description": "End-to-end ML pipeline to predict FIFA player market values and classify performance levels. Applied feature engineering, log transformation, GridSearchCV, and ensemble learning.",
+      "description": "End-to-end ML pipeline to predict FIFA player market values and classify performance levels.",
       "category": "Machine Learning",
       "difficulty": "Advanced",
       "status": "Completed",
-      "icon": "⚽",
+      "icon": "ML",
       "technologies": [
         "Python",
         "Scikit-learn",
         "Pandas",
-        "GridSearchCV",
-        "Ensemble Learning"
+        "GridSearchCV"
       ],
-      "highlights": ["96.0% R²", "85.6% accuracy", "End-to-end pipeline"],
+      "highlights": [
+        "96.0% R2",
+        "85.6% accuracy",
+        "End-to-end pipeline"
+      ],
       "github": "https://github.com/AI-0o0",
       "demo": ""
     },
     {
       "id": 3,
       "title": "House Price Prediction",
-      "description": "Led a 10-member team to predict house prices using the Ames Housing dataset (1,460 properties, 81 features). Implemented linear regression from scratch using NumPy — including Gradient Descent, Normal Equation, and L1/L2 regularization.",
+      "description": "Led a 10-member team to predict house prices with the Ames Housing dataset and linear regression from scratch.",
       "category": "Machine Learning",
       "difficulty": "Intermediate",
       "status": "Completed",
-      "icon": "🏠",
+      "icon": "DS",
       "technologies": [
         "Python",
         "NumPy",
@@ -202,8 +241,8 @@
         "Matplotlib"
       ],
       "highlights": [
-        "Team lead (10 members)",
-        "0.85 R²",
+        "Team lead",
+        "0.85 R2",
         "From-scratch implementation"
       ],
       "github": "https://github.com/AI-0o0",
@@ -216,30 +255,16 @@
       "title": "Getting Started with Machine Learning: A Practical Guide",
       "date": "2025-05-01",
       "category": "Machine Learning",
-      "tags": ["Python", "Scikit-learn", "Beginners"],
+      "tags": [
+        "Python",
+        "Scikit-learn",
+        "Beginners"
+      ],
       "readingTime": "8 min read",
-      "summary": "A beginner-friendly walkthrough of the ML workflow — from data preprocessing to model evaluation — using real-world examples in Python.",
-      "link": "blog-post-1.html"
-    },
-    {
-      "id": 2,
-      "title": "Feature Engineering Secrets That Boosted My Model to 96% R²",
-      "date": "2025-04-15",
-      "category": "Data Science",
-      "tags": ["Feature Engineering", "Regression", "Tips"],
-      "readingTime": "6 min read",
-      "summary": "Lessons from the FIFA player value prediction project — how log transformation and domain-driven features made all the difference.",
-      "link": "#"
-    },
-    {
-      "id": 3,
-      "title": "Linear Regression From Scratch with NumPy",
-      "date": "2025-03-20",
-      "category": "Machine Learning",
-      "tags": ["NumPy", "Math", "Implementation"],
-      "readingTime": "10 min read",
-      "summary": "Implementing gradient descent, the normal equation, and L1/L2 regularization from scratch in NumPy — and understanding the math behind them.",
-      "link": "#"
+      "summary": "A beginner-friendly walkthrough of the ML workflow, from data preprocessing to model evaluation.",
+      "link": "blog-post-1.html",
+      "contentHtml": "<p><b>Machine learning</b> projects become easier when you treat them as a workflow, not a magic trick.</p><p>Start by understanding the problem, inspecting the data, cleaning missing values, and creating features that actually describe the thing you want to predict.</p><p>After that, train a simple baseline model, measure it clearly, and improve one part at a time.</p>",
+      "customCss": ""
     }
   ]
 }
