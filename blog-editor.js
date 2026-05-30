@@ -287,8 +287,8 @@ function downloadPage(post) {
 $("login-form").addEventListener("submit", (event) => {
   event.preventDefault();
   const env = window.ADMIN_ENV || {};
-  const username = env.ADMIN_USERNAME || env.username || "admin";
-  const password = env.ADMIN_PASSWORD || env.password || "portfolio123";
+  const username = env.ADMIN_USERNAME || env.username ;
+  const password = env.ADMIN_PASSWORD || env.password ;
   if ($("username").value === username && $("password").value === password) {
     $("login-message").textContent = "";
     setLoggedIn(true);
