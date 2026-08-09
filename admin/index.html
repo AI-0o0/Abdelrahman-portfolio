@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="admin.css" />
@@ -307,6 +307,38 @@
               </div>
             </div>
             <textarea id="export-output" rows="10" readonly></textarea>
+          </section>
+
+          <section class="admin-card wide">
+            <div class="card-head">
+              <h2>Publish to GitHub</h2>
+              <button class="primary-btn" id="github-push-btn" type="button">
+                Push to GitHub
+              </button>
+            </div>
+            <div class="field-grid">
+              <label>
+                Repository (owner/name)
+                <input id="github-repo" value="AI-0o0/Abdelrahman-portfolio" />
+              </label>
+              <label>
+                Branch
+                <input id="github-branch" value="main" />
+              </label>
+            </div>
+            <label>
+              GitHub token (repo scope) — stored in this browser only
+              <input id="github-token" type="password" autocomplete="off" />
+            </label>
+            <label>
+              Commit message
+              <input id="github-message" />
+            </label>
+            <p class="status-line">
+              Pushes data.json and every blog page to the repo, then GitHub
+              Pages deploys automatically (takes ~1 min). Create a token at
+              github.com/settings/tokens — check only the "repo" scope.
+            </p>
           </section>
         </section>
       </section>

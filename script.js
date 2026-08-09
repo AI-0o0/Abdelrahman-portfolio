@@ -491,6 +491,19 @@ window.addEventListener("scroll", () => {
   nav.classList.toggle("scrolled", window.scrollY > 20);
 });
 
+/* ---------------------------------------------------------------
+   SCROLL PROGRESS BAR
+--------------------------------------------------------------- */
+const progressBar = document.getElementById("scroll-progress");
+function updateProgress() {
+  const max =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  progressBar.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+}
+window.addEventListener("scroll", updateProgress, { passive: true });
+updateProgress();
+
 const navLinks = document.querySelectorAll(".nav-links a");
 const sections = document.querySelectorAll("section[id]");
 
@@ -525,43 +538,6 @@ hamburger.addEventListener("click", () => {
 function closeMobileMenu() {
   mobileMenu.classList.remove("open");
 }
-
-/* ---------------------------------------------------------------
-   TYPING EFFECT
---------------------------------------------------------------- */
-const roles = [
-  "Data Science Student",
-  "AI Engineer in Training",
-  "Problem Solver",
-  "AI Enthusiast",
-];
-
-let roleIdx = 0,
-  charIdx = 0,
-  deleting = false;
-const typingEl = document.getElementById("typing-text");
-
-function type() {
-  const role = roles[roleIdx];
-  if (!deleting) {
-    typingEl.textContent = role.slice(0, charIdx + 1);
-    charIdx++;
-    if (charIdx === role.length) {
-      deleting = true;
-      setTimeout(type, 1800);
-      return;
-    }
-  } else {
-    typingEl.textContent = role.slice(0, charIdx - 1);
-    charIdx--;
-    if (charIdx === 0) {
-      deleting = false;
-      roleIdx = (roleIdx + 1) % roles.length;
-    }
-  }
-  setTimeout(type, deleting ? 45 : 80);
-}
-type();
 
 /* ---------------------------------------------------------------
    FOOTER YEAR
@@ -629,7 +605,7 @@ function renderProjects() {
             ? `
           <div class="project-highlights">
             ${p.highlights
-              .map((h) => `<span class="project-highlight">✓ ${h}</span>`)
+              .map((h) => `<span class="project-highlight">${h}</span>`)
               .join("")}
           </div>`
             : ""
@@ -834,6 +810,9 @@ function submitContact(e) {
 const revealEls = document.querySelectorAll(
   ".card, .timeline-item, .section-head"
 );
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
 const revealObs = new IntersectionObserver(
   (entries) => {
     entries.forEach((e) => {
@@ -847,12 +826,14 @@ const revealObs = new IntersectionObserver(
   { threshold: 0.1 }
 );
 
-revealEls.forEach((el) => {
-  el.style.opacity = "0";
-  el.style.transform = "translateY(20px)";
-  el.style.transition = "opacity 0.5s ease, transform 0.5s ease";
-  revealObs.observe(el);
-});
+if (!prefersReducedMotion) {
+  revealEls.forEach((el) => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(20px)";
+    el.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+    revealObs.observe(el);
+  });
+}
 
 async function refreshFromRemoteData() {
   const data = await loadRemoteData();

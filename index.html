@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23111317'/%3E%3Ctext x='16' y='22.5' font-family='ui-monospace,monospace' font-size='17' font-weight='bold' fill='%23FF7F0E' text-anchor='middle'%3E%24_%3C/text%3E%3C/svg%3E"
+    />
     <meta
       name="description"
       content="Abdelrahman Eslam Omar — Data Science student at Alexandria University. Building ML models, ML pipelines, and AI projects."
@@ -86,7 +90,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -94,6 +98,7 @@
   </head>
 
   <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
     <!-- ============================================================
      NAVIGATION
      ============================================================ -->
@@ -139,8 +144,6 @@
      ============================================================ -->
     <section id="hero">
       <div class="hero-grid"></div>
-      <div class="hero-blob-1"></div>
-      <div class="hero-blob-2"></div>
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
@@ -151,9 +154,6 @@
               >
             </div>
             <h1 class="hero-name fade-up-2">Abdelrahman<br />Eslam Omar</h1>
-            <p class="hero-role fade-up-3">
-              <span id="typing-text"></span><span id="cursor"></span>
-            </p>
             <p class="hero-bio fade-up-4">
               Data Science student at
               <strong>Alexandria University</strong> building ML pipelines,
@@ -248,26 +248,30 @@
               </div>
             </div>
           </div>
-          <div class="hero-avatar-wrap">
-            <div class="hero-avatar-ring"></div>
-            <div class="hero-avatar">AE</div>
-            <div class="hero-badge-float b1">✓ GPA 3.45</div>
-            <div class="hero-badge-float b2">🔍 Open to Internships</div>
+          <div class="hero-term fade-up-3" aria-hidden="true">
+            <div class="term-bar">
+              <span class="term-title">abdelrahman@portfolio:~</span>
+            </div>
+            <div class="term-body">
+              <p class="term-line"><span class="term-prompt">$</span> whoami</p>
+              <p class="term-out term-line">
+                abdelrahman eslam omar — data science student
+              </p>
+              <p class="term-line"><span class="term-prompt">$</span> cat status.txt</p>
+              <p class="term-out term-line">
+                open to internships · research · remote · alexandria, eg
+              </p>
+              <p class="term-line">
+                <span class="term-prompt">$</span> python -c "print(3.45)"
+              </p>
+              <p class="term-out term-line">3.45</p>
+              <p class="term-line">
+                <span class="term-prompt">$</span><span class="term-caret"></span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <a href="#about" class="scroll-cue">
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <line x1="12" y1="5" x2="12" y2="19" />
-          <polyline points="19,12 12,19 5,12" />
-        </svg>
-        scroll
-      </a>
     </section>
 
     <!-- ============================================================
@@ -426,14 +430,19 @@
           </div>
         </div>
         <div class="skills-learning">
-          <p class="skills-learning-title">📚 Currently Learning</p>
-          <div class="skill-tags">
-            <span class="skill-tag">Deep Learning</span>
-            <span class="skill-tag">Neural Networks</span>
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">NLP Fundamentals</span>
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">Computer Vision Basics</span>
+          <div class="cell-head">
+            <span class="cell-prompt">In [7]:</span>
+            <span class="skills-learning-title">currently learning</span>
+          </div>
+          <div class="cell-output">
+            <div class="skill-tags">
+              <span class="skill-tag">Deep Learning</span>
+              <span class="skill-tag">Neural Networks</span>
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">NLP Fundamentals</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">Computer Vision Basics</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1002,8 +1011,11 @@
             </a>
           </div>
           <div class="footer-bottom">
-            Built with ❤️ and Python by Abdelrahman Eslam @
-            <span id="year"></span>
+            <span
+              >Built with ❤️ and Python by Abdelrahman Eslam @
+              <span id="year"></span></span
+            >
+            <a href="#hero" class="back-top">↑ top</a>
           </div>
         </div>
       </div>
