@@ -2,18 +2,18 @@
   "profile": {
     "name": "Abdelrahman Eslam Omar",
     "heroBio": "Data Science student at <strong>Alexandria University</strong> building ML pipelines, uncovering insights from data, and learning something new every day. Currently seeking <strong>internships</strong> and hands-on AI projects.",
-    "aboutHtml": "<p>I'm <strong>Abdelrahman Eslam Omar</strong>, a first-year Data Science student at <strong>Alexandria University</strong> (Class of 2028) with a real passion for turning messy data into useful insights.</p><p>I enjoy building machine learning projects, explaining ideas clearly, and improving my skills through practical work.</p>",
+    "aboutHtml": "<p>I'm <strong>Abdelrahman Eslam Omar</strong>, a first-year Data Science student at <strong>Alexandria University</strong> (Class of 2028) with a real passion for turning messy data into meaningful insights.</p><p>I've built ML pipelines that achieved <strong>96% R2</strong> on regression tasks, led a 10-member team project, and completed practical training in data analysis.</p><p>I'm currently focused on strengthening my machine learning foundations, learning deep learning, and building a portfolio that shows clear, practical problem-solving.</p><div class=\"about-tags\"><span class=\"badge badge-blue\">Open to Internships</span><span class=\"badge badge-green\">Open to Research</span><span class=\"badge badge-gray\">Remote-Friendly</span></div>",
     "email": "abdelrahmaneslamomar@gmail.com",
-    "footerText": "Built by Mohamed Elsayed"
+    "footerText": "Built with love and Python by Abdelrahman Eslam"
   },
   "homepage": {
     "stats": [
       {
-        "value": "10+",
+        "value": "3",
         "label": "Projects"
       },
       {
-        "value": "3.45",
+        "value": "3.5",
         "label": "GPA"
       },
       {
@@ -27,8 +27,7 @@
         "color": "var(--accent)",
         "items": [
           "Python",
-          "SQL",
-          "Bash"
+          "SQL"
         ]
       },
       {
@@ -39,8 +38,7 @@
           "NumPy",
           "Matplotlib",
           "Seaborn",
-          "EDA",
-          "Data Visualization"
+          "EDA"
         ]
       },
       {
@@ -50,9 +48,7 @@
           "Scikit-learn",
           "Regression",
           "Classification",
-          "Clustering",
-          "Feature Engineering",
-          "GridSearchCV"
+          "Feature Engineering"
         ]
       },
       {
@@ -62,9 +58,7 @@
           "Jupyter Notebook",
           "Google Colab",
           "Git",
-          "GitHub",
-          "Tableau",
-          "Power BI"
+          "GitHub"
         ]
       },
       {
@@ -75,8 +69,7 @@
           "Communication",
           "Critical Thinking",
           "Research",
-          "Teamwork",
-          "Leadership"
+          "Teamwork"
         ]
       },
       {
@@ -95,8 +88,7 @@
       "Neural Networks",
       "PyTorch",
       "NLP Fundamentals",
-      "TensorFlow",
-      "Computer Vision Basics"
+      "TensorFlow"
     ],
     "education": [
       {
@@ -125,17 +117,8 @@
         "period": "May 2025 - Oct 2025",
         "badges": [],
         "bullets": [
-          "Completing 5+ hands-on projects in data analysis using Python and SQL",
-          "Cleaning, analyzing, and visualizing datasets with thousands of records",
-          "Building dashboards and reports using Tableau and Power BI",
-          "Collaborating with peers in a structured, team-based learning environment"
-        ],
-        "technologies": [
-          "Python",
-          "SQL",
-          "Tableau",
-          "Power BI",
-          "Pandas"
+          "Completing hands-on projects in data analysis using Python and SQL",
+          "Cleaning, analyzing, and visualizing datasets with thousands of records"
         ]
       }
     ],
@@ -280,8 +263,7 @@
       "readingTime": "8 min read",
       "summary": "A beginner-friendly walkthrough of the ML workflow, from data preprocessing to model evaluation.",
       "link": "blog-post-1.html",
-      "contentHtml": "<p><b>Machine learning</b> projects become easier when you treat them as a workflow, not a magic trick.</p><p>Start by understanding the problem, inspecting the data, cleaning missing values, and creating features that actually describe the thing you want to predict.</p><p>After that, train a simple baseline model, measure it clearly, and improve one part at a time.</p>",
-      "customCss": ""
+      "content": "Machine learning projects become easier when you treat them as a workflow, not a magic trick.\n\nStart by understanding the problem, inspecting the data, cleaning missing values, and creating features that actually describe the thing you want to predict.\n\nAfter that, train a simple baseline model, measure it clearly, and improve one part at a time."
     }
   ]
 }
