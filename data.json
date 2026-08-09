@@ -13,7 +13,7 @@
         "label": "Projects"
       },
       {
-        "value": "3.5",
+        "value": "3.45",
         "label": "GPA"
       },
       {
@@ -27,7 +27,8 @@
         "color": "var(--accent)",
         "items": [
           "Python",
-          "SQL"
+          "SQL",
+          "Bash"
         ]
       },
       {
@@ -38,7 +39,8 @@
           "NumPy",
           "Matplotlib",
           "Seaborn",
-          "EDA"
+          "EDA",
+          "Data Visualization"
         ]
       },
       {
@@ -48,7 +50,9 @@
           "Scikit-learn",
           "Regression",
           "Classification",
-          "Feature Engineering"
+          "Clustering",
+          "Feature Engineering",
+          "GridSearchCV"
         ]
       },
       {
@@ -58,7 +62,9 @@
           "Jupyter Notebook",
           "Google Colab",
           "Git",
-          "GitHub"
+          "GitHub",
+          "Tableau",
+          "Power BI"
         ]
       },
       {
@@ -69,7 +75,8 @@
           "Communication",
           "Critical Thinking",
           "Research",
-          "Teamwork"
+          "Teamwork",
+          "Leadership"
         ]
       },
       {
@@ -88,7 +95,8 @@
       "Neural Networks",
       "PyTorch",
       "NLP Fundamentals",
-      "TensorFlow"
+      "TensorFlow",
+      "Computer Vision Basics"
     ],
     "education": [
       {
@@ -117,8 +125,17 @@
         "period": "May 2025 - Oct 2025",
         "badges": [],
         "bullets": [
-          "Completing hands-on projects in data analysis using Python and SQL",
-          "Cleaning, analyzing, and visualizing datasets with thousands of records"
+          "Completing 5+ hands-on projects in data analysis using Python and SQL",
+          "Cleaning, analyzing, and visualizing datasets with thousands of records",
+          "Building dashboards and reports using Tableau and Power BI",
+          "Collaborating with peers in a structured, team-based learning environment"
+        ],
+        "technologies": [
+          "Python",
+          "SQL",
+          "Tableau",
+          "Power BI",
+          "Pandas"
         ]
       }
     ],

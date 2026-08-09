@@ -531,7 +531,7 @@ function closeMobileMenu() {
 --------------------------------------------------------------- */
 const roles = [
   "Data Science Student",
-  "ML Engineer in Training",
+  "AI Engineer in Training",
   "Problem Solver",
   "AI Enthusiast",
 ];

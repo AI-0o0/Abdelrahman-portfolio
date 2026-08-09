@@ -3,3 +3,6 @@
 env.js
 admin.*
 blog-editor.*
+learn/*
+
+AGENTS.md

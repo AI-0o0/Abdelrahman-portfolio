@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <main class="admin-shell">
+      <section class="login-panel" id="login-panel">
+        <a class="back-link" href="index.html">Back to site</a>
+        <div class="panel-head">
+          <p class="eyebrow">Admin</p>
+          <h1>Portfolio Control</h1>
+          <p>Edit your profile, projects, and blog cards.</p>
+        </div>
+        <form id="login-form" class="admin-card">
+          <label>
+            Username
+            <input
+              id="username"
+              name="username"
+              autocomplete="username"
+              required
+            />
+          </label>
+          <label>
+            Password
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+            />
+          </label>
+          <button class="primary-btn" type="submit">Log in</button>
+          <p class="form-note" id="login-message"></p>
+        </form>
+      </section>
+
+      <section class="dashboard hidden" id="dashboard">
+        <header class="admin-header">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h1>Manage Portfolio</h1>
+          </div>
+          <div class="header-actions">
+            <a class="ghost-btn" href="index.html">View Site</a>
+            <a class="ghost-btn" href="blog-editor/">Blog Editor</a>
+            <button class="ghost-btn" id="logout-btn" type="button">
+              Log out
+            </button>
+          </div> 
+        </header>
+
+        <div class="status-line" id="save-status">
+          Changes save in this browser. Export data.json to update production.
+        </div>
+
+        <section class="admin-grid">
+          <form class="admin-card wide" id="profile-form">
+            <div class="card-head">
+              <h2>Portfolio Details</h2>
+              <button class="primary-btn" type="submit">Save Details</button>
+            </div>
+            <div class="field-grid">
+              <label>
+                Name
+                <input id="profile-name" required />
+              </label>
+              <label>
+                Email
+                <input id="profile-email" type="email" required />
+              </label>
+            </div>
+            <label>
+              Hero Bio
+              <textarea id="profile-hero" rows="5" required></textarea>
+            </label>
+            <label>
+              About HTML
+              <textarea id="profile-about" rows="7" required></textarea>
+            </label>
+            <label>
+              Footer Text
+              <input id="profile-footer" required />
+            </label>
+          </form>
+
+          <form class="admin-card wide" id="homepage-form">
+            <div class="card-head">
+              <div>
+                <h2>Homepage Sections</h2>
+                <p class="helper-text">
+                  Edit the homepage content below. Keep the same JSON shape,
+                  change the text/items.
+                </p>
+              </div>
+              <button class="primary-btn" type="submit">Save Homepage</button>
+            </div>
+            <div class="field-grid">
+              <label>
+                Hero Stats JSON
+                <textarea id="home-stats" rows="7"></textarea>
+              </label>
+              <label>
+                Currently Learning JSON
+                <textarea id="home-learning" rows="7"></textarea>
+              </label>
+            </div>
+            <label>
+              Skills JSON
+              <textarea id="home-skills" rows="14"></textarea>
+            </label>
+            <div class="field-grid">
+              <label>
+                Education JSON
+                <textarea id="home-education" rows="14"></textarea>
+              </label>
+              <label>
+                Experience JSON
+                <textarea id="home-experience" rows="14"></textarea>
+              </label>
+            </div>
+            <label>
+              Research Cards JSON
+              <textarea id="home-research" rows="14"></textarea>
+            </label>
+            <label>
+              Contact Intro
+              <textarea id="home-contact-intro" rows="4"></textarea>
+            </label>
+            <label>
+              Contact Items JSON
+              <textarea id="home-contact-items" rows="12"></textarea>
+            </label>
+          </form>
+
+          <form class="admin-card" id="blog-form">
+            <div class="card-head">
+              <h2>Blog Post</h2>
+              <div class="split-actions compact">
+                <button
+                  class="secondary-btn"
+                  id="site-folder-btn"
+                  type="button"
+                >
+                  Choose Site Folder
+                </button>
+                <button class="secondary-btn" id="new-blog-btn" type="button">
+                  New
+                </button>
+              </div>
+            </div>
+            <label>
+              Existing Post
+              <select id="blog-select"></select>
+            </label>
+            <label>
+              Title
+              <input id="blog-title" required />
+            </label>
+            <div class="field-grid">
+              <label>
+                Date
+                <input id="blog-date" type="date" required />
+              </label>
+              <label>
+                Category
+                <input id="blog-category" required />
+              </label>
+            </div>
+            <label>
+              Tags, comma separated
+              <input id="blog-tags" />
+            </label>
+            <label>
+              Reading Time
+              <input id="blog-reading-time" placeholder="6 min read" />
+            </label>
+            <label>
+              Page File Name
+              <input id="blog-slug" placeholder="my-new-post.html" />
+            </label>
+            <label>
+              Link
+              <input id="blog-link" placeholder="blog-post-2.html" />
+            </label>
+            <label>
+              Summary
+              <textarea id="blog-summary" rows="5" required></textarea>
+            </label>
+            <label>
+              Full Blog Content
+              <textarea
+                id="blog-content"
+                rows="12"
+                placeholder="Write the full article here. Blank lines become paragraphs."
+              ></textarea>
+            </label>
+            <div class="split-actions">
+              <button class="primary-btn" type="submit">Save Blog</button>
+              <button
+                class="secondary-btn"
+                id="download-blog-btn"
+                type="button"
+              >
+                Download Blog Page
+              </button>
+              <button class="danger-btn" id="delete-blog-btn" type="button">
+                Delete
+              </button>
+            </div>
+          </form>
+
+          <form class="admin-card" id="project-form">
+            <div class="card-head">
+              <h2>Project</h2>
+              <button class="secondary-btn" id="new-project-btn" type="button">
+                New
+              </button>
+            </div>
+            <label>
+              Existing Project
+              <select id="project-select"></select>
+            </label>
+            <label>
+              Title
+              <input id="project-title" required />
+            </label>
+            <label>
+              Description
+              <textarea id="project-description" rows="5" required></textarea>
+            </label>
+            <div class="field-grid">
+              <label>
+                Category
+                <input id="project-category" required />
+              </label>
+              <label>
+                Difficulty
+                <select id="project-difficulty">
+                  <option>Beginner</option>
+                  <option>Intermediate</option>
+                  <option>Advanced</option>
+                </select>
+              </label>
+            </div>
+            <div class="field-grid">
+              <label>
+                Status
+                <select id="project-status">
+                  <option>Completed</option>
+                  <option>In Progress</option>
+                  <option>Planned</option>
+                </select>
+              </label>
+              <label>
+                Icon
+                <input id="project-icon" placeholder="ML" />
+              </label>
+            </div>
+            <label>
+              Technologies, comma separated
+              <input id="project-technologies" />
+            </label>
+            <label>
+              Highlights, comma separated
+              <input id="project-highlights" />
+            </label>
+            <div class="field-grid">
+              <label>
+                GitHub
+                <input id="project-github" />
+              </label>
+              <label>
+                Demo
+                <input id="project-demo" />
+              </label>
+            </div>
+            <div class="split-actions">
+              <button class="primary-btn" type="submit">Save Project</button>
+              <button class="danger-btn" id="delete-project-btn" type="button">
+                Delete
+              </button>
+            </div>
+          </form>
+
+          <section class="admin-card wide">
+            <div class="card-head">
+              <h2>Stored Data</h2>
+              <div class="split-actions compact">
+                <button class="secondary-btn" id="export-btn" type="button">
+                  Export data.json
+                </button>
+                <button class="danger-btn" id="reset-btn" type="button">
+                  Reset
+                </button>
+              </div>
+            </div>
+            <textarea id="export-output" rows="10" readonly></textarea>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <div class="toast" id="admin-toast" role="status" aria-live="polite">
+      <span class="toast-icon" id="toast-icon">✓</span>
+      <span id="toast-message">Saved successfully.</span>
+    </div>
+
+    <script src="env.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
