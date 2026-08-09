@@ -1,19 +1,19 @@
 {
   "profile": {
     "name": "Abdelrahman Eslam Omar",
-    "heroBio": "Data Science student at <strong>Alexandria University</strong> building ML pipelines, uncovering insights from data, and learning something new every day. Currently seeking <strong>internships</strong> and hands-on AI projects.",
-    "aboutHtml": "<p>I'm <strong>Abdelrahman Eslam Omar</strong>, a first-year Data Science student at <strong>Alexandria University</strong> (Class of 2028) with a real passion for turning messy data into meaningful insights.</p><p>I've built ML pipelines that achieved <strong>96% R2</strong> on regression tasks, led a 10-member team project, and completed practical training in data analysis.</p><p>I'm currently focused on strengthening my machine learning foundations, learning deep learning, and building a portfolio that shows clear, practical problem-solving.</p><div class=\"about-tags\"><span class=\"badge badge-blue\">Open to Internships</span><span class=\"badge badge-green\">Open to Research</span><span class=\"badge badge-gray\">Remote-Friendly</span></div>",
+    "heroBio": "Computer & Data Science student at <strong>Alexandria University</strong> building <strong>AI agents, LLM applications, and RAG systems</strong>. Interested in <strong>AI research</strong>, particularly agentic AI, LLMs, and intelligent systems. Currently seeking <strong>AI/ML internships</strong> and research opportunities.",
+    "aboutHtml": "<p>I'm <strong>Abdelrahman Eslam Omar</strong>, a Computer & Data Science student at <strong>Alexandria University</strong> with a strong interest in <strong>AI research and intelligent systems</strong>.</p>\n\n<p>I enjoy building <strong>AI agents, LLM applications, and RAG systems</strong>, while exploring how models, tools, memory, and retrieval can work together to create reliable AI systems.</p>",
     "email": "abdelrahmaneslamomar@gmail.com",
-    "footerText": "Built with love and Python by Abdelrahman Eslam"
+    "footerText": "Built by Mohamed Elsayed"
   },
   "homepage": {
     "stats": [
       {
-        "value": "3",
+        "value": "20+",
         "label": "Projects"
       },
       {
-        "value": "3.5",
+        "value": "3.45",
         "label": "GPA"
       },
       {
@@ -27,68 +27,75 @@
         "color": "var(--accent)",
         "items": [
           "Python",
-          "SQL"
+          "SQL",
+          "C++",
+          "JavaScript"
         ]
       },
       {
-        "title": "Data Science",
-        "color": "#0891b2",
+        "title": "AI & LLMs",
+        "color": "#7c3aed",
         "items": [
-          "Pandas",
-          "NumPy",
-          "Matplotlib",
-          "Seaborn",
-          "EDA"
+          "LLMs",
+          "AI Agents",
+          "RAG",
+          "LangChain",
+          "MCP",
+          "Prompt Engineering"
         ]
       },
       {
         "title": "Machine Learning",
-        "color": "#7c3aed",
+        "color": "#0891b2",
         "items": [
           "Scikit-learn",
-          "Regression",
-          "Classification",
+          "PyTorch",
+          "Deep Learning",
+          "NLP",
           "Feature Engineering"
         ]
       },
       {
-        "title": "Tools & Workflow",
+        "title": "Backend & Systems",
         "color": "#059669",
         "items": [
-          "Jupyter Notebook",
-          "Google Colab",
-          "Git",
-          "GitHub"
+          "FastAPI",
+          "Node.js",
+          "REST APIs",
+          "Pydantic",
+          "Async Python"
         ]
       },
       {
-        "title": "Soft Skills",
+        "title": "Data",
         "color": "#d97706",
         "items": [
-          "Problem Solving",
-          "Communication",
-          "Critical Thinking",
-          "Research",
-          "Teamwork"
+          "Pandas",
+          "NumPy",
+          "MySQL",
+          "EDA",
+          "Data Visualization"
         ]
       },
       {
-        "title": "Mathematics",
+        "title": "Engineering",
         "color": "#db2777",
         "items": [
-          "Linear Algebra",
-          "Statistics",
-          "Probability",
-          "Calculus"
+          "Git",
+          "GitHub",
+          "Linux",
+          "Testing",
+          "System Design"
         ]
       }
     ],
     "learning": [
-      "Deep Learning",
-      "Neural Networks",
-      "PyTorch",
-      "NLP Fundamentals",
-      "TensorFlow"
+      "AI Agents",
+      "LLM Applications",
+      "RAG Systems",
+      "MCP",
+      "AI System Design",
+      "LLM Evaluation"
     ],
     "education": [
       {
@@ -98,7 +105,7 @@
         "subtitle": "BSc in Data Science",
         "period": "Sep 2024 - Jun 2028",
         "badges": [
-          "GPA 3.5 / 4.0",
+          "GPA 3.45 / 4.0",
           "Alexandria, Egypt"
         ],
         "bullets": [
@@ -110,15 +117,45 @@
     ],
     "experience": [
       {
-        "icon": "💼",
+        "icon": "🧠",
+        "colorClass": "purple",
+        "title": "NLP Trainee",
+        "subtitle": "NTI NLP Training",
+        "period": "Jul 2026 - Present",
+        "badges": [
+          "NLP",
+          "Deep Learning"
+        ],
+        "bullets": [
+          "Developing practical skills in Natural Language Processing and modern NLP techniques",
+          "Working with text processing, language models, and NLP applications"
+        ]
+      },
+      {
+        "icon": "🤖",
         "colorClass": "cyan",
+        "title": "Autonomous Agents Trainee",
+        "subtitle": "Alexandria University",
+        "period": "Jul 2026 - Present",
+        "badges": [
+          "AI Agents",
+          "LLMs"
+        ],
+        "bullets": [
+          "Exploring autonomous agent architectures and LLM-based systems",
+          "Building practical experience with agent workflows, tools, and decision-making"
+        ]
+      },
+      {
+        "icon": "💼",
+        "colorClass": "green",
         "title": "Data Analyst Trainee",
         "subtitle": "Skills Dynamics (DEPI)",
         "period": "May 2025 - Oct 2025",
         "badges": [],
         "bullets": [
-          "Completing hands-on projects in data analysis using Python and SQL",
-          "Cleaning, analyzing, and visualizing datasets with thousands of records"
+          "Completed hands-on projects in data analysis using Python and SQL",
+          "Cleaned, analyzed, and visualized datasets with thousands of records"
         ]
       }
     ],
@@ -249,21 +286,5 @@
       "demo": ""
     }
   ],
-  "blogs": [
-    {
-      "id": 1,
-      "title": "Getting Started with Machine Learning: A Practical Guide",
-      "date": "2025-05-01",
-      "category": "Machine Learning",
-      "tags": [
-        "Python",
-        "Scikit-learn",
-        "Beginners"
-      ],
-      "readingTime": "8 min read",
-      "summary": "A beginner-friendly walkthrough of the ML workflow, from data preprocessing to model evaluation.",
-      "link": "blog-post-1.html",
-      "content": "Machine learning projects become easier when you treat them as a workflow, not a magic trick.\n\nStart by understanding the problem, inspecting the data, cleaning missing values, and creating features that actually describe the thing you want to predict.\n\nAfter that, train a simple baseline model, measure it clearly, and improve one part at a time."
-    }
-  ]
+  "blogs": []
 }
