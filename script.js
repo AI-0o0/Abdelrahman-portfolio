@@ -367,10 +367,12 @@ function applyHomepage() {
 
   if (stats) {
     stats.innerHTML = (homepage.stats || [])
-      .map(
-        (stat) =>
-          `<div><div class="stat-val">${stat.value}</div><div class="stat-label">${stat.label}</div></div>`
-      )
+      .map((stat) => {
+        const numeric = stat.value !== "" && !isNaN(Number(stat.value));
+        return `<div><div class="stat-val"${
+          numeric ? ` data-count="${stat.value}"` : ""
+        }>${stat.value}</div><div class="stat-label">${stat.label}</div></div>`;
+      })
       .join("");
   }
 
@@ -442,9 +444,10 @@ function applyProfile() {
   if (heroName) {
     const words = profile.name.trim().split(/\s+/);
     heroName.innerHTML =
-      words.length > 2
-        ? `${words.slice(0, 2).join(" ")}<br />${words.slice(2).join(" ")}`
+      words.length > 1
+        ? `${words.slice(0, 1).join(" ")}<br />${words.slice(1).join(" ")}`
         : profile.name;
+    staggerHeroName(heroName);
   }
 
   if (heroBio) heroBio.innerHTML = profile.heroBio;
@@ -504,6 +507,41 @@ function updateProgress() {
 window.addEventListener("scroll", updateProgress, { passive: true });
 updateProgress();
 
+/* ---------------------------------------------------------------
+   HERO NAME LETTER STAGGER
+--------------------------------------------------------------- */
+function staggerHeroName(el) {
+  if (!el) return;
+  el.style.animation = "none";
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  let i = 0;
+  el.innerHTML = el.innerHTML
+    .split(/<br\s*\/?>/)
+    .map((line) =>
+      [...line]
+        .map((ch) => {
+          i += 1;
+          return `<span class="name-letter" style="animation-delay:${(
+            0.25 + i * 0.035
+          ).toFixed(3)}s">${ch === " " ? "&nbsp;" : ch}</span>`;
+        })
+        .join("")
+    )
+    .join("<br />");
+}
+
+/* ---------------------------------------------------------------
+   BACK TO TOP FAB
+--------------------------------------------------------------- */
+const backTop = document.getElementById("back-top");
+window.addEventListener(
+  "scroll",
+  () => {
+    backTop.classList.toggle("visible", window.scrollY > 480);
+  },
+  { passive: true }
+);
+
 const navLinks = document.querySelectorAll(".nav-links a");
 const sections = document.querySelectorAll("section[id]");
 
@@ -533,10 +571,12 @@ const mobileMenu = document.getElementById("mobile-menu");
 
 hamburger.addEventListener("click", () => {
   mobileMenu.classList.toggle("open");
+  hamburger.classList.toggle("open");
 });
 
 function closeMobileMenu() {
   mobileMenu.classList.remove("open");
+  hamburger.classList.remove("open");
 }
 
 /* ---------------------------------------------------------------
@@ -834,6 +874,33 @@ if (!prefersReducedMotion) {
     revealObs.observe(el);
   });
 }
+
+/* ---------------------------------------------------------------
+   HERO STATS COUNT-UP
+--------------------------------------------------------------- */
+let statsAnimated = false;
+function animateHeroStats() {
+  if (statsAnimated) return;
+  statsAnimated = true;
+  document.querySelectorAll(".stat-val[data-count]").forEach((el) => {
+    const target = parseFloat(el.dataset.count);
+    const decimals = (el.dataset.count.split(".")[1] || "").length;
+    if (prefersReducedMotion) {
+      el.textContent = el.dataset.count;
+      return;
+    }
+    const duration = 900;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target * eased).toFixed(decimals);
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}
+setTimeout(animateHeroStats, 600);
 
 async function refreshFromRemoteData() {
   const data = await loadRemoteData();
