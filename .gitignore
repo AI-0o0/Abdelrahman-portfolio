@@ -6,4 +6,6 @@ blog-editor.*
 learn/*
 
 AGENTS.md
+.gemini/
+design-system/
 

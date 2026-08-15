@@ -1,9 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /admin.html
-Disallow: /blog-editor.html
-Disallow: /admin.js
-Disallow: /blog-editor.js
+Disallow: /admin/
 Disallow: /env.js
 
-Sitemap: https://abdelrahman.is-a.dev/sitemap.xml
+Sitemap: https://ai-0o0.vercel.app/sitemap.xml

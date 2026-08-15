@@ -4,7 +4,7 @@
     "heroBio": "Computer & Data Science student at <strong>Alexandria University</strong> building <strong>AI agents, LLM applications, and RAG systems</strong>. Interested in <strong>AI research</strong>, particularly agentic AI, LLMs, and intelligent systems. Currently seeking <strong>AI/ML internships</strong> and research opportunities.",
     "aboutHtml": "<p>I'm <strong>Abdelrahman Eslam Omar</strong>, a Computer & Data Science student at <strong>Alexandria University</strong> with a strong interest in <strong>AI research and intelligent systems</strong>.</p>\n\n<p>I enjoy building <strong>AI agents, LLM applications, and RAG systems</strong>, while exploring how models, tools, memory, and retrieval can work together to create reliable AI systems.</p>",
     "email": "abdelrahmaneslamomar@gmail.com",
-    "footerText": "Built by Mohamed Elsayed"
+    "footerText": "Built by Abdelrahman Eslam"
   },
   "homepage": {
     "stats": [
@@ -219,31 +219,56 @@
   "projects": [
     {
       "id": 1,
-      "title": "Nobel Prize Winners Analysis",
-      "description": "Analyzed over 100 years of Nobel Prize data using Python, Pandas, and Seaborn to uncover trends in U.S. Nobel Prize winners.",
-      "category": "Data Science",
-      "difficulty": "Intermediate",
+      "title": "WanderPath Travel Agency MCP & AI Agent",
+      "description": "Secure Model Context Protocol (MCP) server and autonomous ReAct agent architecture for enterprise travel operations, implementing role-based authorization and human-in-the-loop confirmation.",
+      "category": "AI Agents",
+      "difficulty": "Advanced",
       "status": "Completed",
-      "icon": "AI",
+      "icon": "MCP",
       "technologies": [
         "Python",
-        "Pandas",
-        "Seaborn",
-        "Matplotlib",
-        "Jupyter"
+        "MCP Protocol",
+        "FastMCP",
+        "ReAct Agent",
+        "MySQL",
+        "Tool Calling"
       ],
       "highlights": [
-        "100+ years of data",
-        "Trend analysis",
-        "Published report"
+        "Collaborative Project",
+        "Role-Based Authorization",
+        "Human-in-the-Loop Elicitation"
       ],
-      "github": "https://github.com/AI-0o0",
+      "github": "https://github.com/AI-0o0/WanderPathA",
       "demo": ""
     },
     {
       "id": 2,
-      "title": "FIFA Player Value Prediction",
-      "description": "End-to-end ML pipeline to predict FIFA player market values and classify performance levels.",
+      "title": "Excel MCP Server",
+      "description": "An intelligent Model Context Protocol (MCP) server enabling AI assistants (Claude, Cursor, Copilot) to inspect, query, edit, and format Excel workbooks asynchronously.",
+      "category": "AI Agents",
+      "difficulty": "Advanced",
+      "status": "In Progress",
+      "icon": "MCP",
+      "technologies": [
+        "Python",
+        "MCP Protocol",
+        "FastMCP",
+        "AsyncIO",
+        "OpenPyXL",
+        "Pandas"
+      ],
+      "highlights": [
+        "Full MCP Tool Protocol",
+        "Autonomous Spreadsheet Workflows",
+        "Zero-Latency Async Execution"
+      ],
+      "github": "https://github.com/AI-0o0/excel-mcp",
+      "demo": ""
+    },
+    {
+      "id": 3,
+      "title": "FIFA Player Market Value ML Pipeline",
+      "description": "End-to-end Machine Learning pipeline achieving 96% R² score predicting football player valuations with automated domain feature engineering and cross-validated models.",
       "category": "Machine Learning",
       "difficulty": "Advanced",
       "status": "Completed",
@@ -252,37 +277,158 @@
         "Python",
         "Scikit-learn",
         "Pandas",
-        "GridSearchCV"
+        "GridSearchCV",
+        "Feature Engineering"
       ],
       "highlights": [
-        "96.0% R2",
-        "85.6% accuracy",
-        "End-to-end pipeline"
+        "96.0% R² Score",
+        "85.6% Tier Accuracy",
+        "Automated ML Pipeline"
       ],
-      "github": "https://github.com/AI-0o0",
+      "github": "https://github.com/AI-0o0/Data-science-projects",
       "demo": ""
     },
     {
-      "id": 3,
-      "title": "House Price Prediction",
-      "description": "Led a 10-member team to predict house prices with the Ames Housing dataset and linear regression from scratch.",
+      "id": 4,
+      "title": "Linear Regression Analysis From Scratch",
+      "description": "NumPy implementation of Linear Regression built from scratch, benchmarking Gradient Descent vs. Closed-Form Normal Equation with L1/L2 regularization across multiple model specifications.",
       "category": "Machine Learning",
+      "difficulty": "Intermediate",
+      "status": "Completed",
+      "icon": "MATH",
+      "technologies": [
+        "Python",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn",
+        "Vectorization",
+        "Linear Algebra"
+      ],
+      "highlights": [
+        "Vectorized Gradient Descent",
+        "Closed-Form Normal Equation",
+        "L1 / L2 Regularization"
+      ],
+      "github": "https://github.com/AI-0o0/Regression-Analysis-project-",
+      "demo": ""
+    },
+    {
+      "id": 5,
+      "title": "Greenfield MCP Agent Dispatcher",
+      "description": "Autonomous AI agent dispatcher framework using the Model Context Protocol to orchestrate multi-tool workflows, dispatch microservices, and maintain state.",
+      "category": "AI Agents",
+      "difficulty": "Advanced",
+      "status": "In Progress",
+      "icon": "AI",
+      "technologies": [
+        "Python",
+        "FastMCP",
+        "AI Agents",
+        "AsyncIO",
+        "Tool Dispatch"
+      ],
+      "highlights": [
+        "Autonomous Tool Dispatching",
+        "Multi-Tool Orchestration",
+        "Resilient Task Routing"
+      ],
+      "github": "https://github.com/AI-0o0/greenfieldA",
+      "demo": ""
+    },
+    {
+      "id": 6,
+      "title": "End-to-End Data Science Methodology",
+      "description": "Final project for Data Science Methodology at Alexandria University showcasing a complete CRISP-DM pipeline: raw data ingestion, statistical EDA, hypothesis testing, and actionable insight synthesis.",
+      "category": "Data Science",
       "difficulty": "Intermediate",
       "status": "Completed",
       "icon": "DS",
       "technologies": [
         "Python",
-        "NumPy",
         "Pandas",
         "Scikit-learn",
-        "Matplotlib"
+        "Statistical Modeling",
+        "Seaborn",
+        "EDA"
       ],
       "highlights": [
-        "Team lead",
-        "0.85 R2",
-        "From-scratch implementation"
+        "CRISP-DM Standard Pipeline",
+        "Hypothesis Testing Validation",
+        "Insight Formulation"
       ],
-      "github": "https://github.com/AI-0o0",
+      "github": "https://github.com/AI-0o0/AlexU_DSM_FinalProject",
+      "demo": ""
+    },
+    {
+      "id": 7,
+      "title": "FCDS Data Mining & Pattern Discovery",
+      "description": "Advanced data mining pipeline applying unsupervised clustering (K-Means, Hierarchical), Association Rule Mining (Apriori), and PCA dimensionality reduction on complex datasets.",
+      "category": "Data Science",
+      "difficulty": "Intermediate",
+      "status": "Completed",
+      "icon": "DM",
+      "technologies": [
+        "Python",
+        "Scikit-learn",
+        "Apriori / FP-Growth",
+        "K-Means",
+        "PCA",
+        "Pandas"
+      ],
+      "highlights": [
+        "Unsupervised Clustering",
+        "Association Rule Mining",
+        "PCA Dimensionality Reduction"
+      ],
+      "github": "https://github.com/AI-0o0/Data-Mining-FCDS-Project-",
+      "demo": ""
+    },
+    {
+      "id": 8,
+      "title": "DEPI Strategic Data Analytics & Insights",
+      "description": "Graduation data analytics project for Digital Egypt Pioneers Initiative (DEPI) extracting strategic KPI trends, predictive performance indicators, and automated visual dashboards.",
+      "category": "Data Science",
+      "difficulty": "Intermediate",
+      "status": "Completed",
+      "icon": "VIZ",
+      "technologies": [
+        "Python",
+        "Pandas",
+        "Matplotlib",
+        "Seaborn",
+        "Data Visualization",
+        "SQL"
+      ],
+      "highlights": [
+        "DEPI Graduation Project",
+        "Strategic KPI Dashboards",
+        "Statistical Trend Decomposition"
+      ],
+      "github": "https://github.com/AI-0o0/DEPI-Final-Project",
+      "demo": ""
+    },
+    {
+      "id": 9,
+      "title": "Nobel Prize 100-Year Historical Analysis",
+      "description": "Exploratory data analysis and historical trend modeling spanning over a century of Nobel Prize laureates, gender dynamics, and geographical distributions.",
+      "category": "Data Science",
+      "difficulty": "Intermediate",
+      "status": "Completed",
+      "icon": "DS",
+      "technologies": [
+        "Python",
+        "Pandas",
+        "Seaborn",
+        "Matplotlib",
+        "Jupyter",
+        "EDA"
+      ],
+      "highlights": [
+        "100+ Years of Data",
+        "Demographic Trend Analysis",
+        "Data-Driven Visualizations"
+      ],
+      "github": "https://github.com/AI-0o0/Data-science-projects",
       "demo": ""
     }
   ],
