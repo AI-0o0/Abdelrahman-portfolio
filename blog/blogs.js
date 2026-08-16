@@ -6,42 +6,21 @@
 const DEFAULT_BLOGS = [
   {
     id: 1,
-    title: "Getting Started with Machine Learning: A Practical Guide",
-    date: "2025-05-01",
-    category: "Machine Learning",
-    tags: ["Python", "Scikit-learn", "Beginners"],
-    readingTime: "8 min read",
+    title: "Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills",
+    date: "2026-08-16",
+    category: "AI Agents",
+    tags: ["AI Agents", "LLMs", "DevTools", "Best Practices", "Workflows"],
+    readingTime: "5 min read",
     summary:
-      "A beginner-friendly walkthrough of the ML workflow, from data preprocessing to model evaluation.",
-    link: "../blog-post-1.html",
-  },
-  {
-    id: 2,
-    title: "Feature Engineering Secrets That Boosted My Model to 96% R²",
-    date: "2025-04-15",
-    category: "Data Science",
-    tags: ["Feature Engineering", "Regression", "Tips"],
-    readingTime: "6 min read",
-    summary:
-      "Lessons from the FIFA player value prediction project — how log transformation and domain-driven features made all the difference.",
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "Linear Regression From Scratch with NumPy",
-    date: "2025-03-20",
-    category: "Machine Learning",
-    tags: ["NumPy", "Math", "Implementation"],
-    readingTime: "10 min read",
-    summary:
-      "Implementing gradient descent, the normal equation, and L1/L2 regularization from scratch in NumPy — and understanding the math behind them.",
-    link: "#",
+      "A practical playbook for steering LLM coding agents: task scoping, Plan Mode, context hygiene, AGENTS.md conventions, and modular skill systems.",
+    link: "../working-with-coding-agents.html",
   },
 ];
 
 const STORAGE_KEY = "portfolio.blogs";
 const CAT_BADGE_CLASS = {
   "Machine Learning": "badge-blue",
+  "AI Agents": "badge-blue",
   "Data Science": "badge-green",
   "Deep Learning": "badge-amber",
   NLP: "badge-red",
@@ -63,7 +42,12 @@ async function loadRemoteData() {
 function readStoredJson(key, fallback) {
   try {
     const value = localStorage.getItem(key);
-    return value ? JSON.parse(value) : fallback;
+    if (!value) return fallback;
+    const parsed = JSON.parse(value);
+    if (Array.isArray(parsed) && parsed.length === 0 && Array.isArray(fallback) && fallback.length > 0) {
+      return fallback;
+    }
+    return parsed;
   } catch {
     return fallback;
   }
@@ -147,7 +131,13 @@ function renderBlogs() {
   grid.innerHTML = filtered
     .map((b) => {
       const tags = (b.tags || []).map((t) => `<span class="tag"># ${t}</span>`).join("");
-      const link = b.link === "blog-post-1.html" ? "../blog-post-1.html" : b.link || "#";
+      const link = !b.link || b.link === "#"
+        ? "#"
+        : b.link.startsWith("http") || b.link.startsWith("../")
+        ? b.link
+        : b.link.startsWith("blog/")
+        ? `../${b.link}`
+        : `../${b.link}`;
 
       return `
     <article class="card blog-card">
@@ -194,9 +184,9 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 async function init() {
   renderBlogs();
   const data = await loadRemoteData();
-  if (data && data.blogs) {
+  if (data && data.blogs && Array.isArray(data.blogs) && data.blogs.length > 0) {
     REMOTE_DATA = data;
-    BLOGS = readStoredJson(STORAGE_KEY, data.blogs);
+    BLOGS = data.blogs;
     renderBlogs();
   }
 }

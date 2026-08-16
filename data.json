@@ -432,5 +432,22 @@
       "demo": ""
     }
   ],
-  "blogs": []
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills",
+      "date": "2026-08-16",
+      "category": "AI Agents",
+      "tags": [
+        "AI Agents",
+        "LLMs",
+        "DevTools",
+        "Best Practices",
+        "Workflows"
+      ],
+      "readingTime": "5 min read",
+      "summary": "A practical playbook for steering LLM coding agents: task scoping, Plan Mode, context hygiene, AGENTS.md conventions, and modular skill systems.",
+      "link": "working-with-coding-agents.html"
+    }
+  ]
 }

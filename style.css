@@ -2233,7 +2233,8 @@ footer {
 /* ============================================================
    19. BLOG STANDALONE & ARCHIVE STYLES
    ============================================================ */
-.blogs-page {
+.blogs-page,
+.projects-page {
   padding-top: calc(var(--nav-h) + var(--space-2xl));
   padding-bottom: var(--space-4xl);
 }
@@ -2251,6 +2252,46 @@ footer {
 .blogs-page-head p {
   font-size: 1.0625rem;
   color: var(--text-muted);
+}
+
+.section-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-2xl);
+}
+
+.btn-see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  min-height: 44px;
+}
+
+.btn-see-all:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-see-all svg {
+  transition: transform var(--transition-fast);
+}
+
+.btn-see-all:hover svg {
+  transform: translateX(4px);
 }
 
 .blog-page {
@@ -2336,6 +2377,183 @@ footer {
   font-size: 0.8125rem;
   overflow-x: auto;
   border: 1px solid var(--border);
+}
+
+.blog-article-body :not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--bg-subtle);
+  color: var(--accent);
+  padding: 2px 7px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border);
+}
+
+.blog-article-body ul,
+.blog-article-body ol {
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog-article-body li {
+  line-height: 1.7;
+}
+
+.blog-article-body strong {
+  color: var(--text);
+}
+
+.blog-callout {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  padding: 14px 18px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+/* ============================================================
+   LANGUAGE SWITCHER & ARABIC (EGYPTIAN) TYPOGRAPHY
+   ============================================================ */
+.lang-switch-wrap {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 3px;
+  gap: 2px;
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-height: 28px;
+}
+
+.lang-btn:hover {
+  color: var(--text);
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.blog-lang-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.blog-lang-bar .blog-back-link {
+  margin-bottom: 0;
+}
+
+/* RTL Mode for Arabic (Egyptian Dialect) */
+[data-lang="ar"] .blog-article {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Tajawal', 'Almarai', 'Cairo', var(--font-sans);
+}
+
+[data-lang="ar"] .blog-article-head h1 {
+  font-family: 'Cairo', 'Almarai', sans-serif;
+  line-height: 1.45;
+  font-weight: 800;
+  letter-spacing: normal;
+}
+
+[data-lang="ar"] .blog-article-head p {
+  font-family: 'Tajawal', 'Almarai', sans-serif;
+  line-height: 1.75;
+  font-size: 1.125rem;
+  letter-spacing: normal;
+}
+
+[data-lang="ar"] .blog-article-body {
+  font-family: 'Tajawal', 'Almarai', sans-serif;
+  line-height: 1.95;
+  font-size: 1.125rem;
+  letter-spacing: normal;
+}
+
+[data-lang="ar"] .blog-article-body h2 {
+  font-family: 'Cairo', 'Almarai', sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+[data-lang="ar"] .blog-article-body h3 {
+  font-family: 'Cairo', 'Almarai', sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+[data-lang="ar"] .blog-article-body ul,
+[data-lang="ar"] .blog-article-body ol {
+  padding-left: 0;
+  padding-right: 26px;
+}
+
+[data-lang="ar"] .blog-article-body pre {
+  direction: rtl;
+  text-align: right;
+  font-family: 'JetBrains Mono', 'Tajawal', 'Almarai', monospace;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+[data-lang="ar"] .blog-article-body pre code {
+  direction: rtl;
+  text-align: right;
+  display: block;
+  font-family: inherit;
+}
+
+[data-lang="ar"] .blog-article-body :not(pre) > code {
+  direction: ltr;
+  display: inline-block;
+  unicode-bidi: embed;
+}
+
+[data-lang="ar"] .blog-callout {
+  border-left: none;
+  border-right: 4px solid var(--accent);
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+  font-family: 'Tajawal', 'Almarai', sans-serif;
+  line-height: 1.8;
+}
+
+[data-lang="ar"] .blog-article-meta {
+  direction: rtl;
+  font-family: 'Tajawal', var(--font-mono);
+}
+
+[data-lang="ar"] .blog-tags {
+  direction: rtl;
+}
+
+[data-lang="ar"] .blog-tags .tag {
+  font-family: 'Tajawal', 'Almarai', sans-serif;
 }
 
 /* ============================================================

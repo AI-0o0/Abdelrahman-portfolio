@@ -307,36 +307,14 @@ const DEFAULT_PROJECTS = [
 const DEFAULT_BLOGS = [
   {
     id: 1,
-    title: "Getting Started with Machine Learning: A Practical Guide",
-    date: "2025-05-01",
-    category: "Machine Learning",
-    tags: ["Python", "Scikit-learn", "Beginners"],
-    readingTime: "8 min read",
+    title: "Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills",
+    date: "2026-08-16",
+    category: "AI Agents",
+    tags: ["AI Agents", "LLMs", "DevTools", "Best Practices", "Workflows"],
+    readingTime: "5 min read",
     summary:
-      "A beginner-friendly walkthrough of the ML workflow — from data preprocessing to model evaluation — using real-world examples in Python.",
-    link: "blog-post-1.html",
-  },
-  {
-    id: 2,
-    title: "Feature Engineering Secrets That Boosted My Model to 96% R²",
-    date: "2025-04-15",
-    category: "Data Science",
-    tags: ["Feature Engineering", "Regression", "Tips"],
-    readingTime: "6 min read",
-    summary:
-      "Lessons from the FIFA player value prediction project — how log transformation and domain-driven features made all the difference.",
-    link: "blog/index.html",
-  },
-  {
-    id: 3,
-    title: "Linear Regression From Scratch with NumPy",
-    date: "2025-03-20",
-    category: "Machine Learning",
-    tags: ["NumPy", "Math", "Implementation"],
-    readingTime: "10 min read",
-    summary:
-      "Implementing gradient descent, the normal equation, and L1/L2 regularization from scratch in NumPy — and understanding the math behind them.",
-    link: "blog/index.html",
+      "A practical playbook for steering LLM coding agents: task scoping, Plan Mode, context hygiene, AGENTS.md conventions, and modular skill systems.",
+    link: "working-with-coding-agents.html",
   },
 ];
 
@@ -369,7 +347,12 @@ async function loadRemoteData() {
 function readStoredJson(key, fallback) {
   try {
     const value = localStorage.getItem(key);
-    return value ? JSON.parse(value) : fallback;
+    if (!value) return fallback;
+    const parsed = JSON.parse(value);
+    if (Array.isArray(parsed) && parsed.length === 0 && Array.isArray(fallback) && fallback.length > 0) {
+      return fallback;
+    }
+    return parsed;
   } catch (error) {
     console.warn(`Could not read ${key} from localStorage`, error);
     return fallback;
@@ -759,6 +742,7 @@ let blogCategory = "All";
 function renderProjects() {
   const searchEl = document.getElementById("project-search");
   const grid = document.getElementById("projects-grid");
+  const moreContainer = document.getElementById("projects-more");
   if (!grid) return;
 
   const search = searchEl ? searchEl.value.toLowerCase().trim() : "";
@@ -774,10 +758,14 @@ function renderProjects() {
 
   if (filtered.length === 0) {
     grid.innerHTML = '<div class="no-results">No projects match your search criteria.</div>';
+    if (moreContainer) moreContainer.innerHTML = "";
     return;
   }
 
-  grid.innerHTML = filtered
+  // Display at most 3 projects on homepage
+  const displayed = filtered.slice(0, 3);
+
+  grid.innerHTML = displayed
     .map((p) => {
       const techTags = (p.technologies || []).map((t) => `<span class="tag">${t}</span>`).join("");
       const highlights = (p.highlights || [])
@@ -823,6 +811,23 @@ function renderProjects() {
       </div>`;
     })
     .join("");
+
+  if (moreContainer) {
+    if (filtered.length > 3 || PROJECTS.length > 3) {
+      moreContainer.innerHTML = `
+        <div class="section-more-wrap">
+          <a href="projects/index.html" class="btn-see-all">
+            <span>See all projects (${PROJECTS.length})</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>`;
+    } else {
+      moreContainer.innerHTML = "";
+    }
+  }
 }
 
 function setProjectFilter(btn) {
@@ -878,6 +883,7 @@ function renderTimeline(items, containerSelector, fallbackIcon = "briefcase") {
 function renderBlogs() {
   const searchEl = document.getElementById("blog-search");
   const grid = document.getElementById("blog-grid");
+  const moreContainer = document.getElementById("blog-more");
   if (!grid) return;
 
   const search = searchEl ? searchEl.value.toLowerCase().trim() : "";
@@ -895,11 +901,14 @@ function renderBlogs() {
 
   if (filtered.length === 0) {
     grid.innerHTML = '<div class="no-results">No articles match your search criteria.</div>';
+    if (moreContainer) moreContainer.innerHTML = "";
     return;
   }
 
-  grid.innerHTML = filtered
-    .slice(0, 3)
+  // Display at most 3 blogs on homepage
+  const displayed = filtered.slice(0, 3);
+
+  grid.innerHTML = displayed
     .map((b) => {
       const tags = (b.tags || []).map((t) => `<span class="tag"># ${t}</span>`).join("");
       const formattedDate = new Date(b.date).toLocaleDateString("en-US", {
@@ -932,6 +941,23 @@ function renderBlogs() {
       </article>`;
     })
     .join("");
+
+  if (moreContainer) {
+    if (filtered.length > 3 || allBlogs.length > 3) {
+      moreContainer.innerHTML = `
+        <div class="section-more-wrap">
+          <a href="blog/index.html" class="btn-see-all">
+            <span>See all articles (${allBlogs.length})</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>`;
+    } else {
+      moreContainer.innerHTML = "";
+    }
+  }
 }
 
 function setBlogFilter(btn) {
@@ -1030,8 +1056,17 @@ async function refreshFromRemoteData() {
   if (!data) return;
 
   REMOTE_DATA = data;
-  PROJECTS = readStoredJson(STORAGE_KEYS.projects, data.projects || DEFAULT_PROJECTS);
-  BLOGS = readStoredJson(STORAGE_KEYS.blogs, data.blogs || DEFAULT_BLOGS);
+  if (data.projects && Array.isArray(data.projects) && data.projects.length > 0) {
+    PROJECTS = data.projects;
+  } else {
+    PROJECTS = readStoredJson(STORAGE_KEYS.projects, DEFAULT_PROJECTS);
+  }
+
+  if (data.blogs && Array.isArray(data.blogs) && data.blogs.length > 0) {
+    BLOGS = data.blogs;
+  } else {
+    BLOGS = readStoredJson(STORAGE_KEYS.blogs, DEFAULT_BLOGS);
+  }
 
   applyProfile();
   applyHomepage();

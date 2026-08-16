@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237C3AED'/%3E%3Ctext x='16' y='22' font-family='ui-monospace,monospace' font-size='16' font-weight='bold' fill='%23FFFFFF' text-anchor='middle'%3EAE%3C/text%3E%3C/svg%3E"
+    />
+    <meta
+      name="description"
+      content="A practical guide to working effectively with AI coding agents: task scoping, Plan Mode, context hygiene, AGENTS.md conventions, and modular skill systems."
+    />
+    <meta name="author" content="Abdelrahman Eslam Omar" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ai-0o0.vercel.app/working-with-coding-agents.html" />
+    <link rel="alternate" hreflang="x-default" href="https://ai-0o0.vercel.app/working-with-coding-agents.html" />
+    <meta
+      property="og:title"
+      content="Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills | Abdelrahman Eslam"
+    />
+    <meta
+      property="og:description"
+      content="A practical guide to working effectively with AI coding agents: task scoping, Plan Mode, context hygiene, AGENTS.md conventions, and modular skill systems."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ai-0o0.vercel.app/working-with-coding-agents.html" />
+    <meta property="og:site_name" content="Abdelrahman Eslam" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://ai-0o0.vercel.app/img/og-img.png" />
+    <meta
+      property="og:image:alt"
+      content="Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="article:published_time" content="2026-08-16" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills | Abdelrahman Eslam"
+    />
+    <meta
+      name="twitter:description"
+      content="A practical guide to working effectively with AI coding agents: task scoping, Plan Mode, context hygiene, AGENTS.md conventions, and modular skill systems."
+    />
+    <meta name="twitter:image" content="https://ai-0o0.vercel.app/img/og-img.png" />
+    <meta name="twitter:url" content="https://ai-0o0.vercel.app/working-with-coding-agents.html" />
+    <title>Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills | Abdelrahman Eslam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills",
+        "description": "A practical guide to working effectively with AI coding agents: task scoping, Plan Mode, context hygiene, AGENTS.md conventions, and modular skill systems.",
+        "author": {
+          "@type": "Person",
+          "name": "Abdelrahman Eslam Omar"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Abdelrahman Eslam Omar"
+        },
+        "datePublished": "2026-08-16",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://ai-0o0.vercel.app/working-with-coding-agents.html"
+        },
+        "image": ["https://ai-0o0.vercel.app/img/og-img.png"],
+        "inLanguage": "en"
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav id="nav" class="scrolled">
+        <div class="nav-inner">
+          <a href="index.html#hero" class="nav-logo" aria-label="Abdelrahman Eslam Homepage">
+            <div class="nav-logo-monogram" aria-hidden="true">AE</div>
+            <span>Abdelrahman<span class="dot">.</span></span>
+          </a>
+
+          <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="projects/index.html">Projects</a></li>
+            <li><a href="index.html#research">Research</a></li>
+            <li><a href="blog/index.html" class="active">All Blogs</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+
+          <div class="nav-right">
+            <button id="theme-btn" aria-label="Toggle dark and light mode">
+              <svg id="theme-icon-sun" class="hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg id="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+            <a href="index.html#blog" class="btn btn-outline btn-sm">← Back to Portfolio</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="blog-page">
+      <article class="blog-article">
+        <!-- Top Bar with Back Link & Dialect Switcher -->
+        <div class="blog-lang-bar">
+          <a class="blog-back-link" id="blog-back-link" href="blog/index.html">← Back to all posts</a>
+          
+          <div class="lang-switch-wrap" role="group" aria-label="Article Language">
+            <button id="article-lang-en" class="lang-btn active" onclick="setLanguage('en')">
+              <span>🇬🇧</span> English
+            </button>
+            <button id="article-lang-ar" class="lang-btn" onclick="setLanguage('ar')">
+              <span>🇪🇬</span> اللهجة المصرية
+            </button>
+          </div>
+        </div>
+
+        <!-- ============================================================
+             ENGLISH VERSION
+             ============================================================ -->
+        <div id="blog-content-en">
+          <header class="blog-article-head">
+            <div class="blog-article-meta">
+              <span class="badge badge-blue">AI Agents</span>
+              <span>August 16, 2026</span>
+              <span>5 min read</span>
+            </div>
+            <h1>Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills</h1>
+            <p>
+              A practical playbook for steering LLM coding agents: scoped planning, context steering, persistent instruction files, and reusable verification skills.
+            </p>
+            <div class="blog-tags">
+              <span class="tag"># AI Agents</span>
+              <span class="tag"># LLMs</span>
+              <span class="tag"># DevTools</span>
+              <span class="tag"># Best Practices</span>
+              <span class="tag"># Workflows</span>
+            </div>
+          </header>
+
+          <div class="blog-article-body">
+            <p>
+              Working with modern AI coding agents (such as Claude Code, OpenCode, Codex, and Antigravity) is less about typing magic prompts and more about engineering clear constraints, maintaining clean context, and building reusable workflows.
+            </p>
+
+            <p>
+              When developers struggle with coding agents hallucinating or breaking existing features, the culprit is almost always unbounded scope, noisy context windows, or missing project instructions. Here are the core habits and tools to get consistent, reliable results from your agent.
+            </p>
+
+            <h2>Two Core Habits for Working with Agents</h2>
+
+            <h3>1. Scope the Work</h3>
+            <p>
+              AI models perform best when solving well-defined, modular problems. Giving an agent an open-ended goal like <em>"refactor our auth system and fix all bugs"</em> invites assumptions and unneeded churn.
+            </p>
+
+            <ul>
+              <li><strong>Break tasks into small, clear steps:</strong> Divide features into discrete chunks—such as writing a schema first, implementing the backend handler next, and adding client wiring last.</li>
+              <li><strong>Use Plan Mode:</strong> It’s there for a reason :) Plan mode forces the agent to research files, verify assumptions, and propose a concrete step-by-step roadmap before making destructive edits.</li>
+              <li><strong>Review and update the plan:</strong> Don’t passively let the model assume architecture decisions. Inspect the generated plan, adjust steps, correct constraints, and sign off before code is written.</li>
+            </ul>
+
+            <pre><code># Example: Scoping a feature request with clear checkpoints
+Step 1: Inspect `src/auth/jwt.ts` and verify token expiration handling.
+Step 2: Add refresh token rotation function in `src/auth/service.ts`.
+Step 3: Update unit tests in `test/auth.test.ts` and verify with `npm test`.</code></pre>
+
+            <h3>2. Steer the Model &amp; Maintain Context Hygiene</h3>
+            <p>
+              The quality of an LLM’s output is directly tied to the cleanliness of its context window. A cluttered context containing multiple failed attempts confuses the model and degrades reasoning.
+            </p>
+
+            <ul>
+              <li><strong>Use compaction wisely:</strong> Compaction and summarization help reduce context size, but they can also strip away crucial edge-case details or file paths. Compact intentionally when moving between major milestones.</li>
+              <li><strong>Add clear, proactive instructions:</strong> Provide explicit guardrails upfront to prevent the model from drifting into unwanted refactors or library additions.</li>
+              <li><strong>The Undo / Rewind Rule:</strong> If the model makes a mistake or heads in the wrong direction, <em>undo/rewind instead of asking it to fix its own mistake</em>. Asking a model to debug its hallucination in the same thread pollutes context with bad code. Rewind to before the mistake, refine your prompt with the missing instruction, and rerun.</li>
+            </ul>
+
+            <div class="blog-callout">
+              <strong>Key Rule:</strong> A cleaner context usually means better accuracy. Don’t hesitate to reset or rewind when a thread gets noisy.
+            </div>
+
+            <h2>Persistent Project Instructions: AGENTS.md</h2>
+            <p>
+              Rather than re-typing coding guidelines in every conversation, use a persistent instruction file placed at the root of your repository. This file serves as the single source of truth for agent behavior across your project.
+            </p>
+
+            <p>
+              Different coding agents look for specific filenames, but the underlying concept is identical:
+            </p>
+
+            <ul>
+              <li><strong>Claude Code</strong> &rarr; <code>CLAUDE.md</code></li>
+              <li><strong>Codex / OpenCode / Antigravity</strong> &rarr; <code>AGENTS.md</code></li>
+            </ul>
+
+            <p>
+              These instruction files help the model instantly understand your project structure, conventions, build/test commands, and overall technical direction without guessing.
+            </p>
+
+            <h3>Modularizing Large Instruction Files</h3>
+            <p>
+              If your instruction file gets too long, split the instructions into dedicated sub-files—such as <code>styling.md</code>, <code>architecture.md</code>, or <code>api-rules.md</code>—and reference them from the main instruction file. You can name these files whatever makes sense for your team.
+            </p>
+
+            <p>
+              You can also reuse these modular files across future projects—for instance, standard rules for a specific framework, package manager workflow, or coding convention.
+            </p>
+
+            <h3>Be Specific with Actionable Rules</h3>
+            <p>
+              Avoid vague phrases like <em>“write clean code”</em> or <em>“follow best practices”</em>—the model cannot read your mind. Instead, provide concrete, enforceable rules:
+            </p>
+
+            <ul>
+              <li><strong>Specific naming conventions:</strong> e.g., <em>“Use snake_case for Python helper functions and PascalCase for React components.”</em></li>
+              <li><strong>Function length:</strong> e.g., <em>“Keep functions small and focused (&lt; 40 lines where feasible).”</em></li>
+              <li><strong>Prohibited patterns:</strong> e.g., <em>“Never use `any` in TypeScript; do not introduce external styling libraries.”</em></li>
+              <li><strong>Style constraints:</strong> e.g., <em>“Don’t use emojis in code comments or log statements.”</em></li>
+              <li><strong>Commit conventions:</strong> e.g., <em>“Write meaningful conventional commit messages (e.g., `feat(auth): ...`).”</em></li>
+            </ul>
+
+            <pre><code># Example AGENTS.md / CLAUDE.md snippet
+
+## Project Conventions
+- Framework: Vanilla HTML5 / CSS / ES6 JavaScript (No React, no build steps).
+- State: Single source of truth is `data.json`. Always update `data.json`, never hardcoded constants.
+- Code Style: Small focused functions, semantic HTML5 tags, 2-space indentation.
+- Anti-patterns: Do not add external npm packages unless explicitly approved.
+- Verification: Always verify layout across dark and light modes before completing tasks.</code></pre>
+
+            <p>
+              <strong>Keep instructions up to date:</strong> As your codebase evolves, prune rules that are no longer relevant. If you notice the model repeatedly making the same mistake, immediately codify a clear rule to prevent it in the future.
+            </p>
+
+            <h2>Scaling Workflows with Skills</h2>
+            <p>
+              If you find yourself guiding an agent through the same multi-step workflow over and over, <strong>Skills</strong> make those tasks faster, more deterministic, and consistent.
+            </p>
+
+            <p>
+              You can build custom skills tailored to your repository or leverage pre-made community skills for standard operations (such as database migrations, API testing, or documentation audits).
+            </p>
+
+            <h3>The Verification Skill</h3>
+            <p>
+              A <strong>verification skill</strong> is particularly powerful. It guides the model through a disciplined checklist—running linters, checking edge cases, executing test suites, and confirming output criteria—before marking any task as complete.
+            </p>
+
+            <h3>Context Optimization: `reference.md` alongside `SKILL.md`</h3>
+            <p>
+              To keep your primary skill file lean, place a <code>reference.md</code> next to <code>SKILL.md</code>. Instruct the model to read the reference file only when it encounters specific complex scenarios. This keeps the active context compact and avoids token bloat during routine execution.
+            </p>
+
+            <h3>Executable Scripts in Skills</h3>
+            <p>
+              You can package executable scripts (such as Python validation scripts or shell helpers) inside a skill. When an agent needs to perform a complex transformation or check schema integrity, executing a script guarantees 100% deterministic accuracy without LLM calculation errors.
+            </p>
+
+            <pre><code># Skill Directory Structure
+.skills/
+  deploy-verifier/
+    SKILL.md          # Core workflow instructions and checklist
+    reference.md      # Detailed deployment edge cases and error codes (read on-demand)
+    scripts/
+      check_health.py # Executable health check script run by the agent</code></pre>
+
+            <h2>Summary Checklist</h2>
+            <ol>
+              <li><strong>Plan First:</strong> Scope tasks into bite-sized units; review the plan before execution.</li>
+              <li><strong>Keep Context Clean:</strong> Rewind and re-prompt on mistakes rather than chaining error fixes.</li>
+              <li><strong>Codify Rules:</strong> Maintain an active <code>AGENTS.md</code> / <code>CLAUDE.md</code> with concrete, specific constraints.</li>
+              <li><strong>Automate with Skills:</strong> Turn repetitive workflows and verification checklists into reusable skills.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- ============================================================
+             EGYPTIAN ARABIC VERSION (اللهجة المصرية الدارجة)
+             ============================================================ -->
+        <div id="blog-content-ar" class="hidden">
+          <header class="blog-article-head">
+            <div class="blog-article-meta">
+              <span class="badge badge-blue">AI Agents</span>
+              <span>١٦ أغسطس ٢٠٢٦</span>
+              <span>٥ دقائق قراءة</span>
+            </div>
+            <h1>إزاي تتعامل مع الـ AI Coding Agents صح: عادات مهمة، ملف AGENTS.md، والـ Skills</h1>
+            <p>
+              دليل عملي يخليك تسيطر على الـ Coding Agents وتطلع كود سليم: تقسم الشغل صح، تحافظ على الـ Context نضيف، وتستغل الـ AGENTS.md والـ Skills.
+            </p>
+            <div class="blog-tags">
+              <span class="tag"># AI_Agents</span>
+              <span class="tag"># LLMs</span>
+              <span class="tag"># هندسة_البرمجيات</span>
+              <span class="tag"># نصائح_برمجة</span>
+              <span class="tag"># Workflows</span>
+            </div>
+          </header>
+
+          <div class="blog-article-body">
+            <p>
+              الشغل مع الـ AI Coding Agents الحديثة (زي Claude Code و OpenCode و Codex و Antigravity) مش مجرد إنك ترميله برومت وتتمنى خير.. الموضوع كله عبارة عن إنك تحط شروط وقيود واضحة (Constraints)، تحافظ على الـ Context نضيف ومركز، وتعمل Workflows متجربة تقدر تعيد استخدامها.
+            </p>
+
+            <p>
+              لما بتلاقي ناس بتشتكي إن الـ Agent بيهلوس، بيكتب كود مش شغال، أو بيبوظ أجزاء تانية في المشروع، السبب في أغلب الأوقات بيكون: التاسك مفتوحة بزيادة ومش متحددة، الـ Context اتزحم أخطاء ولف ودوران، أو مفيش ملف تعليمات صريح يفهمه نظام المشروع.
+            </p>
+
+            <h2>عادتين أساسيين لازم تتعود عليهم مع أي Agent</h2>
+
+            <h3>١. حدد نطاق الشغل كويس (Scope the work)</h3>
+            <p>
+              نماذج الذكاء الاصطناعي بتشتغل بأعلى كفاءة لما تديلها مشكلة محددة ومفصولة. لو دخلت قولتله <em>"ظبطلي نظام الـ Auth وحل المشاكل اللي في السيستم"</em>، انت كده بتفتح الباب للافتراضات واللخبطة.
+            </p>
+
+            <ul>
+              <li><strong>قسّم التاسك لخطوات صغيرة ومحددة:</strong> قسّم الميزة الكبيرة لمراحل — مثلاً يكتب الـ Schema الأول، بعدها يكتب الـ Backend Service، وفي الآخر يربط الـ Frontend.</li>
+              <li><strong>استخدم الـ Plan Mode:</strong> الـ Plan Mode مش محطوط ديكور :) المود ده بيجبر الـ Agent يفحص الملفات الأول، يتأكد من معمارية المشروع، ويقترح عليك خطة خطوة بخطوة قبل ما يعدل في الكود الحقيقي.</li>
+              <li><strong>راجع الخطة وعدلها بنفسك:</strong> ماتسيبش الموديل يقرر كل حاجة بمزاجه. اقرأ الخطة المقترحة، عدل أي خطوة مش عجباك، حط شروطك، وبعد ما توافق خليه يبدأ كتابة الكود.</li>
+            </ul>
+
+            <pre><code># مثال: تقسيم طلب الميزة لخطوات واضحة وقابلة للتنفيذ
+الخطوة ١: افحص ملف `src/auth/jwt.ts` وتأكد من مدة صلاحية الـ Token.
+الخطوة ٢: ضيف فانكشن لتدوير الـ Refresh Token في `src/auth/service.ts`.
+الخطوة ٣: حدّث اختبارات الـ Unit Tests في `test/auth.test.ts` واتأكد بـ `npm test`.</code></pre>
+
+            <h3>٢. وجّه الموديل وحافظ على الـ Context نضيف (Steer the model)</h3>
+            <p>
+              جودة إجابات الموديل معتمدة بنسبة ١٠٠٪ على نظافة الـ Context Window. لما المحادثة بتتملى كود بايظ ومحاولات تصليح فاشلة، الموديل بيتشتت ودقته بتقل جداً.
+            </p>
+
+            <ul>
+              <li><strong>استخدم الـ Compaction بحذر:</strong> تلخيص المحادثة (Compaction) بيوفر مساحة وتوكنز، بس خلي بالك إنه ممكن يمسح تفاصيل مهمة ومسارات ملفات دقيقة. استخدمه بوعي بين المراحل الكبيرة.</li>
+              <li><strong>حط تعليمات استباقية واضحة:</strong> عرفه من البداية المسموح والممنوع عشان تمنعه يسرح ويضيف مكتبات جديدة أو يغير بنية الكود بدون إذن.</li>
+              <li><strong>قاعدة الـ Undo / Rewind (أهم قاعدة):</strong> لو الموديل عمل غلطة أو مشي في سكة غلط، <em>اعمل Undo/Rewind وارجع للنقطة اللي قبل الغلطة بدل ما تقعد تخليه يصلح غلطته في نفس الشات</em>. تصليح الغلط في نفس المحادثة بيملى الـ Context عك. ارجع خطوة لورا، عدل الـ Prompt ووضحله اللي فاته، وشغله تاني.</li>
+            </ul>
+
+            <div class="blog-callout">
+              <strong>قاعدة دهبية:</strong> كل ما الـ Context كان نضيف ومركز، كل ما دقة الموديل في كتابة الكود كانت أعلى بمراحل.
+            </div>
+
+            <h2>التعليمات الدائمة للمشروع: ملف AGENTS.md</h2>
+            <p>
+              بدل ما تقعد تعيد وتزيد نفس التعليمات والقواعد في كل برومت أو شات جديد، حط ملف تعليمات دائم في الـ Root بتاع المشروع. الملف ده بيكون المرجع الأساسي اللي الـ Agent بيقرأه أول ما يشتغل.
+            </p>
+
+            <p>
+              الأدوات المختلفة بتستخدم أسماء ملفات مختلفة، بس الفكرة واحدة تماماً:
+            </p>
+
+            <ul>
+              <li><strong>Claude Code</strong> &rarr; <code>CLAUDE.md</code></li>
+              <li><strong>Codex / OpenCode / Antigravity</strong> &rarr; <code>AGENTS.md</code></li>
+            </ul>
+
+            <p>
+              الملف ده بيخلي الموديل يفهم معمارية المشروع، الفريموورك المستخدم، أوامر الرن والتست، والستايل المتبع من غير ما يخمن.
+            </p>
+
+            <h3>تقسيم ملف التعليمات لو كبر منك</h3>
+            <p>
+              لو لقيت ملف التعليمات كبر وبقى طويل، قسمه لملفات فرعية منفصلة — زي <code>styling.md</code> أو <code>architecture.md</code> أو <code>api-rules.md</code> — واعملهم Reference من الملف الأساسي.
+            </p>
+
+            <p>
+              كمان ميزة الملفات دي إنك تقدر تنقلها وتعيد استخدامها في مشاريعك الجاية (مثلاً ملف تعليمات لمكتبة معينة، أو قواعد ستايل الكود).
+            </p>
+
+            <h3>خليك محدد بلاش كلام عايم</h3>
+            <p>
+              بلاش تكتبله كلام عام زي <em>"اكتب كود نضيف"</em> أو <em>"اتبع أحسن الممارسات"</em>.. الموديل مش هيقرأ دماغك. بدالها اديله قواعد واضحة ومباشرة:
+            </p>
+
+            <ul>
+              <li><strong>قواعد التسمية:</strong> مثلاً <em>"استخدم snake_case لفانكشنز بايثون و PascalCase لمكونات React."</em></li>
+              <li><strong>حجم الفانكشن:</strong> مثلاً <em>"خلي الفانكشن صغيرة ومركّزة في وظيفة واحدة (أقل من ٤٠ سطر)."</em></li>
+              <li><strong>الممنوعات:</strong> مثلاً <em>"ممنوع استخدام `any` في TypeScript، وممنوع إضافة مكتبات CSS خارجية."</em></li>
+              <li><strong>الكومنتات:</strong> مثلاً <em>"ممنوع استخدام الإيموجيز في الكود أو الكومنتات."</em></li>
+              <li><strong>رسائل الـ Commit:</strong> مثلاً <em>"اكتب رسالة Commit احترافية وواضحة."</em></li>
+            </ul>
+
+            <pre><code># مثال من ملف AGENTS.md / CLAUDE.md حقيقي
+
+## قواعد ومعايير المشروع
+- الفريموورك: Vanilla HTML5 / CSS / ES6 JavaScript (بدون React وبدون Build Step).
+- مصدر البيانات: الملف الأساسي هو `data.json` دايماً، ممنوع تعديل الثوابت اليدوية.
+- ستايل الكود: فانكشنز صغيرة، عناصر HTML5 دلالية، مسافتين Indentation.
+- الممنوعات: ممنوع تثبيت مكتبات npm إلا بموافقة صريحة.
+- المراجعة: اتأكد دايماً إن التصميم شغال ومظبوط في الـ Dark Mode والـ Light Mode.</code></pre>
+
+            <p>
+              <strong>حافظ على الملف محدث دايماً:</strong> مع تطور المشروع، امسح القواعد اللي مبقتش لازمة. وأول ما تلاحظ إن الموديل بيكرر نفس الغلطة، ادخل ضيف قاعدة صريحة في الملف تمنع تكرار الغلطة دي تاني.
+            </p>
+
+            <h2>تسهيل الشغل وتكراره بالـ Skills</h2>
+            <p>
+              لو لاحظت إنك بتعمل نفس الـ Workflow والخطوات كذا مرة، الـ <strong>Skills</strong> معمولة عشان تخلي الشغل ده أسرع، أدق، وموثوق جداً.
+            </p>
+
+            <p>
+              تقدر تبني Skills مخصصة لمشروعك، أو تستخدم Skills جاهزة من المجتمع (زي إدارة الداتابيز، اختبارات الـ API، أو توثيق الكود).
+            </p>
+
+            <h3>مهارة المراجعة والتأكيد (Verification Skill)</h3>
+            <p>
+              الـ <strong>Verification Skill</strong> من أهم المهارات اللي ممكن تعملها. وظيفتها إنها تطلب من الموديل يعدي على قائمة مراجعة صارمة  يرن الـ Linters، يفحص الـ Edge Cases، يرن التستات، ويتأكد إن الناتج مطابق للمعايير قبل ما يقولك إنه خلص التاسك.
+            </p>
+
+            <h3>توفير الـ Context: حط `reference.md` جنب `SKILL.md`</h3>
+            <p>
+              عشان ملف المهارة الأساسي يفضل صغير، حط التفاصيل التقيلة والأمثلة في ملف <code>reference.md</code> جنبه. واطلب من الموديل ما يقرأش ملف الـ Reference إلا لو واجه حالة خاصة أو معقدة. ده بيوفر مساحة كبيرة في الـ Context Window.
+            </p>
+
+            <h3>إضافة سكريبتات قابلة للتنفيذ في الـ Skill</h3>
+            <p>
+              تقدر ترفق Scripts (بايثون أو باش) جوه المهارة. لما الـ Agent يحتاج ينفذ عملية حسابية أو فحص دقيق للداتابيز، إنه يرن سكريبت بيضمن دقة ١٠٠٪ بدون أي فرصة للهلوسة أو الغلط.
+            </p>
+
+            <pre><code># هيكل مجلد الـ Skill
+.skills/
+  deploy-verifier/
+    SKILL.md          # التعليمات الأساسية وقائمة المراجعة
+    reference.md      # تفاصيل الأخطاء وحالات خاصة (يُقرأ عند الحاجة فقط)
+    scripts/
+      check_health.py # سكريبت فحص حقيقي الموديل بيرنه بنفسه</code></pre>
+
+            <h2>ملخص الزتونة (Summary)</h2>
+            <ol>
+              <li><strong>خطط الأول:</strong> قسّم التاسك لخطوات صغيرة، واستخدم الـ Plan Mode عشان تراجع الخطة قبل التنفيذ.</li>
+              <li><strong>حافظ على نظافة الـ Context:</strong> استخدم الـ Undo وعدّل البرومت بدل ما تخليه يرقع غلطاته في نفس الشات.</li>
+              <li><strong>اكتب قواعد واضحة:</strong> جهّز ملف <code>AGENTS.md</code> / <code>CLAUDE.md</code> بقواعد صريحة ومحددة.</li>
+              <li><strong>استغل الـ Skills:</strong> حول الخطوات المتكررة وفحوصات الجودة لـ Skills قابلة لإعادة الاستخدام.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <a href="index.html#hero" class="footer-logo">Abdelrahman <span>Eslam</span></a>
+          <div class="footer-bottom">
+            <span>Built by Abdelrahman Eslam &copy; <span id="year"></span></span>
+            <a href="index.html#hero" class="back-top">↑ Back to top</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      /* Theme Logic */
+      const html = document.documentElement;
+      const themeBtn = document.getElementById("theme-btn");
+      const iconSun = document.getElementById("theme-icon-sun");
+      const iconMoon = document.getElementById("theme-icon-moon");
+
+      function updateThemeIcons(isDark) {
+        if (iconSun && iconMoon) {
+          if (isDark) {
+            iconSun.classList.remove("hidden");
+            iconMoon.classList.add("hidden");
+          } else {
+            iconSun.classList.add("hidden");
+            iconMoon.classList.remove("hidden");
+          }
+        }
+      }
+
+      function initTheme() {
+        const saved = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const isDark = saved ? saved === "dark" : prefersDark;
+        html.setAttribute("data-theme", isDark ? "dark" : "light");
+        updateThemeIcons(isDark);
+      }
+
+      themeBtn.addEventListener("click", () => {
+        const isDark = html.getAttribute("data-theme") === "dark";
+        const next = isDark ? "light" : "dark";
+        html.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+        updateThemeIcons(next === "dark");
+      });
+
+      initTheme();
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      /* Language Switcher Logic */
+      function setLanguage(lang) {
+        const enContent = document.getElementById("blog-content-en");
+        const arContent = document.getElementById("blog-content-ar");
+        const backLink = document.getElementById("blog-back-link");
+
+        const articleBtnEn = document.getElementById("article-lang-en");
+        const articleBtnAr = document.getElementById("article-lang-ar");
+
+        const isAr = lang === "ar";
+
+        // Toggle visibility
+        if (enContent) enContent.classList.toggle("hidden", isAr);
+        if (arContent) arContent.classList.toggle("hidden", !isAr);
+
+        // Update body attribute for scoped RTL & font styles
+        document.body.setAttribute("data-lang", lang);
+        html.setAttribute("lang", lang);
+
+        // Update button states
+        if (articleBtnEn) articleBtnEn.classList.toggle("active", !isAr);
+        if (articleBtnAr) articleBtnAr.classList.toggle("active", isAr);
+
+        // Update back link text
+        if (backLink) {
+          backLink.textContent = isAr ? "← ارجع لكل المقالات" : "← Back to all posts";
+        }
+
+        // Save preference
+        localStorage.setItem("portfolio_blog_lang", lang);
+      }
+
+      // Initialize language from localStorage or default to EN
+      const savedLang = localStorage.getItem("portfolio_blog_lang") || "en";
+      setLanguage(savedLang);
+    </script>
+  </body>
+</html>
