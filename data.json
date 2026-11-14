@@ -1,8 +1,8 @@
 {
   "profile": {
-    "name": "Abdelrahman Eslam Omar",
-    "heroBio": "Computer & Data Science student at <strong>Alexandria University</strong> building <strong>AI agents, LLM applications, and RAG systems</strong>. Interested in <strong>AI research</strong>, particularly agentic AI, LLMs, and intelligent systems. Currently seeking <strong>AI/ML internships</strong> and research opportunities.",
-    "aboutHtml": "<p>I'm <strong>Abdelrahman Eslam Omar</strong>, a Computer & Data Science student at <strong>Alexandria University</strong> with a strong interest in <strong>AI research and intelligent systems</strong>.</p>\n\n<p>I enjoy building <strong>AI agents, LLM applications, and RAG systems</strong>, while exploring how models, tools, memory, and retrieval can work together to create reliable AI systems.</p>",
+    "name": "Abdelrahman Eslam",
+    "heroBio": "Computer & Data Science undergraduate at <strong>Alexandria University</strong> focused on <strong>AI Engineering, Machine Learning, and LLM-based systems</strong>. Experienced in building secure MCP servers, persistent multi-agent workflows, and bilingual RAG pipelines using <strong>Python, LangGraph, and FastAPI</strong>. Seeking <strong>AI/ML Engineering Internships</strong>.",
+    "aboutHtml": "<p>I'm <strong>Abdelrahman Eslam</strong>, a Computer & Data Science undergraduate at <strong>Alexandria University</strong> (Class of 2028) focused on <strong>AI Engineering, Machine Learning, and LLM-based systems</strong>.</p>\n\n<p>I build production-oriented AI applications: secure Model Context Protocol (MCP) servers, stateful multi-agent workflows with LangGraph, and bilingual hybrid Retrieval-Augmented Generation (RAG) pipelines combining dense vector search, BM25 keyword matching, and cross-encoder rerankers.</p>\n\n<p>Active as an AI & Data Science research team member in <strong>Argus Team</strong> and organizing student academic resources in <strong>Material Team</strong> at Alexandria University. Actively seeking <strong>AI/ML Engineering Internships</strong>.</p>",
     "email": "abdelrahmaneslamomar@gmail.com",
     "footerText": "Built by Abdelrahman Eslam"
   },
@@ -10,11 +10,11 @@
     "stats": [
       {
         "value": "20+",
-        "label": "Projects"
+        "label": "Projects Built"
       },
       {
         "value": "3.45",
-        "label": "GPA"
+        "label": "Academic GPA"
       },
       {
         "value": "'28",
@@ -23,193 +23,245 @@
     ],
     "skills": [
       {
-        "title": "Programming",
-        "color": "var(--accent)",
+        "title": "LLM & Agent Engineering",
+        "color": "var(--text-secondary)",
+        "items": [
+          "RAG & Self-RAG",
+          "AI Agents",
+          "Model Context Protocol (MCP)",
+          "LangGraph",
+          "LangChain",
+          "Agentic Workflows",
+          "Tool Calling",
+          "Memory Systems"
+        ]
+      },
+      {
+        "title": "Machine Learning & AI",
+        "color": "var(--text-secondary)",
+        "items": [
+          "Machine Learning",
+          "Deep Learning",
+          "NLP",
+          "Transformers",
+          "Scikit-learn",
+          "PyTorch",
+          "Embeddings",
+          "Model Evaluation"
+        ]
+      },
+      {
+        "title": "Programming Languages",
+        "color": "var(--text-secondary)",
         "items": [
           "Python",
           "SQL",
+          "Java",
           "C++",
+          "R",
           "JavaScript"
         ]
       },
       {
-        "title": "AI & LLMs",
-        "color": "#7c3aed",
-        "items": [
-          "LLMs",
-          "AI Agents",
-          "RAG",
-          "LangChain",
-          "MCP",
-          "Prompt Engineering"
-        ]
-      },
-      {
-        "title": "Machine Learning",
-        "color": "#0891b2",
-        "items": [
-          "Scikit-learn",
-          "PyTorch",
-          "Deep Learning",
-          "NLP",
-          "Feature Engineering"
-        ]
-      },
-      {
-        "title": "Backend & Systems",
-        "color": "#059669",
+        "title": "Backend & Databases",
+        "color": "var(--text-secondary)",
         "items": [
           "FastAPI",
-          "Node.js",
           "REST APIs",
+          "MySQL",
+          "SQLite",
           "Pydantic",
           "Async Python"
         ]
       },
       {
-        "title": "Data",
-        "color": "#d97706",
+        "title": "Data Analysis",
+        "color": "var(--text-secondary)",
         "items": [
           "Pandas",
           "NumPy",
-          "MySQL",
-          "EDA",
-          "Data Visualization"
+          "Matplotlib",
+          "Tableau",
+          "Power BI",
+          "Excel",
+          "Power Query"
         ]
       },
       {
-        "title": "Engineering",
-        "color": "#db2777",
+        "title": "Developer Tools & Cloud",
+        "color": "var(--text-secondary)",
         "items": [
-          "Git",
-          "GitHub",
+          "Docker",
+          "Git & GitHub",
           "Linux",
-          "Testing",
+          "AWS (EC2, IAM)",
+          "uv",
+          "VS Code",
           "System Design"
         ]
       }
     ],
     "learning": [
-      "AI Agents",
-      "LLM Applications",
-      "RAG Systems",
-      "MCP",
-      "AI System Design",
-      "LLM Evaluation"
+      "Multi-Agent Orchestration",
+      "LangGraph Stateful Graphs",
+      "Bilingual Hybrid RAG",
+      "Self-RAG & HITL Approvals",
+      "Cross-Encoder Reranking",
+      "MCP Protocol Extensions"
     ],
     "education": [
       {
-        "icon": "🎓",
+        "icon": "graduation",
         "colorClass": "blue",
         "title": "Alexandria University",
-        "subtitle": "BSc in Data Science",
+        "subtitle": "Bachelor of Science in Computer and Data Science",
         "period": "Sep 2024 - Jun 2028",
         "badges": [
           "GPA 3.45 / 4.0",
           "Alexandria, Egypt"
         ],
         "bullets": [
-          "Focusing on machine learning, statistics, and data engineering",
-          "Active in AI-related student communities on campus",
-          "Maintaining strong academic performance from day one"
+          "Relevant Coursework: Machine Learning, Data Mining, Regression Analysis, Cloud Computing, Operating Systems, Data Science, Database Systems, and Algorithms",
+          "Active in AI and Data Science student research initiatives on campus",
+          "Maintaining consistent academic honors and strong software engineering foundations"
         ]
       }
     ],
     "experience": [
       {
-        "icon": "🧠",
+        "icon": "brain",
+        "colorClass": "blue",
+        "title": "Argus Team – Alexandria University",
+        "subtitle": "AI / Data Science Research Team Member",
+        "period": "2026 - Present",
+        "badges": [
+          "AI Research",
+          "Paper Summarization",
+          "Experimentation"
+        ],
+        "bullets": [
+          "Participate in research paper reading, technical discussion, and summarization across AI and Data Science topics",
+          "Produce structured technical summaries communicating research methodologies, key findings, and limitations",
+          "Contribute to collaborative research shared tasks involving empirical experimentation and implementation"
+        ]
+      },
+      {
+        "icon": "graduation",
+        "colorClass": "green",
+        "title": "Material Team – Alexandria University",
+        "subtitle": "Student Academic Materials Team Member",
+        "period": "2024 - Present",
+        "badges": [
+          "Academic Knowledge",
+          "Resource Curation"
+        ],
+        "bullets": [
+          "Collect, organize, and maintain course summaries, lecture notes, and academic resources for university students",
+          "Help centralize and structure academic materials to improve accessibility and knowledge sharing across cohorts"
+        ]
+      },
+      {
+        "icon": "cpu",
         "colorClass": "purple",
-        "title": "NLP Trainee",
-        "subtitle": "NTI NLP Training",
-        "period": "Jul 2026 - Present",
+        "title": "AI Engineering Training – Autonomous Agents",
+        "subtitle": "Alexandria University",
+        "period": "Jul 2026 - Aug 2026",
+        "badges": [
+          "AI Agents",
+          "LLMs",
+          "Agent Architectures"
+        ],
+        "bullets": [
+          "Studied AI engineering concepts focusing on Autonomous Agents, LLM-based systems, and agentic architectures",
+          "Explored agent orchestration, tool integration, decision-making, and multi-step reasoning in autonomous systems",
+          "Built practical agent workflows integrating external tools for stateful execution"
+        ]
+      },
+      {
+        "icon": "message",
+        "colorClass": "cyan",
+        "title": "Natural Language Processing Training",
+        "subtitle": "National Telecommunication Institute (NTI)",
+        "period": "Jul 2026",
         "badges": [
           "NLP",
+          "Transformers",
           "Deep Learning"
         ],
         "bullets": [
-          "Developing practical skills in Natural Language Processing and modern NLP techniques",
-          "Working with text processing, language models, and NLP applications"
+          "Studied core Natural Language Processing concepts, including modern language-model-based systems",
+          "Applied NLP concepts using Python and machine learning workflows"
         ]
       },
       {
-        "icon": "🤖",
-        "colorClass": "cyan",
-        "title": "Autonomous Agents Trainee",
-        "subtitle": "Alexandria University",
-        "period": "Jul 2026 - Present",
+        "icon": "briefcase",
+        "colorClass": "amber",
+        "title": "Data Analyst Specialist Track",
+        "subtitle": "Digital Egypt Pioneers Initiative (DEPI)",
+        "period": "May 2025 - Oct 2025",
         "badges": [
-          "AI Agents",
-          "LLMs"
+          "Python",
+          "SQL",
+          "Tableau",
+          "Power BI"
         ],
         "bullets": [
-          "Exploring autonomous agent architectures and LLM-based systems",
-          "Building practical experience with agent workflows, tools, and decision-making"
-        ]
-      },
-      {
-        "icon": "💼",
-        "colorClass": "green",
-        "title": "Data Analyst Trainee",
-        "subtitle": "Skills Dynamics (DEPI)",
-        "period": "May 2025 - Oct 2025",
-        "badges": [],
-        "bullets": [
-          "Completed hands-on projects in data analysis using Python and SQL",
-          "Cleaned, analyzed, and visualized datasets with thousands of records"
+          "Worked with Python, SQL, Tableau, Power BI, and Excel for data preparation, analysis, visualization, and data-driven decision-making",
+          "Applied data cleaning, exploratory data analysis, data visualization, and data governance concepts to analytical workflows"
         ]
       }
     ],
     "research": [
       {
-        "emoji": "🗣️",
+        "emoji": "cpu",
+        "badge": "Active Focus",
+        "badgeClass": "badge-blue",
+        "title": "Multi-Agent Systems & Planning",
+        "text": "Stateful agent orchestration, dynamic handoffs, and planning strategies including ReAct, Tree of Thoughts, and LATS."
+      },
+      {
+        "emoji": "message",
+        "badge": "Active Focus",
+        "badgeClass": "badge-blue",
+        "title": "Hybrid Retrieval & Bilingual RAG",
+        "text": "Combining dense semantic embeddings, BM25 keyword matching, and cross-encoder rerankers for Arabic and English document grounding."
+      },
+      {
+        "emoji": "chart",
         "badge": "Exploring",
-        "badgeClass": "badge-blue",
-        "title": "Natural Language Processing",
-        "text": "Understanding how machines process, interpret, and generate human language."
-      },
-      {
-        "emoji": "🤖",
-        "badge": "Learning",
-        "badgeClass": "badge-blue",
-        "title": "Large Language Models",
-        "text": "Studying foundation model architecture, prompting, and efficient inference."
-      },
-      {
-        "emoji": "🧠",
-        "badge": "Learning",
         "badgeClass": "badge-amber",
-        "title": "Deep Learning",
-        "text": "Building neural networks from scratch and learning attention mechanisms."
+        "title": "Secure AI Tooling & Guardrails",
+        "text": "Model Context Protocol (MCP) server security, least-privilege tool boundaries, and human-in-the-loop validation."
       }
     ],
-    "contactIntro": "I'm actively looking for data science and AI internships, research positions, and open-source collaborations. I usually respond within 24 hours.",
+    "contactIntro": "I'm actively seeking AI/ML Engineering internships, research positions, and open-source collaborations. I usually respond within 24 hours.",
     "contactItems": [
       {
-        "icon": "📧",
+        "icon": "mail",
         "label": "Email",
         "value": "abdelrahmaneslamomar@gmail.com",
         "href": "mailto:abdelrahmaneslamomar@gmail.com"
       },
       {
-        "icon": "💻",
+        "icon": "github",
         "label": "GitHub",
         "value": "github.com/AI-0o0",
         "href": "https://github.com/AI-0o0"
       },
       {
-        "icon": "🔗",
+        "icon": "linkedin",
         "label": "LinkedIn",
         "value": "linkedin.com/in/abdelrahmaneslam",
         "href": "https://linkedin.com/in/abdelrahmaneslam"
       },
       {
-        "icon": "📱",
+        "icon": "phone",
         "label": "Phone",
         "value": "+20 127 992 9056",
         "href": "tel:+201279929056"
       },
       {
-        "icon": "📍",
+        "icon": "map-pin",
         "label": "Location",
         "value": "Alexandria, Egypt",
         "href": ""
@@ -219,8 +271,57 @@
   "projects": [
     {
       "id": 1,
-      "title": "WanderPath Travel Agency MCP & AI Agent",
-      "description": "Secure Model Context Protocol (MCP) server and autonomous ReAct agent architecture for enterprise travel operations, implementing role-based authorization and human-in-the-loop confirmation.",
+      "title": "Terms – AI-Powered Legal Document Analysis",
+      "description": "AI-powered legal document analysis platform combining NLP, Transformer models, and Retrieval-Augmented Generation to analyze complex legal documents. Built hybrid retrieval with cross-encoder reranking, clause classification, and bilingual Arabic/English document grounding.",
+      "category": "AI Agents",
+      "difficulty": "Advanced",
+      "status": "Completed",
+      "icon": "AI",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "LangGraph",
+        "RAG",
+        "Transformers",
+        "PyTorch"
+      ],
+      "highlights": [
+        "Bilingual RAG (Arabic & English)",
+        "Hybrid Search + Cross-Encoder Reranker",
+        "NER, PII Detection & Risk Analysis"
+      ],
+      "github": "https://github.com/AI-0o0",
+      "demo": ""
+    },
+    {
+      "id": 2,
+      "title": "Greenfield Autonomous Multi-Agent Platform",
+      "description": "Persistent multi-agent platform coordinating specialized agents for agricultural operations through dynamic handoffs and shared orchestration. Built stateful LangGraph workflows with durable SQLite checkpoints, Self-RAG domain knowledge grounding, and Docker containerization.",
+      "category": "AI Agents",
+      "difficulty": "Advanced",
+      "status": "Completed",
+      "icon": "AI",
+      "technologies": [
+        "Python",
+        "MCP",
+        "LangGraph",
+        "RAG",
+        "FastAPI",
+        "SQLite",
+        "Docker"
+      ],
+      "highlights": [
+        "Persistent Multi-Agent Workflows",
+        "Self-RAG Grounding & ReAct/LATS",
+        "Durable SQLite Checkpoints & HITL"
+      ],
+      "github": "https://github.com/AI-0o0/greenfieldA",
+      "demo": ""
+    },
+    {
+      "id": 3,
+      "title": "WanderPath Travel Agency – Secure MCP Server",
+      "description": "Secure Model Context Protocol (MCP) server enabling AI agents to interact with enterprise travel data through controlled tools rather than direct database access. Implemented role-based authorization, JSON Schema validation, and Human-in-the-Loop confirmation.",
       "category": "AI Agents",
       "difficulty": "Advanced",
       "status": "Completed",
@@ -229,22 +330,22 @@
         "Python",
         "MCP Protocol",
         "FastMCP",
-        "ReAct Agent",
-        "MySQL",
-        "Tool Calling"
+        "LangChain",
+        "Gemini",
+        "MySQL"
       ],
       "highlights": [
-        "Collaborative Project",
         "Role-Based Authorization",
-        "Human-in-the-Loop Elicitation"
+        "Server-Side Validation & Elicitation",
+        "LangChain & Gemini Integration"
       ],
       "github": "https://github.com/AI-0o0/WanderPathA",
       "demo": ""
     },
     {
-      "id": 2,
+      "id": 4,
       "title": "Excel MCP Server",
-      "description": "An intelligent Model Context Protocol (MCP) server enabling AI assistants (Claude, Cursor, Copilot) to inspect, query, edit, and format Excel workbooks asynchronously.",
+      "description": "Model Context Protocol (MCP) server enabling AI assistants (Claude, Cursor, Copilot) to inspect, query, edit, and format Excel workbooks asynchronously with zero latency.",
       "category": "AI Agents",
       "difficulty": "Advanced",
       "status": "In Progress",
@@ -260,15 +361,15 @@
       "highlights": [
         "Full MCP Tool Protocol",
         "Autonomous Spreadsheet Workflows",
-        "Zero-Latency Async Execution"
+        "Async Execution"
       ],
       "github": "https://github.com/AI-0o0/excel-mcp",
       "demo": ""
     },
     {
-      "id": 3,
+      "id": 5,
       "title": "FIFA Player Market Value ML Pipeline",
-      "description": "End-to-end Machine Learning pipeline achieving 96% R² score predicting football player valuations with automated domain feature engineering and cross-validated models.",
+      "description": "End-to-end Machine Learning pipeline achieving 96% R² score predicting football player valuations with automated domain feature engineering, cross-validation, and hyperparameter tuning.",
       "category": "Machine Learning",
       "difficulty": "Advanced",
       "status": "Completed",
@@ -283,15 +384,15 @@
       "highlights": [
         "96.0% R² Score",
         "85.6% Tier Accuracy",
-        "Automated ML Pipeline"
+        "Automated Feature Pipeline"
       ],
       "github": "https://github.com/AI-0o0/Data-science-projects",
       "demo": ""
     },
     {
-      "id": 4,
+      "id": 6,
       "title": "Linear Regression Analysis From Scratch",
-      "description": "NumPy implementation of Linear Regression built from scratch, benchmarking Gradient Descent vs. Closed-Form Normal Equation with L1/L2 regularization across multiple model specifications.",
+      "description": "NumPy implementation of Linear Regression built from mathematical foundations, benchmarking vectorized Gradient Descent vs. Closed-Form Normal Equation with L1/L2 regularization.",
       "category": "Machine Learning",
       "difficulty": "Intermediate",
       "status": "Completed",
@@ -313,32 +414,9 @@
       "demo": ""
     },
     {
-      "id": 5,
-      "title": "Greenfield MCP Agent Dispatcher",
-      "description": "Autonomous AI agent dispatcher framework using the Model Context Protocol to orchestrate multi-tool workflows, dispatch microservices, and maintain state.",
-      "category": "AI Agents",
-      "difficulty": "Advanced",
-      "status": "In Progress",
-      "icon": "AI",
-      "technologies": [
-        "Python",
-        "FastMCP",
-        "AI Agents",
-        "AsyncIO",
-        "Tool Dispatch"
-      ],
-      "highlights": [
-        "Autonomous Tool Dispatching",
-        "Multi-Tool Orchestration",
-        "Resilient Task Routing"
-      ],
-      "github": "https://github.com/AI-0o0/greenfieldA",
-      "demo": ""
-    },
-    {
-      "id": 6,
+      "id": 7,
       "title": "End-to-End Data Science Methodology",
-      "description": "Final project for Data Science Methodology at Alexandria University showcasing a complete CRISP-DM pipeline: raw data ingestion, statistical EDA, hypothesis testing, and actionable insight synthesis.",
+      "description": "Comprehensive CRISP-DM standard pipeline at Alexandria University covering raw data ingestion, statistical exploratory data analysis, hypothesis testing, and actionable insight synthesis.",
       "category": "Data Science",
       "difficulty": "Intermediate",
       "status": "Completed",
@@ -360,7 +438,7 @@
       "demo": ""
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "FCDS Data Mining & Pattern Discovery",
       "description": "Advanced data mining pipeline applying unsupervised clustering (K-Means, Hierarchical), Association Rule Mining (Apriori), and PCA dimensionality reduction on complex datasets.",
       "category": "Data Science",
@@ -384,51 +462,27 @@
       "demo": ""
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "DEPI Strategic Data Analytics & Insights",
-      "description": "Graduation data analytics project for Digital Egypt Pioneers Initiative (DEPI) extracting strategic KPI trends, predictive performance indicators, and automated visual dashboards.",
+      "description": "Graduation data analytics project for Digital Egypt Pioneers Initiative (DEPI) extracting strategic KPI trends, predictive performance indicators, and automated visual dashboards using Tableau and Power BI.",
       "category": "Data Science",
       "difficulty": "Intermediate",
       "status": "Completed",
       "icon": "VIZ",
       "technologies": [
         "Python",
+        "SQL",
+        "Tableau",
+        "Power BI",
         "Pandas",
-        "Matplotlib",
-        "Seaborn",
-        "Data Visualization",
-        "SQL"
+        "Matplotlib"
       ],
       "highlights": [
         "DEPI Graduation Project",
         "Strategic KPI Dashboards",
-        "Statistical Trend Decomposition"
+        "Tableau & Power BI Analytics"
       ],
       "github": "https://github.com/AI-0o0/DEPI-Final-Project",
-      "demo": ""
-    },
-    {
-      "id": 9,
-      "title": "Nobel Prize 100-Year Historical Analysis",
-      "description": "Exploratory data analysis and historical trend modeling spanning over a century of Nobel Prize laureates, gender dynamics, and geographical distributions.",
-      "category": "Data Science",
-      "difficulty": "Intermediate",
-      "status": "Completed",
-      "icon": "DS",
-      "technologies": [
-        "Python",
-        "Pandas",
-        "Seaborn",
-        "Matplotlib",
-        "Jupyter",
-        "EDA"
-      ],
-      "highlights": [
-        "100+ Years of Data",
-        "Demographic Trend Analysis",
-        "Data-Driven Visualizations"
-      ],
-      "github": "https://github.com/AI-0o0/Data-science-projects",
       "demo": ""
     }
   ],

@@ -18,14 +18,6 @@ const DEFAULT_BLOGS = [
 ];
 
 const STORAGE_KEY = "portfolio.blogs";
-const CAT_BADGE_CLASS = {
-  "Machine Learning": "badge-blue",
-  "AI Agents": "badge-blue",
-  "Data Science": "badge-green",
-  "Deep Learning": "badge-amber",
-  NLP: "badge-red",
-  Career: "badge-gray",
-};
 
 let REMOTE_DATA = null;
 
@@ -143,7 +135,7 @@ function renderBlogs() {
     <article class="card blog-card">
       <div class="blog-card-body">
         <div class="blog-card-top">
-          <span class="badge ${CAT_BADGE_CLASS[b.category] || "badge-blue"}">${b.category || "AI"}</span>
+          <span class="card-meta">${b.category || "AI"}</span>
           <span class="blog-date">${formatDate(b.date)}</span>
         </div>
         <h3 class="blog-title">${b.title}</h3>
@@ -155,7 +147,7 @@ function renderBlogs() {
             ${b.readingTime || "5 min read"}
           </span>
           <a href="${link}" class="read-more">
-            <span>Read post</span>
+            <span>Read article</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
         </div>

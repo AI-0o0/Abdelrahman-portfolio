@@ -133,17 +133,6 @@ const DEFAULT_PROJECTS = [
 ];
 
 const STORAGE_KEY = "portfolio.projects";
-const DIFF_BADGE = {
-  Beginner: "badge-green",
-  Intermediate: "badge-blue",
-  Advanced: "badge-red",
-};
-
-const STATUS_BADGE = {
-  Completed: "badge-green",
-  "In Progress": "badge-blue",
-  Planned: "badge-gray",
-};
 
 let REMOTE_DATA = null;
 
@@ -262,8 +251,7 @@ function renderProjects() {
               ${p.icon && p.icon.length <= 4 ? p.icon : getSvgIcon("code")}
             </div>
             <div class="project-badges">
-              <span class="badge ${DIFF_BADGE[p.difficulty] || "badge-gray"}">${p.difficulty}</span>
-              <span class="badge ${STATUS_BADGE[p.status] || "badge-gray"}">${p.status}</span>
+              <span class="card-meta">${p.difficulty} · ${p.status}</span>
             </div>
           </div>
           <h3 class="project-title">${p.title}</h3>

@@ -541,7 +541,7 @@ function showToast(message) {
   const toastText = document.getElementById("toast-text");
   if (!toast || !toastText) return;
 
-  toastText.textContent = message || "Copied to clipboard!";
+  toastText.textContent = message || "Copied to clipboard";
   toast.classList.add("show");
 
   clearTimeout(toastTimeout);
@@ -550,7 +550,7 @@ function showToast(message) {
   }, 2400);
 }
 
-function copyTextToClipboard(text, successMsg = "Copied to clipboard!") {
+function copyTextToClipboard(text, successMsg = "Copied to clipboard") {
   navigator.clipboard.writeText(text).then(() => {
     showToast(successMsg);
   }).catch(() => {
@@ -577,31 +577,31 @@ const terminalScreen = document.getElementById("terminal-screen");
 
 const TERM_SNIPPETS = {
   agent: `
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">python -m ai_agents.evaluate --benchmark</span></div>
-<div class="term-out">[✓] Loading LangChain + RAG retrieval vectorstore...</div>
-<div class="term-out">[✓] Agent reasoning loop initialized: <span class="highlight">ReAct Model (Active)</span></div>
-<div class="term-out success">[✓] Evaluation passed: 96.0% R² | Precision: 0.94 | Status: Ready</div>
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">cat focus_areas.txt</span></div>
-<div class="term-out highlight">→ AI Agents, LLM Orchestration, RAG, Machine Learning, Systems</div>
+<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">python -m greenfield.orchestrator --checkpoint sqlite://checkpoints.db</span></div>
+<div class="term-out">[LangGraph] Loading stateful graph: <span class="highlight">4 specialized agents registered</span></div>
+<div class="term-out">[Tool Registry] FastMCP tools initialized: least-privilege boundaries enforced</div>
+<div class="term-out">[Planning] Dynamic task decomposition: ReAct + Tree of Thoughts active</div>
+<div class="term-out success">[✓] Orchestration running: Durable checkpoints saved | HITL approvals ready</div>
 <div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`,
 
   profile: `
 <div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">cat profile.json</span></div>
 <div class="term-out">{</div>
-<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"name"</span>: <span style="color:#a5d6ff">"Abdelrahman Eslam Omar"</span>,</div>
-<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"role"</span>: <span style="color:#a5d6ff">"AI & Data Science Student"</span>,</div>
-<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"university"</span>: <span style="color:#a5d6ff">"Alexandria University"</span>,</div>
+<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"name"</span>: <span style="color:#a5d6ff">"Abdelrahman Eslam"</span>,</div>
+<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"degree"</span>: <span style="color:#a5d6ff">"BSc in Computer & Data Science"</span>,</div>
+<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"institution"</span>: <span style="color:#a5d6ff">"Alexandria University ('28)"</span>,</div>
 <div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"gpa"</span>: <span style="color:#79c0ff">3.45</span>,</div>
-<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"status"</span>: <span style="color:#34d399">"Open for Internships & Research"</span></div>
+<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"focus"</span>: <span style="color:#a5d6ff">"AI Engineering, LLM Systems, MCP & LangGraph"</span>,</div>
+<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"status"</span>: <span style="color:#34d399">"Seeking AI/ML Engineering Internships"</span></div>
 <div class="term-out">}</div>
 <div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`,
 
   rag: `
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">python rag_pipeline.py --query "Optimal retrieval params"</span></div>
-<div class="term-out">[1/3] Ingesting documents & chunking tokens...</div>
-<div class="term-out">[2/3] Query embedding generated via Vector Index.</div>
-<div class="term-out">[3/3] Retrieved Top-K relevant chunks with cosine similarity > 0.88.</div>
-<div class="term-out success">[✓] Grounded answer synthesized with zero hallucination.</div>
+<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">python terms_eval.py --bilingual --reranker cross-encoder</span></div>
+<div class="term-out">[1/3] Hybrid Retrieval: Dense vector + BM25 keyword matching (Arabic & English)...</div>
+<div class="term-out">[2/3] Cross-encoder reranking: Top-5 grounded clauses selected (Score > 0.92)...</div>
+<div class="term-out">[3/3] Transformers pipeline: NER & PII detection executed...</div>
+<div class="term-out success">[✓] Evaluation passed: 0 hallucination | Grounded QA synthesis complete</div>
 <div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`,
 };
 
@@ -622,22 +622,25 @@ function runTermCommand(cmd) {
   if (cmd === "skills") {
     output = `
 <div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">skills</span></div>
-<div class="term-out">→ Languages: Python, SQL, C++, JavaScript</div>
-<div class="term-out">→ AI & ML: LLMs, AI Agents, RAG, PyTorch, Scikit-learn, LangChain</div>
-<div class="term-out">→ Backend: FastAPI, REST APIs, Pydantic, MySQL, Git</div>
+<div class="term-out">→ Languages: Python, SQL, Java, C++, R, JavaScript</div>
+<div class="term-out">→ LLMs & Agents: RAG & Self-RAG, LangGraph, MCP, LangChain, Tool Calling</div>
+<div class="term-out">→ ML & DL: PyTorch, Transformers, NLP, Scikit-learn, Embeddings, Evaluation</div>
+<div class="term-out">→ Backend & Cloud: FastAPI, REST APIs, MySQL, SQLite, Docker, AWS (EC2)</div>
 <div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`;
   } else if (cmd === "projects") {
     output = `
 <div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">projects</span></div>
-<div class="term-out">1. FIFA Player Value Prediction (96% R² ML Pipeline)</div>
-<div class="term-out">2. Nobel Prize 100-Year Historical Analysis (Data Science)</div>
-<div class="term-out">3. Ames Housing Price Prediction (NumPy from scratch)</div>
+<div class="term-out">1. Terms – AI Legal Document Analysis (LangGraph, Bilingual RAG, Transformers)</div>
+<div class="term-out">2. Greenfield Autonomous Multi-Agent Platform (LangGraph, Self-RAG, Docker)</div>
+<div class="term-out">3. WanderPath Travel Agency (Secure FastMCP Server, Role Auth, Gemini)</div>
+<div class="term-out">4. FIFA Player Market Value ML Pipeline (96% R² Automated Pipeline)</div>
 <div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`;
   } else if (cmd === "whoami") {
     output = `
 <div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">whoami</span></div>
-<div class="term-out">Abdelrahman Eslam Omar — Data Science student @ Alexandria University</div>
-<div class="term-out">Building AI agents, LLM applications, and RAG architectures.</div>
+<div class="term-out">Abdelrahman Eslam — Computer & Data Science @ Alexandria University ('28)</div>
+<div class="term-out">Focused on AI Engineering, LLM Systems, LangGraph, and Secure MCP Tooling.</div>
+<div class="term-out">Seeking AI/ML Engineering Internships & Research Collaborations.</div>
 <div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`;
   } else if (cmd === "contact") {
     output = `
@@ -724,18 +727,6 @@ if (cmdInput && cmdList) {
 /* ---------------------------------------------------------------
    10. DATA RENDERING (PROJECTS, TIMELINE, BLOGS, PROFILE)
 --------------------------------------------------------------- */
-const DIFF_BADGE = {
-  Beginner: "badge-green",
-  Intermediate: "badge-amber",
-  Advanced: "badge-red",
-};
-
-const STATUS_BADGE = {
-  Completed: "badge-green",
-  "In Progress": "badge-blue",
-  Planned: "badge-gray",
-};
-
 let projectCategory = "All";
 let blogCategory = "All";
 
@@ -781,8 +772,7 @@ function renderProjects() {
               ${p.icon && p.icon.length <= 4 ? p.icon : getSvgIcon("code")}
             </div>
             <div class="project-badges">
-              <span class="badge ${DIFF_BADGE[p.difficulty] || "badge-gray"}">${p.difficulty}</span>
-              <span class="badge ${STATUS_BADGE[p.status] || "badge-gray"}">${p.status}</span>
+              <span class="card-meta">${p.difficulty} · ${p.status}</span>
             </div>
           </div>
           <h3 class="project-title">${p.title}</h3>
@@ -851,9 +841,7 @@ function renderTimeline(items, containerSelector, fallbackIcon = "briefcase") {
 
   container.innerHTML = (items || [])
     .map((item) => {
-      const badges = (item.badges || [])
-        .map((b) => `<span class="badge badge-gray" style="margin-right:6px">${b}</span>`)
-        .join("");
+      const badges = (item.badges || []).map((b) => `<span class="badge">${b}</span>`).join("");
 
       const bullets = (item.bullets || []).map((bullet) => `<li>${bullet}</li>`).join("");
 
@@ -861,7 +849,7 @@ function renderTimeline(items, containerSelector, fallbackIcon = "briefcase") {
       <div class="timeline-item">
         <div class="timeline-left">
           <div class="timeline-dot">
-            ${getSvgIcon(item.icon === "🎓" ? "graduation" : item.icon === "🧠" ? "brain" : item.icon === "🤖" || item.icon === "cpu" ? "cpu" : fallbackIcon)}
+            ${getSvgIcon(item.icon === "🎓" ? "graduation" : item.icon === "🧠" ? "brain" : (item.icon === "🤖" || item.icon === "cpu") ? "cpu" : (item.icon || fallbackIcon))}
           </div>
         </div>
         <div class="card timeline-card">
@@ -872,7 +860,7 @@ function renderTimeline(items, containerSelector, fallbackIcon = "briefcase") {
             </div>
             <span class="timeline-period">${item.period || ""}</span>
           </div>
-          ${badges ? `<div style="margin-bottom:6px">${badges}</div>` : ""}
+          ${badges ? `<div class="timeline-badges">${badges}</div>` : ""}
           <ul class="timeline-list">${bullets}</ul>
         </div>
       </div>`;
@@ -921,7 +909,7 @@ function renderBlogs() {
       <article class="card blog-card">
         <div class="blog-card-body">
           <div class="blog-card-top">
-            <span class="badge badge-blue">${b.category || "AI"}</span>
+            <span class="card-meta">${b.category || "AI"}</span>
             <span class="blog-date">${formattedDate}</span>
           </div>
           <h3 class="blog-title">${b.title}</h3>
@@ -971,8 +959,49 @@ function filterBlogs() {
   renderBlogs();
 }
 
+function renderSkills(skills) {
+  const grid = document.querySelector(".skills-grid");
+  if (!grid || !Array.isArray(skills) || skills.length === 0) return;
+  grid.innerHTML = skills.map(group => {
+    const tags = (group.items || []).map(item => `<span class="skill-tag">${item}</span>`).join("");
+    const iconName = group.title.toLowerCase().includes("llm") || group.title.toLowerCase().includes("agent") ? "cpu" :
+                     group.title.toLowerCase().includes("machine") ? "ml" :
+                     group.title.toLowerCase().includes("data") ? "chart" :
+                     group.title.toLowerCase().includes("program") ? "code" :
+                     group.title.toLowerCase().includes("backend") ? "briefcase" : "code";
+    return `
+    <div class="card skill-group">
+      <div class="skill-group-head">
+        <p class="skill-group-title">
+          ${getSvgIcon(iconName)}
+          ${group.title}
+        </p>
+      </div>
+      <div class="skill-tags">${tags}</div>
+    </div>`;
+  }).join("");
+}
+
+function renderResearch(research) {
+  const grid = document.querySelector(".research-grid");
+  if (!grid || !Array.isArray(research) || research.length === 0) return;
+  grid.innerHTML = research.map((r) => `
+    <div class="card research-card">
+      <div class="research-card-top">
+        <div class="research-icon-box" aria-hidden="true">
+          ${getSvgIcon(r.emoji || "cpu")}
+        </div>
+        ${r.badge ? `<span class="card-meta">${r.badge}</span>` : ""}
+      </div>
+      <h3>${r.title}</h3>
+      <p>${r.text}</p>
+    </div>`).join("");
+}
+
 function applyHomepage() {
   const homepage = getHomepage();
+  renderSkills(homepage.skills);
+  renderResearch(homepage.research);
   renderTimeline(homepage.education, "#education-timeline", "graduation");
   renderTimeline(homepage.experience, "#experience-timeline", "briefcase");
 }
@@ -999,7 +1028,7 @@ function submitContact(e) {
 
   const btn = document.getElementById("submit-btn");
   if (btn) {
-    btn.innerHTML = `<span>✓ Message Prepared! Check Email Client</span>`;
+    btn.innerHTML = `<span>Message ready — check your email client</span>`;
     btn.style.background = "var(--accent-green)";
     setTimeout(() => {
       btn.innerHTML = `
