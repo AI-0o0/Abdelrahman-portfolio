@@ -656,7 +656,7 @@ function copyEmailToClipboard() {
 
   function makeSpeck() {
     const angle = Math.random() * TAU;
-    const radius = Math.sqrt(Math.random()) * 0.33;
+    const radius = Math.sqrt(Math.random()) * 10;
     return {
       ax: 0.5 + Math.cos(angle) * radius,
       ay: 0.5 + Math.sin(angle) * radius,
@@ -664,7 +664,7 @@ function copyEmailToClipboard() {
       r: rand(0.003, 0.006),
       a: rand(0.05, 0.15),
       phase: Math.random() * TAU,
-      speed: rand(0.2, 0.6),
+      speed: rand(0.8, 0.9),
       amp: rand(0.004, 0.011),
       spring: rand(0.01, 0.022),
     };
@@ -672,7 +672,7 @@ function copyEmailToClipboard() {
 
   function makeHalo() {
     const angle = Math.random() * TAU;
-    const radius = rand(0.43, 0.52);
+    const radius = rand(0.33, 0.52);
     return {
       ax: 0.5 + Math.cos(angle) * radius,
       ay: 0.5 + Math.sin(angle) * radius,
@@ -691,7 +691,7 @@ function copyEmailToClipboard() {
     halo.length = 0;
     const scale = clamp(stageW / 420, 0.12, 1.2);
     const nSpecks = Math.max(10, Math.round(38 * scale));
-    const nHalo = Math.max(7, Math.round(30 * scale));
+    const nHalo = Math.max(7, Math.round(60 * scale));
     for (let i = 0; i < nSpecks; i++) specks.push(makeSpeck());
     for (let i = 0; i < nHalo; i++) halo.push(makeHalo());
     specks.concat(halo).forEach((p) => {
