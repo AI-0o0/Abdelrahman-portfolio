@@ -20,7 +20,7 @@ const DEFAULT_PROFILE = {
 const DEFAULT_HOMEPAGE = {
   stats: [
     { value: "20+", label: "Projects" },
-    { value: "3.47", label: "GPA" },
+    { value: "3.45", label: "GPA" },
     { value: "'28", label: "Graduation" },
   ],
   skills: [
@@ -32,25 +32,12 @@ const DEFAULT_HOMEPAGE = {
     {
       title: "AI & LLMs",
       color: "#7c3aed",
-      items: [
-        "LLMs",
-        "AI Agents",
-        "RAG",
-        "LangChain",
-        "MCP",
-        "Prompt Engineering",
-      ],
+      items: ["LLMs", "AI Agents", "RAG", "LangChain", "MCP", "Prompt Engineering"],
     },
     {
       title: "Machine Learning",
       color: "#0891b2",
-      items: [
-        "Scikit-learn",
-        "PyTorch",
-        "Deep Learning",
-        "NLP",
-        "Feature Engineering",
-      ],
+      items: ["Scikit-learn", "PyTorch", "Deep Learning", "NLP", "Feature Engineering"],
     },
     {
       title: "Backend & Systems",
@@ -83,7 +70,7 @@ const DEFAULT_HOMEPAGE = {
       title: "Alexandria University",
       subtitle: "BSc in Data Science",
       period: "Sep 2024 - Jun 2028",
-      badges: ["GPA 3.47 / 4.0", "Alexandria, Egypt"],
+      badges: ["GPA 3.45 / 4.0", "Alexandria, Egypt"],
       bullets: [
         "Focusing on machine learning, statistics, and data engineering",
         "Active in AI-related student communities on campus",
@@ -198,19 +185,8 @@ const DEFAULT_PROJECTS = [
     difficulty: "Advanced",
     status: "Completed",
     icon: "MCP",
-    technologies: [
-      "Python",
-      "MCP Protocol",
-      "FastMCP",
-      "ReAct Agent",
-      "MySQL",
-      "Tool Calling",
-    ],
-    highlights: [
-      "Collaborative Project",
-      "Role-Based Authorization",
-      "Human-in-the-Loop Elicitation",
-    ],
+    technologies: ["Python", "MCP Protocol", "FastMCP", "ReAct Agent", "MySQL", "Tool Calling"],
+    highlights: ["Collaborative Project", "Role-Based Authorization", "Human-in-the-Loop Elicitation"],
     github: "https://github.com/AI-0o0/WanderPathA",
     demo: "",
   },
@@ -223,19 +199,8 @@ const DEFAULT_PROJECTS = [
     difficulty: "Advanced",
     status: "In Progress",
     icon: "MCP",
-    technologies: [
-      "Python",
-      "MCP Protocol",
-      "FastMCP",
-      "AsyncIO",
-      "OpenPyXL",
-      "Pandas",
-    ],
-    highlights: [
-      "Full MCP Tool Protocol",
-      "Autonomous Spreadsheet Workflows",
-      "Zero-Latency Async Execution",
-    ],
+    technologies: ["Python", "MCP Protocol", "FastMCP", "AsyncIO", "OpenPyXL", "Pandas"],
+    highlights: ["Full MCP Tool Protocol", "Autonomous Spreadsheet Workflows", "Zero-Latency Async Execution"],
     github: "https://github.com/AI-0o0/excel-mcp",
     demo: "",
   },
@@ -248,18 +213,8 @@ const DEFAULT_PROJECTS = [
     difficulty: "Advanced",
     status: "Completed",
     icon: "ML",
-    technologies: [
-      "Python",
-      "Scikit-learn",
-      "Pandas",
-      "GridSearchCV",
-      "Feature Engineering",
-    ],
-    highlights: [
-      "96.0% R² Score",
-      "85.6% Tier Accuracy",
-      "Automated ML Pipeline",
-    ],
+    technologies: ["Python", "Scikit-learn", "Pandas", "GridSearchCV", "Feature Engineering"],
+    highlights: ["96.0% R² Score", "85.6% Tier Accuracy", "Automated ML Pipeline"],
     github: "https://github.com/AI-0o0/Data-science-projects",
     demo: "",
   },
@@ -272,19 +227,8 @@ const DEFAULT_PROJECTS = [
     difficulty: "Intermediate",
     status: "Completed",
     icon: "MATH",
-    technologies: [
-      "Python",
-      "NumPy",
-      "Matplotlib",
-      "Seaborn",
-      "Vectorization",
-      "Linear Algebra",
-    ],
-    highlights: [
-      "Vectorized Gradient Descent",
-      "Closed-Form Normal Equation",
-      "L1 / L2 Regularization",
-    ],
+    technologies: ["Python", "NumPy", "Matplotlib", "Seaborn", "Vectorization", "Linear Algebra"],
+    highlights: ["Vectorized Gradient Descent", "Closed-Form Normal Equation", "L1 / L2 Regularization"],
     github: "https://github.com/AI-0o0/Regression-Analysis-project-",
     demo: "",
   },
@@ -297,18 +241,8 @@ const DEFAULT_PROJECTS = [
     difficulty: "Advanced",
     status: "In Progress",
     icon: "AI",
-    technologies: [
-      "Python",
-      "FastMCP",
-      "AI Agents",
-      "AsyncIO",
-      "Tool Dispatch",
-    ],
-    highlights: [
-      "Autonomous Tool Dispatching",
-      "Multi-Tool Orchestration",
-      "Resilient Task Routing",
-    ],
+    technologies: ["Python", "FastMCP", "AI Agents", "AsyncIO", "Tool Dispatch"],
+    highlights: ["Autonomous Tool Dispatching", "Multi-Tool Orchestration", "Resilient Task Routing"],
     github: "https://github.com/AI-0o0/greenfieldA",
     demo: "",
   },
@@ -321,19 +255,8 @@ const DEFAULT_PROJECTS = [
     difficulty: "Intermediate",
     status: "Completed",
     icon: "DS",
-    technologies: [
-      "Python",
-      "Pandas",
-      "Scikit-learn",
-      "Statistical Modeling",
-      "Seaborn",
-      "EDA",
-    ],
-    highlights: [
-      "CRISP-DM Standard Pipeline",
-      "Hypothesis Testing Validation",
-      "Insight Formulation",
-    ],
+    technologies: ["Python", "Pandas", "Scikit-learn", "Statistical Modeling", "Seaborn", "EDA"],
+    highlights: ["CRISP-DM Standard Pipeline", "Hypothesis Testing Validation", "Insight Formulation"],
     github: "https://github.com/AI-0o0/AlexU_DSM_FinalProject",
     demo: "",
   },
@@ -346,19 +269,8 @@ const DEFAULT_PROJECTS = [
     difficulty: "Intermediate",
     status: "Completed",
     icon: "DM",
-    technologies: [
-      "Python",
-      "Scikit-learn",
-      "Apriori / FP-Growth",
-      "K-Means",
-      "PCA",
-      "Pandas",
-    ],
-    highlights: [
-      "Unsupervised Clustering",
-      "Association Rule Mining",
-      "PCA Dimensionality Reduction",
-    ],
+    technologies: ["Python", "Scikit-learn", "Apriori / FP-Growth", "K-Means", "PCA", "Pandas"],
+    highlights: ["Unsupervised Clustering", "Association Rule Mining", "PCA Dimensionality Reduction"],
     github: "https://github.com/AI-0o0/Data-Mining-FCDS-Project-",
     demo: "",
   },
@@ -371,19 +283,8 @@ const DEFAULT_PROJECTS = [
     difficulty: "Intermediate",
     status: "Completed",
     icon: "VIZ",
-    technologies: [
-      "Python",
-      "Pandas",
-      "Matplotlib",
-      "Seaborn",
-      "Data Visualization",
-      "SQL",
-    ],
-    highlights: [
-      "DEPI Graduation Project",
-      "Strategic KPI Dashboards",
-      "Statistical Trend Decomposition",
-    ],
+    technologies: ["Python", "Pandas", "Matplotlib", "Seaborn", "Data Visualization", "SQL"],
+    highlights: ["DEPI Graduation Project", "Strategic KPI Dashboards", "Statistical Trend Decomposition"],
     github: "https://github.com/AI-0o0/DEPI-Final-Project",
     demo: "",
   },
@@ -396,19 +297,8 @@ const DEFAULT_PROJECTS = [
     difficulty: "Intermediate",
     status: "Completed",
     icon: "DS",
-    technologies: [
-      "Python",
-      "Pandas",
-      "Seaborn",
-      "Matplotlib",
-      "Jupyter",
-      "EDA",
-    ],
-    highlights: [
-      "100+ Years of Data",
-      "Demographic Trend Analysis",
-      "Data-Driven Visualizations",
-    ],
+    technologies: ["Python", "Pandas", "Seaborn", "Matplotlib", "Jupyter", "EDA"],
+    highlights: ["100+ Years of Data", "Demographic Trend Analysis", "Data-Driven Visualizations"],
     github: "https://github.com/AI-0o0/Data-science-projects",
     demo: "",
   },
@@ -417,8 +307,7 @@ const DEFAULT_PROJECTS = [
 const DEFAULT_BLOGS = [
   {
     id: 1,
-    title:
-      "Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills",
+    title: "Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills",
     date: "2026-08-16",
     category: "AI Agents",
     tags: ["AI Agents", "LLMs", "DevTools", "Best Practices", "Workflows"],
@@ -460,12 +349,7 @@ function readStoredJson(key, fallback) {
     const value = localStorage.getItem(key);
     if (!value) return fallback;
     const parsed = JSON.parse(value);
-    if (
-      Array.isArray(parsed) &&
-      parsed.length === 0 &&
-      Array.isArray(fallback) &&
-      fallback.length > 0
-    ) {
+    if (Array.isArray(parsed) && parsed.length === 0 && Array.isArray(fallback) && fallback.length > 0) {
       return fallback;
     }
     return parsed;
@@ -593,9 +477,7 @@ function updateNavOnScroll() {
   if (backTop) backTop.classList.toggle("visible", scrollY > 450);
 
   if (progressBar) {
-    const max =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
+    const max = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     progressBar.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
   }
 }
@@ -630,22 +512,36 @@ sections.forEach((sec) => navObserver.observe(sec));
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobile-menu");
 
+function setMobileMenuState(isOpen) {
+  if (!mobileMenu || !hamburger) return;
+
+  mobileMenu.classList.toggle("open", isOpen);
+  hamburger.classList.toggle("open", isOpen);
+  hamburger.setAttribute("aria-expanded", String(isOpen));
+  mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+}
+
 if (hamburger && mobileMenu) {
   hamburger.addEventListener("click", () => {
-    const isOpen = mobileMenu.classList.toggle("open");
-    hamburger.classList.toggle("open");
-    hamburger.setAttribute("aria-expanded", isOpen);
-    mobileMenu.setAttribute("aria-hidden", !isOpen);
+    setMobileMenuState(!mobileMenu.classList.contains("open"));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && mobileMenu.classList.contains("open")) {
+      setMobileMenuState(false);
+      hamburger.focus();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768 && mobileMenu.classList.contains("open")) {
+      setMobileMenuState(false);
+    }
   });
 }
 
 function closeMobileMenu() {
-  if (mobileMenu && hamburger) {
-    mobileMenu.classList.remove("open");
-    hamburger.classList.remove("open");
-    hamburger.setAttribute("aria-expanded", "false");
-    mobileMenu.setAttribute("aria-hidden", "true");
-  }
+  setMobileMenuState(false);
 }
 window.closeMobileMenu = closeMobileMenu;
 
@@ -669,119 +565,444 @@ function showToast(message) {
 }
 
 function copyTextToClipboard(text, successMsg = "Copied to clipboard") {
-  navigator.clipboard
-    .writeText(text)
-    .then(() => {
-      showToast(successMsg);
-    })
-    .catch(() => {
-      // Fallback for older browsers
-      const tempInput = document.createElement("input");
-      tempInput.value = text;
-      document.body.appendChild(tempInput);
-      tempInput.select();
-      document.execCommand("copy");
-      document.body.removeChild(tempInput);
-      showToast(successMsg);
-    });
+  navigator.clipboard.writeText(text).then(() => {
+    showToast(successMsg);
+  }).catch(() => {
+    // Fallback for older browsers
+    const tempInput = document.createElement("input");
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    showToast(successMsg);
+  });
 }
 
 function copyEmailToClipboard() {
   const profile = getProfile();
-  copyTextToClipboard(
-    profile.email || "abdelrahmaneslamomar@gmail.com",
-    "Email copied: " + profile.email
-  );
+  copyTextToClipboard(profile.email || "abdelrahmaneslamomar@gmail.com", "Email copied: " + profile.email);
 }
 
 /* ---------------------------------------------------------------
-   8. INTERACTIVE DEVELOPER TERMINAL
+   8. MASCOT ORB — LIVE POINTER-REACTIVE COMPANION
+   Particle model: Codrops "Interactive Particles" concept —
+   anchored particles, pointer repulsion, spring return, friction.
+   Behaviors: cursor follow (desktop), gaze tracking, idle wander,
+   blinking, scroll glance, tap/click "boop" burst, FLIP dock morph.
 --------------------------------------------------------------- */
-const terminalScreen = document.getElementById("terminal-screen");
+(function initMascotOrb() {
+  const wrap = document.getElementById("mascot-wrap");
+  const stage = document.getElementById("mascot-stage");
+  const orbPos = document.getElementById("mascot-orb-pos");
+  const orb = document.getElementById("mascot-orb");
+  const canvas = document.getElementById("mascot-canvas");
+  if (!wrap || !stage || !orbPos || !orb || !canvas) return;
 
-const TERM_SNIPPETS = {
-  agent: `
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">python -m greenfield.orchestrator --checkpoint sqlite://checkpoints.db</span></div>
-<div class="term-out">[LangGraph] Loading stateful graph: <span class="highlight">4 specialized agents registered</span></div>
-<div class="term-out">[Tool Registry] FastMCP tools initialized: least-privilege boundaries enforced</div>
-<div class="term-out">[Planning] Dynamic task decomposition: ReAct + Tree of Thoughts active</div>
-<div class="term-out success">[✓] Orchestration running: Durable checkpoints saved | HITL approvals ready</div>
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`,
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
 
-  profile: `
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">cat profile.json</span></div>
-<div class="term-out">{</div>
-<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"name"</span>: <span style="color:#a5d6ff">"Abdelrahman Eslam"</span>,</div>
-<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"degree"</span>: <span style="color:#a5d6ff">"BSc in Computer & Data Science"</span>,</div>
-<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"institution"</span>: <span style="color:#a5d6ff">"Alexandria University ('28)"</span>,</div>
-<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"gpa"</span>: <span style="color:#79c0ff">3.47</span>,</div>
-<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"focus"</span>: <span style="color:#a5d6ff">"AI Engineering, LLM Systems, MCP & LangGraph"</span>,</div>
-<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"status"</span>: <span style="color:#34d399">"Seeking AI/ML Engineering Internships"</span></div>
-<div class="term-out">}</div>
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`,
+  const TAU = Math.PI * 2;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const clamp = (v, min, max) => Math.min(max, Math.max(min, v));
+  const rand = (min, max) => min + Math.random() * (max - min);
 
-  rag: `
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">python terms_eval.py --bilingual --reranker cross-encoder</span></div>
-<div class="term-out">[1/3] Hybrid Retrieval: Dense vector + BM25 keyword matching (Arabic & English)...</div>
-<div class="term-out">[2/3] Cross-encoder reranking: Top-5 grounded clauses selected (Score > 0.92)...</div>
-<div class="term-out">[3/3] Transformers pipeline: NER & PII detection executed...</div>
-<div class="term-out success">[✓] Evaluation passed: 0 hallucination | Grounded QA synthesis complete</div>
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`,
-};
+  /* ---------- state ---------- */
+  let stageW = 0;
+  let stageH = 0;
+  let docked = false;
+  let running = false;
+  let rafId = 0;
+  let flipAnim = null;
+  let curious = false;
+  let boopUntil = 0;
+  let blinkUntil = 0;
+  let nextBlink = performance.now() + 1800 + Math.random() * 2200;
+  let wanderT = Math.random() * 100;
+  let lastScrollY = window.scrollY;
+  let scrollBias = 0;
+  let scrollBiasUntil = 0;
+  let lastFrameTime = performance.now();
+  let heroDocTop = 0; // mascot wrap's position in document coordinates
 
-function switchTermTab(tabId) {
-  document.querySelectorAll(".term-tab").forEach((tab) => {
-    tab.classList.toggle("active", tab.dataset.tab === tabId);
+  function measureHeroDocTop() {
+    heroDocTop = wrap.getBoundingClientRect().top + window.scrollY;
+  }
+  measureHeroDocTop();
+  window.addEventListener("resize", measureHeroDocTop);
+
+  const pointer = { x: -9999, y: -9999, inside: false, fine: true, lastMove: 0 };
+  const follow = { x: 0, y: 0 };
+  const gaze = { x: 0, y: 0 };
+
+  /* ---------- particles ---------- */
+  const specks = [];  // subtle texture on the orb face
+  const halo = [];    // dust ring drifting around the orb
+  const sparks = [];  // short-lived burst particles
+  const palette = { onOrb: "236,240,247", halo: "148,163,184" };
+
+  function readPalette() {
+    const dark = document.documentElement.getAttribute("data-theme") === "dark";
+    palette.onOrb = dark ? "235,240,248" : "240,238,230";
+    palette.halo = dark ? "196,210,232" : "71,85,105";
+  }
+  readPalette();
+  if (typeof MutationObserver !== "undefined") {
+    new MutationObserver(readPalette).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  }
+
+  function makeSpeck() {
+    const angle = Math.random() * TAU;
+    const radius = Math.sqrt(Math.random()) * 0.33;
+    return {
+      ax: 0.5 + Math.cos(angle) * radius,
+      ay: 0.5 + Math.sin(angle) * radius,
+      x: 0, y: 0, vx: 0, vy: 0,
+      r: rand(0.003, 0.006),
+      a: rand(0.05, 0.15),
+      phase: Math.random() * TAU,
+      speed: rand(0.2, 0.6),
+      amp: rand(0.004, 0.011),
+      spring: rand(0.01, 0.022),
+    };
+  }
+
+  function makeHalo() {
+    const angle = Math.random() * TAU;
+    const radius = rand(0.43, 0.52);
+    return {
+      ax: 0.5 + Math.cos(angle) * radius,
+      ay: 0.5 + Math.sin(angle) * radius,
+      x: 0, y: 0, vx: 0, vy: 0,
+      r: rand(0.0022, 0.0042),
+      a: rand(0.12, 0.3),
+      phase: Math.random() * TAU,
+      speed: rand(0.3, 0.9),
+      amp: rand(0.006, 0.018),
+      spring: rand(0.007, 0.015),
+    };
+  }
+
+  function seedParticles() {
+    specks.length = 0;
+    halo.length = 0;
+    const scale = clamp(stageW / 420, 0.12, 1.2);
+    const nSpecks = Math.max(10, Math.round(38 * scale));
+    const nHalo = Math.max(7, Math.round(30 * scale));
+    for (let i = 0; i < nSpecks; i++) specks.push(makeSpeck());
+    for (let i = 0; i < nHalo; i++) halo.push(makeHalo());
+    specks.concat(halo).forEach((p) => {
+      p.x = p.ax * stageW;
+      p.y = p.ay * stageH;
+    });
+  }
+
+  function drawParticles() {
+    ctx.clearRect(0, 0, stageW, stageH);
+    for (let i = 0; i < halo.length; i++) {
+      const p = halo[i];
+      ctx.fillStyle = "rgba(" + palette.halo + "," + clamp(p.a, 0, 0.55).toFixed(3) + ")";
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, Math.max(0.5, p.r * stageW), 0, TAU);
+      ctx.fill();
+    }
+    for (let i = 0; i < specks.length; i++) {
+      const p = specks[i];
+      ctx.fillStyle = "rgba(" + palette.onOrb + "," + clamp(p.a + 0.07, 0, 0.5).toFixed(3) + ")";
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, Math.max(0.5, p.r * stageW), 0, TAU);
+      ctx.fill();
+    }
+    for (let i = sparks.length - 1; i >= 0; i--) {
+      const s = sparks[i];
+      ctx.fillStyle = "rgba(" + palette.onOrb + "," + clamp(s.life * 0.85, 0, 0.9).toFixed(3) + ")";
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, Math.max(0.6, s.r), 0, TAU);
+      ctx.fill();
+    }
+  }
+
+  function resizeCanvas() {
+    stageW = stage.offsetWidth;
+    stageH = stage.offsetHeight;
+    if (!stageW || !stageH) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(stageW * dpr);
+    canvas.height = Math.round(stageH * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    seedParticles();
+    drawParticles();
+  }
+
+  if (typeof ResizeObserver !== "undefined") {
+    new ResizeObserver(resizeCanvas).observe(stage);
+  } else {
+    window.addEventListener("resize", resizeCanvas);
+  }
+  resizeCanvas();
+
+  /* ---------- pointer & scroll ---------- */
+  function onPointerMove(e) {
+    pointer.x = e.clientX;
+    pointer.y = e.clientY;
+    pointer.inside = true;
+    pointer.fine = e.pointerType !== "touch";
+    pointer.lastMove = performance.now();
+  }
+  window.addEventListener("pointermove", onPointerMove, { passive: true });
+  window.addEventListener("pointerdown", onPointerMove, { passive: true });
+  document.addEventListener("pointerleave", () => { pointer.inside = false; });
+  window.addEventListener("blur", () => { pointer.inside = false; });
+
+  window.addEventListener("scroll", () => {
+    const y = window.scrollY;
+    const dy = y - lastScrollY;
+    lastScrollY = y;
+    if (Math.abs(dy) > 3 && !reducedMotion) {
+      scrollBias = clamp(dy * 0.09, -26, 26);
+      scrollBiasUntil = performance.now() + 280;
+    }
+  }, { passive: true });
+
+  /* ---------- boop (tap / click / keyboard) ---------- */
+  function boop() {
+    const now = performance.now();
+    if (now < boopUntil) return;
+    boopUntil = now + 640;
+    orb.classList.remove("boop");
+    void orb.offsetWidth; // restart squash animation
+    orb.classList.add("boop");
+    blinkUntil = now + 150;
+
+    const cx = stageW / 2;
+    const cy = stageH / 2;
+    const kick = Math.max(2.4, stageW * 0.02);
+    specks.concat(halo).forEach((p) => {
+      const dx = p.x - cx || rand(-1, 1);
+      const dy = p.y - cy || rand(-1, 1);
+      const d = Math.hypot(dx, dy) || 1;
+      p.vx += (dx / d) * kick * rand(0.7, 1.5);
+      p.vy += (dy / d) * kick * rand(0.7, 1.5);
+    });
+    for (let i = 0; i < 12; i++) {
+      const angle = Math.random() * TAU;
+      const speed = kick * rand(1.3, 2.8);
+      sparks.push({
+        x: cx + Math.cos(angle) * stageW * 0.18,
+        y: cy + Math.sin(angle) * stageW * 0.18,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        life: 1,
+        r: Math.max(0.7, stageW * 0.007),
+      });
+    }
+  }
+  orb.addEventListener("pointerdown", boop);
+  orb.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      boop();
+    }
   });
-  if (terminalScreen && TERM_SNIPPETS[tabId]) {
-    terminalScreen.innerHTML = TERM_SNIPPETS[tabId];
-  }
-}
 
-function runTermCommand(cmd) {
-  if (!terminalScreen) return;
-  const currentLines = terminalScreen.innerHTML;
+  /* ---------- docking: FLIP morph between hero and fixed corner ---------- */
+  function setDocked(next) {
+    if (next === docked) return;
+    if (flipAnim) {
+      flipAnim.cancel();
+      flipAnim = null;
+    }
+    const first = stage.getBoundingClientRect();
+    docked = next;
+    wrap.classList.toggle("docked", next);
+    document.body.classList.toggle("mascot-docked", next);
 
-  let output = "";
-  if (cmd === "skills") {
-    output = `
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">skills</span></div>
-<div class="term-out">→ Languages: Python, SQL, Java, C++, R, JavaScript</div>
-<div class="term-out">→ LLMs & Agents: RAG & Self-RAG, LangGraph, MCP, LangChain, Tool Calling</div>
-<div class="term-out">→ ML & DL: PyTorch, Transformers, NLP, Scikit-learn, Embeddings, Evaluation</div>
-<div class="term-out">→ Backend & Cloud: FastAPI, REST APIs, MySQL, SQLite, Docker, AWS (EC2)</div>
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`;
-  } else if (cmd === "projects") {
-    output = `
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">projects</span></div>
-<div class="term-out">1. Terms – AI Legal Document Analysis (LangGraph, Bilingual RAG, Transformers)</div>
-<div class="term-out">2. Greenfield Autonomous Multi-Agent Platform (LangGraph, Self-RAG, Docker)</div>
-<div class="term-out">3. WanderPath Travel Agency (Secure FastMCP Server, Role Auth, Gemini)</div>
-<div class="term-out">4. FIFA Player Market Value ML Pipeline (96% R² Automated Pipeline)</div>
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`;
-  } else if (cmd === "whoami") {
-    output = `
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">whoami</span></div>
-<div class="term-out">Abdelrahman Eslam — Computer & Data Science @ Alexandria University ('28)</div>
-<div class="term-out">Focused on AI Engineering, LLM Systems, LangGraph, and Secure MCP Tooling.</div>
-<div class="term-out">Seeking AI/ML Engineering Internships & Research Collaborations.</div>
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`;
-  } else if (cmd === "contact") {
-    output = `
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">contact</span></div>
-<div class="term-out">Email: abdelrahmaneslamomar@gmail.com</div>
-<div class="term-out">GitHub: https://github.com/AI-0o0</div>
-<div class="term-out">LinkedIn: https://linkedin.com/in/abdelrahmaneslam</div>
-<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`;
-  } else if (cmd === "clear") {
-    terminalScreen.innerHTML = `<div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>`;
-    return;
+    if (reducedMotion) return;
+
+    const last = stage.getBoundingClientRect();
+    const dx = first.left - last.left;
+    const dy = first.top - last.top;
+    const sx = first.width / Math.max(last.width, 1);
+    const sy = first.height / Math.max(last.height, 1);
+    flipAnim = stage.animate(
+      [
+        { transform: "translate(" + dx + "px, " + dy + "px) scale(" + sx + ", " + sy + ")" },
+        { transform: "translate(0, 0) scale(1, 1)" },
+      ],
+      { duration: 620, easing: "cubic-bezier(0.3, 1, 0.36, 1)" }
+    );
+    flipAnim.onfinish = () => {
+      flipAnim = null;
+      stage.style.transform = "";
+    };
   }
 
-  terminalScreen.innerHTML =
-    currentLines.replace('<span class="term-caret"></span>', "") + output;
-  terminalScreen.scrollTop = terminalScreen.scrollHeight;
-}
+  /* ---------- particle physics (Codrops interactive particles) ---------- */
+  function stepParticle(p, dt, px, py, repelRadius, repelRadius2, forceK, t) {
+    // gentle ambient drift around the anchor
+    const ax = p.ax * stageW + Math.cos(t * p.speed + p.phase) * p.amp * stageW;
+    const ay = p.ay * stageH + Math.sin(t * p.speed * 0.9 + p.phase) * p.amp * stageW;
+    // spring back to anchor
+    p.vx += (ax - p.x) * p.spring * dt;
+    p.vy += (ay - p.y) * p.spring * dt;
+    // pointer repulsion
+    const dx = p.x - px;
+    const dy = p.y - py;
+    const d2 = dx * dx + dy * dy;
+    if (d2 < repelRadius2 && d2 > 0.01) {
+      const d = Math.sqrt(d2);
+      const f = (1 - d / repelRadius) * forceK * dt;
+      p.vx += (dx / d) * f;
+      p.vy += (dy / d) * f;
+    }
+    // friction + integrate
+    p.vx *= 0.92;
+    p.vy *= 0.92;
+    p.x += p.vx * dt;
+    p.y += p.vy * dt;
+  }
+
+  /* ---------- main loop ---------- */
+  function frame(now) {
+    if (!running) return;
+
+    const dt = clamp((now - lastFrameTime) / 16.67, 0.25, 3);
+    lastFrameTime = now;
+    const t = now * 0.001;
+
+    /* dock state via scroll position (with hysteresis).
+       Dock when the hero slot nears the nav zone; undock back near the top. */
+    const dockThreshold = Math.max(heroDocTop - 96, 80);
+    if (!docked && window.scrollY > dockThreshold) setDocked(true);
+    else if (docked && window.scrollY < 20) setDocked(false);
+
+    const stageRect = stage.getBoundingClientRect();
+    const cx = stageRect.left + stageRect.width / 2;
+    const cy = stageRect.top + stageRect.height / 2;
+    const idle = now - pointer.lastMove > 4000;
+    const gazeRange = Math.max(stageRect.width, 240) * 0.9;
+
+    let nx = 0;
+    let ny = 0;
+    if (pointer.inside && !idle) {
+      nx = clamp((pointer.x - cx) / gazeRange, -1, 1);
+      ny = clamp((pointer.y - cy) / gazeRange, -1, 1);
+    } else {
+      // idle wander — the mascot keeps looking around on its own
+      wanderT += 0.016 * dt;
+      nx = Math.sin(wanderT * 0.9) * 0.55 + Math.sin(wanderT * 0.31) * 0.45;
+      ny = Math.cos(wanderT * 0.6) * 0.5;
+    }
+
+    /* orb follows the cursor (desktop) / drifts gently (touch & idle) */
+    const maxFollow = Math.max(2.5, stageRect.width * 0.075);
+    if (pointer.fine && pointer.inside && !idle) {
+      follow.x += (nx * maxFollow - follow.x) * 0.085 * dt;
+      follow.y += (ny * maxFollow - follow.y) * 0.085 * dt;
+    } else {
+      wanderT += 0.012 * dt;
+      const fx = Math.sin(wanderT * 0.5) * maxFollow * 0.45;
+      const fy = Math.cos(wanderT * 0.4) * maxFollow * 0.35;
+      follow.x += (fx - follow.x) * 0.05 * dt;
+      follow.y += (fy - follow.y) * 0.05 * dt;
+    }
+    orbPos.style.transform = "translate3d(" + follow.x.toFixed(2) + "px, " + follow.y.toFixed(2) + "px, 0)";
+
+    /* gaze: shine marks track the pointer; docked default = look left */
+    const scrolling = now < scrollBiasUntil;
+    if (docked) {
+      const near = pointer.inside && Math.hypot(pointer.x - cx, pointer.y - cy) < 160;
+      if (near && !idle) {
+        gaze.x += (nx * 46 - gaze.x) * 0.12 * dt;
+        gaze.y += (ny * 36 - gaze.y) * 0.12 * dt;
+      } else {
+        gaze.x += (-58 - gaze.x) * 0.1 * dt;
+        gaze.y += (-6 - gaze.y) * 0.1 * dt;
+      }
+    } else {
+      gaze.x += (nx * 54 - gaze.x) * 0.11 * dt;
+      gaze.y += ((ny * 40 + (scrolling ? scrollBias : 0)) - gaze.y) * 0.11 * dt;
+    }
+    orb.style.setProperty("--eye-x", gaze.x.toFixed(1) + "%");
+    orb.style.setProperty("--eye-y", gaze.y.toFixed(1) + "%");
+
+    /* curious: eyes widen when the pointer hovers the orb */
+    const nearOrb = pointer.inside && Math.hypot(pointer.x - cx, pointer.y - cy) < stageRect.width * 0.36;
+    if (nearOrb !== curious) {
+      curious = nearOrb;
+      orb.style.setProperty("--eye-s", curious ? "1.16" : "1");
+    }
+
+    /* blink scheduler (occasional quick double blink) */
+    if (now > nextBlink) {
+      blinkUntil = now + 130;
+      nextBlink = Math.random() < 0.18 ? now + 380 : now + 2400 + Math.random() * 3200;
+    }
+    orb.classList.toggle("blinking", now < blinkUntil);
+
+    /* particles */
+    const px = pointer.inside ? pointer.x - stageRect.left : -9999;
+    const py = pointer.inside ? pointer.y - stageRect.top : -9999;
+    const repelRadius = Math.max(14, stageW * 0.26);
+    const repelRadius2 = repelRadius * repelRadius;
+    const forceK = Math.max(0.9, stageW * 0.013);
+    for (let i = 0; i < halo.length; i++) {
+      stepParticle(halo[i], dt, px, py, repelRadius, repelRadius2, forceK, t);
+    }
+    for (let i = 0; i < specks.length; i++) {
+      stepParticle(specks[i], dt, px, py, repelRadius, repelRadius2, forceK, t);
+    }
+    for (let i = sparks.length - 1; i >= 0; i--) {
+      const s = sparks[i];
+      s.x += s.vx * dt;
+      s.y += s.vy * dt;
+      s.vx *= 0.94;
+      s.vy *= 0.94;
+      s.life -= 0.028 * dt;
+      if (s.life <= 0) sparks.splice(i, 1);
+    }
+    drawParticles();
+
+    rafId = requestAnimationFrame(frame);
+  }
+
+  function startLoop() {
+    if (running) return;
+    running = true;
+    lastFrameTime = performance.now();
+    rafId = requestAnimationFrame(frame);
+  }
+
+  function stopLoop() {
+    running = false;
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = 0;
+  }
+
+  if (reducedMotion) {
+    /* Static companion: no loop, no tracking. Docking still works
+       (instant) and CSS provides the docked look-left bias. */
+    const updateDockStatic = () => {
+      const threshold = Math.max(heroDocTop - 96, 80);
+      setDocked(window.scrollY > threshold);
+    };
+    window.addEventListener("scroll", updateDockStatic, { passive: true });
+    window.addEventListener("resize", () => {
+      measureHeroDocTop();
+      updateDockStatic();
+    });
+    updateDockStatic();
+  } else {
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stopLoop();
+      else startLoop();
+    });
+    startLoop();
+  }
+})();
 
 /* ---------------------------------------------------------------
    9. COMMAND PALETTE (CTRL+K / CMD+K)
@@ -863,8 +1084,7 @@ function renderProjects() {
 
   const search = searchEl ? searchEl.value.toLowerCase().trim() : "";
   const filtered = PROJECTS.filter((p) => {
-    const matchCat =
-      projectCategory === "All" || p.category === projectCategory;
+    const matchCat = projectCategory === "All" || p.category === projectCategory;
     const matchSearch =
       !search ||
       p.title.toLowerCase().includes(search) ||
@@ -874,8 +1094,7 @@ function renderProjects() {
   });
 
   if (filtered.length === 0) {
-    grid.innerHTML =
-      '<div class="no-results">No projects match your search criteria.</div>';
+    grid.innerHTML = '<div class="no-results">No projects match your search criteria.</div>';
     if (moreContainer) moreContainer.innerHTML = "";
     return;
   }
@@ -885,9 +1104,7 @@ function renderProjects() {
 
   grid.innerHTML = displayed
     .map((p) => {
-      const techTags = (p.technologies || [])
-        .map((t) => `<span class="tag">${t}</span>`)
-        .join("");
+      const techTags = (p.technologies || []).map((t) => `<span class="tag">${t}</span>`).join("");
       const highlights = (p.highlights || [])
         .map((h) => `<span class="project-highlight">${h}</span>`)
         .join("");
@@ -906,11 +1123,7 @@ function renderProjects() {
           </div>
           <h3 class="project-title">${p.title}</h3>
           <p class="project-desc">${p.description}</p>
-          ${
-            highlights
-              ? `<div class="project-highlights">${highlights}</div>`
-              : ""
-          }
+          ${highlights ? `<div class="project-highlights">${highlights}</div>` : ""}
           <div class="project-tech">${techTags}</div>
           <div class="project-links">
             ${
@@ -974,27 +1187,15 @@ function renderTimeline(items, containerSelector, fallbackIcon = "briefcase") {
 
   container.innerHTML = (items || [])
     .map((item) => {
-      const badges = (item.badges || [])
-        .map((b) => `<span class="badge">${b}</span>`)
-        .join("");
+      const badges = (item.badges || []).map((b) => `<span class="badge">${b}</span>`).join("");
 
-      const bullets = (item.bullets || [])
-        .map((bullet) => `<li>${bullet}</li>`)
-        .join("");
+      const bullets = (item.bullets || []).map((bullet) => `<li>${bullet}</li>`).join("");
 
       return `
       <div class="timeline-item">
         <div class="timeline-left">
           <div class="timeline-dot">
-            ${getSvgIcon(
-              item.icon === "🎓"
-                ? "graduation"
-                : item.icon === "🧠"
-                ? "brain"
-                : item.icon === "🤖" || item.icon === "cpu"
-                ? "cpu"
-                : item.icon || fallbackIcon
-            )}
+            ${getSvgIcon(item.icon === "🎓" ? "graduation" : item.icon === "🧠" ? "brain" : (item.icon === "🤖" || item.icon === "cpu") ? "cpu" : (item.icon || fallbackIcon))}
           </div>
         </div>
         <div class="card timeline-card">
@@ -1020,9 +1221,7 @@ function renderBlogs() {
   if (!grid) return;
 
   const search = searchEl ? searchEl.value.toLowerCase().trim() : "";
-  const allBlogs = [...BLOGS].sort(
-    (a, b) => new Date(b.date) - new Date(a.date)
-  );
+  const allBlogs = [...BLOGS].sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const filtered = allBlogs.filter((b) => {
     const matchCat = blogCategory === "All" || b.category === blogCategory;
@@ -1035,8 +1234,7 @@ function renderBlogs() {
   });
 
   if (filtered.length === 0) {
-    grid.innerHTML =
-      '<div class="no-results">No articles match your search criteria.</div>';
+    grid.innerHTML = '<div class="no-results">No articles match your search criteria.</div>';
     if (moreContainer) moreContainer.innerHTML = "";
     return;
   }
@@ -1046,9 +1244,7 @@ function renderBlogs() {
 
   grid.innerHTML = displayed
     .map((b) => {
-      const tags = (b.tags || [])
-        .map((t) => `<span class="tag"># ${t}</span>`)
-        .join("");
+      const tags = (b.tags || []).map((t) => `<span class="tag"># ${t}</span>`).join("");
       const formattedDate = new Date(b.date).toLocaleDateString("en-US", {
         month: "short",
         day: "numeric",
@@ -1070,7 +1266,7 @@ function renderBlogs() {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
               ${b.readingTime || "5 min read"}
             </span>
-            <a href="${b.link || "blog/index.html"}" class="read-more">
+            <a href="${b.link || 'blog/index.html'}" class="read-more">
               <span>Read article</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
@@ -1099,9 +1295,7 @@ function renderBlogs() {
 }
 
 function setBlogFilter(btn) {
-  document
-    .querySelectorAll("#blog-filters .filter-pill")
-    .forEach((b) => b.classList.remove("active"));
+  document.querySelectorAll("#blog-filters .filter-pill").forEach((b) => b.classList.remove("active"));
   btn.classList.add("active");
   blogCategory = btn.dataset.cat || "All";
   renderBlogs();
@@ -1114,25 +1308,14 @@ function filterBlogs() {
 function renderSkills(skills) {
   const grid = document.querySelector(".skills-grid");
   if (!grid || !Array.isArray(skills) || skills.length === 0) return;
-  grid.innerHTML = skills
-    .map((group) => {
-      const tags = (group.items || [])
-        .map((item) => `<span class="skill-tag">${item}</span>`)
-        .join("");
-      const iconName =
-        group.title.toLowerCase().includes("llm") ||
-        group.title.toLowerCase().includes("agent")
-          ? "cpu"
-          : group.title.toLowerCase().includes("machine")
-          ? "ml"
-          : group.title.toLowerCase().includes("data")
-          ? "chart"
-          : group.title.toLowerCase().includes("program")
-          ? "code"
-          : group.title.toLowerCase().includes("backend")
-          ? "briefcase"
-          : "code";
-      return `
+  grid.innerHTML = skills.map(group => {
+    const tags = (group.items || []).map(item => `<span class="skill-tag">${item}</span>`).join("");
+    const iconName = group.title.toLowerCase().includes("llm") || group.title.toLowerCase().includes("agent") ? "cpu" :
+                     group.title.toLowerCase().includes("machine") ? "ml" :
+                     group.title.toLowerCase().includes("data") ? "chart" :
+                     group.title.toLowerCase().includes("program") ? "code" :
+                     group.title.toLowerCase().includes("backend") ? "briefcase" : "code";
+    return `
     <div class="card skill-group">
       <div class="skill-group-head">
         <p class="skill-group-title">
@@ -1142,16 +1325,13 @@ function renderSkills(skills) {
       </div>
       <div class="skill-tags">${tags}</div>
     </div>`;
-    })
-    .join("");
+  }).join("");
 }
 
 function renderResearch(research) {
   const grid = document.querySelector(".research-grid");
   if (!grid || !Array.isArray(research) || research.length === 0) return;
-  grid.innerHTML = research
-    .map(
-      (r) => `
+  grid.innerHTML = research.map((r) => `
     <div class="card research-card">
       <div class="research-card-top">
         <div class="research-icon-box" aria-hidden="true">
@@ -1161,9 +1341,7 @@ function renderResearch(research) {
       </div>
       <h3>${r.title}</h3>
       <p>${r.text}</p>
-    </div>`
-    )
-    .join("");
+    </div>`).join("");
 }
 
 function applyHomepage() {
@@ -1187,15 +1365,12 @@ function submitContact(e) {
   e.preventDefault();
   const name = document.getElementById("c-name").value;
   const email = document.getElementById("c-email").value;
-  const subject =
-    document.getElementById("c-subject").value || "Portfolio Inquiry";
+  const subject = document.getElementById("c-subject").value || "Portfolio Inquiry";
   const message = document.getElementById("c-message").value;
 
   const profile = getProfile();
   const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-  window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(
-    subject
-  )}&body=${encodeURIComponent(body)}`;
+  window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
   const btn = document.getElementById("submit-btn");
   if (btn) {
@@ -1221,9 +1396,7 @@ let statsAnimated = false;
 function animateHeroStats() {
   if (statsAnimated) return;
   statsAnimated = true;
-  const prefersReduced = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   document.querySelectorAll(".stat-val[data-count]").forEach((el) => {
     const target = parseFloat(el.dataset.count);
@@ -1238,9 +1411,7 @@ function animateHeroStats() {
     function tick(now) {
       const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent =
-        (target * eased).toFixed(decimals) +
-        (el.textContent.includes("+") ? "+" : "");
+      el.textContent = (target * eased).toFixed(decimals) + (el.textContent.includes("+") ? "+" : "");
       if (progress < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
@@ -1260,11 +1431,7 @@ async function refreshFromRemoteData() {
   if (!data) return;
 
   REMOTE_DATA = data;
-  if (
-    data.projects &&
-    Array.isArray(data.projects) &&
-    data.projects.length > 0
-  ) {
+  if (data.projects && Array.isArray(data.projects) && data.projects.length > 0) {
     PROJECTS = data.projects;
   } else {
     PROJECTS = readStoredJson(STORAGE_KEYS.projects, DEFAULT_PROJECTS);
