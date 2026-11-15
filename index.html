@@ -171,7 +171,17 @@
       <section id="hero">
         <div class="container">
           <div class="hero-content">
-            <!-- Left: Hero Overview & CTAs -->
+            <figure class="hero-portrait">
+              <img
+                src="img/me.png"
+                alt="Illustrated portrait of Abdelrahman Eslam"
+                width="1280"
+                height="1280"
+                decoding="async"
+              />
+            </figure>
+
+            <!-- Hero Overview & CTAs -->
             <div class="hero-text">
               <div class="hero-eyebrow">
                 <span class="hero-dot" aria-hidden="true"></span>
@@ -212,7 +222,7 @@
                   <div class="stat-label">Projects Built</div>
                 </div>
                 <div>
-                  <div class="stat-val" data-count="3.45">3.45</div>
+                  <div class="stat-val" data-count="3.47">3.47</div>
                   <div class="stat-label">Academic GPA</div>
                 </div>
                 <div>
@@ -222,57 +232,6 @@
               </div>
             </div>
 
-            <!-- Right: Interactive Developer Console / Terminal -->
-            <div class="hero-terminal-wrap">
-              <div class="hero-terminal-card" aria-label="Interactive Terminal Simulation">
-                <div class="terminal-header">
-                  <div class="terminal-controls" aria-hidden="true">
-                    <span class="terminal-dot dot-red"></span>
-                    <span class="terminal-dot dot-yellow"></span>
-                    <span class="terminal-dot dot-green"></span>
-                  </div>
-
-                  <div class="terminal-tabs">
-                    <button class="term-tab active" data-tab="agent" onclick="switchTermTab('agent')">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
-                      multi_agent.py
-                    </button>
-                    <button class="term-tab" data-tab="profile" onclick="switchTermTab('profile')">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                      profile.json
-                    </button>
-                    <button class="term-tab" data-tab="rag" onclick="switchTermTab('rag')">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
-                      legal_rag.py
-                    </button>
-                  </div>
-
-                  <div class="terminal-status">
-                    <span class="hero-dot" style="width:6px;height:6px;" aria-hidden="true"></span>
-                    <span>Ready</span>
-                  </div>
-                </div>
-
-                <div class="terminal-body" id="terminal-screen" tabindex="0" role="region" aria-label="Terminal content">
-                  <div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-cmd">python -m greenfield.orchestrator --checkpoint sqlite://checkpoints.db</span></div>
-                  <div class="term-out">[LangGraph] Loading stateful graph: <span class="highlight">4 specialized agents registered</span></div>
-                  <div class="term-out">[Tool Registry] FastMCP tools initialized: least-privilege boundaries enforced</div>
-                  <div class="term-out">[Planning] Dynamic task decomposition: ReAct + Tree of Thoughts active</div>
-                  <div class="term-out success">[✓] Orchestration running: Durable checkpoints saved | HITL approvals ready</div>
-                  <div class="term-line"><span class="term-prompt">user@ai-lab:~$</span> <span class="term-caret"></span></div>
-                </div>
-
-                <!-- Interactive Chips -->
-                <div class="terminal-chips">
-                  <span style="font-family:var(--font-mono);font-size:0.6875rem;color:#64748b;margin-right:4px;">Try command:</span>
-                  <button class="term-chip" onclick="runTermCommand('skills')">skills</button>
-                  <button class="term-chip" onclick="runTermCommand('projects')">projects</button>
-                  <button class="term-chip" onclick="runTermCommand('whoami')">whoami</button>
-                  <button class="term-chip" onclick="runTermCommand('contact')">contact</button>
-                  <button class="term-chip" onclick="runTermCommand('clear')">clear</button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

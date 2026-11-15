@@ -13,7 +13,7 @@
         "label": "Projects Built"
       },
       {
-        "value": "3.45",
+        "value": "3.47",
         "label": "Academic GPA"
       },
       {
@@ -53,14 +53,7 @@
       {
         "title": "Programming Languages",
         "color": "var(--text-secondary)",
-        "items": [
-          "Python",
-          "SQL",
-          "Java",
-          "C++",
-          "R",
-          "JavaScript"
-        ]
+        "items": ["Python", "SQL", "Java", "C++", "R", "JavaScript"]
       },
       {
         "title": "Backend & Databases",
@@ -116,10 +109,7 @@
         "title": "Alexandria University",
         "subtitle": "Bachelor of Science in Computer and Data Science",
         "period": "Sep 2024 - Jun 2028",
-        "badges": [
-          "GPA 3.45 / 4.0",
-          "Alexandria, Egypt"
-        ],
+        "badges": ["GPA 3.47 / 4.0", "Alexandria, Egypt"],
         "bullets": [
           "Relevant Coursework: Machine Learning, Data Mining, Regression Analysis, Cloud Computing, Operating Systems, Data Science, Database Systems, and Algorithms",
           "Active in AI and Data Science student research initiatives on campus",
@@ -134,11 +124,7 @@
         "title": "Argus Team – Alexandria University",
         "subtitle": "AI / Data Science Research Team Member",
         "period": "2026 - Present",
-        "badges": [
-          "AI Research",
-          "Paper Summarization",
-          "Experimentation"
-        ],
+        "badges": ["AI Research", "Paper Summarization", "Experimentation"],
         "bullets": [
           "Participate in research paper reading, technical discussion, and summarization across AI and Data Science topics",
           "Produce structured technical summaries communicating research methodologies, key findings, and limitations",
@@ -151,10 +137,7 @@
         "title": "Material Team – Alexandria University",
         "subtitle": "Student Academic Materials Team Member",
         "period": "2024 - Present",
-        "badges": [
-          "Academic Knowledge",
-          "Resource Curation"
-        ],
+        "badges": ["Academic Knowledge", "Resource Curation"],
         "bullets": [
           "Collect, organize, and maintain course summaries, lecture notes, and academic resources for university students",
           "Help centralize and structure academic materials to improve accessibility and knowledge sharing across cohorts"
@@ -166,11 +149,7 @@
         "title": "AI Engineering Training – Autonomous Agents",
         "subtitle": "Alexandria University",
         "period": "Jul 2026 - Aug 2026",
-        "badges": [
-          "AI Agents",
-          "LLMs",
-          "Agent Architectures"
-        ],
+        "badges": ["AI Agents", "LLMs", "Agent Architectures"],
         "bullets": [
           "Studied AI engineering concepts focusing on Autonomous Agents, LLM-based systems, and agentic architectures",
           "Explored agent orchestration, tool integration, decision-making, and multi-step reasoning in autonomous systems",
@@ -183,11 +162,7 @@
         "title": "Natural Language Processing Training",
         "subtitle": "National Telecommunication Institute (NTI)",
         "period": "Jul 2026",
-        "badges": [
-          "NLP",
-          "Transformers",
-          "Deep Learning"
-        ],
+        "badges": ["NLP", "Transformers", "Deep Learning"],
         "bullets": [
           "Studied core Natural Language Processing concepts, including modern language-model-based systems",
           "Applied NLP concepts using Python and machine learning workflows"
@@ -199,12 +174,7 @@
         "title": "Data Analyst Specialist Track",
         "subtitle": "Digital Egypt Pioneers Initiative (DEPI)",
         "period": "May 2025 - Oct 2025",
-        "badges": [
-          "Python",
-          "SQL",
-          "Tableau",
-          "Power BI"
-        ],
+        "badges": ["Python", "SQL", "Tableau", "Power BI"],
         "bullets": [
           "Worked with Python, SQL, Tableau, Power BI, and Excel for data preparation, analysis, visualization, and data-driven decision-making",
           "Applied data cleaning, exploratory data analysis, data visualization, and data governance concepts to analytical workflows"
@@ -492,13 +462,7 @@
       "title": "Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills",
       "date": "2026-08-16",
       "category": "AI Agents",
-      "tags": [
-        "AI Agents",
-        "LLMs",
-        "DevTools",
-        "Best Practices",
-        "Workflows"
-      ],
+      "tags": ["AI Agents", "LLMs", "DevTools", "Best Practices", "Workflows"],
       "readingTime": "5 min read",
       "summary": "A practical playbook for steering LLM coding agents: task scoping, Plan Mode, context hygiene, AGENTS.md conventions, and modular skill systems.",
       "link": "working-with-coding-agents.html"

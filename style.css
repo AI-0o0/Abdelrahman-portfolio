@@ -655,7 +655,9 @@ img, svg {
   position: fixed;
   top: var(--nav-h);
   left: 0;
-  width: 100%;
+  right: 0;
+  width: auto;
+  max-width: 100vw;
   max-height: calc(100vh - var(--nav-h));
   overflow-y: auto;
   background: var(--bg-glass);
@@ -708,15 +710,50 @@ img, svg {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1.15fr 0.95fr;
-  gap: var(--space-3xl);
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(var(--space-xl), 6vw, var(--space-3xl));
   align-items: center;
+  max-width: var(--max-w);
+}
+
+.hero-portrait {
+  width: min(100%, 360px);
+  aspect-ratio: 1;
+  margin: 0;
+  justify-self: start;
+  overflow: hidden;
+  border: 6px solid var(--bg);
+  border-radius: 50%;
+  background: #0d1117;
+  box-shadow: 0 0 0 1px var(--accent), 0 20px 40px rgba(15, 23, 42, 0.14);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.12);
+  border-radius: 50%;
+  transition: transform var(--transition-normal), filter var(--transition-normal);
+}
+
+.hero-portrait:hover {
+  transform: translateY(-4px) rotate(-1deg);
+  box-shadow: 0 0 0 1px var(--accent-hover), 0 24px 48px rgba(15, 23, 42, 0.2);
+}
+
+.hero-portrait:hover img {
+  transform: scale(1.16);
+  filter: saturate(1.08) contrast(1.03);
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+  max-width: 720px;
 }
 
 .hero-eyebrow {
@@ -820,180 +857,6 @@ img, svg {
   text-transform: none;
   letter-spacing: 0;
   font-weight: 400;
-}
-
-/* ============================================================
-   7. INTERACTIVE DEVELOPER TERMINAL
-   ============================================================ */
-.hero-terminal-card {
-  background: var(--bg-terminal);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 100%;
-}
-
-.terminal-header {
-  background: rgba(255, 255, 255, 0.04);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 10px 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.terminal-controls {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.terminal-dot {
-  width: 11px;
-  height: 11px;
-  border-radius: var(--radius-full);
-}
-
-.dot-red { background: #ff5f56; }
-.dot-yellow { background: #ffbd2e; }
-.dot-green { background: #27c93f; }
-
-.terminal-tabs {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.term-tab {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 4px 8px;
-  min-height: 28px;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: #8b949e;
-  border-radius: var(--radius-xs);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: color var(--transition-fast), background-color var(--transition-fast);
-}
-
-.term-tab:hover {
-  color: #c9d1d9;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.term-tab.active {
-  color: #58a6ff;
-  background: rgba(56, 139, 253, 0.12);
-}
-
-.terminal-status {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  color: #3fb950;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.terminal-body {
-  padding: 16px;
-  font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  color: var(--text-terminal);
-  line-height: 1.6;
-  min-height: 240px;
-  max-height: 340px;
-  overflow-y: auto;
-  overflow-x: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  word-break: break-word;
-}
-
-.term-line {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  word-break: break-word;
-}
-
-.term-prompt {
-  color: #38bdf8;
-  user-select: none;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-.term-cmd {
-  color: #f1f5f9;
-  font-weight: 600;
-}
-
-.term-out {
-  color: #94a3b8;
-  padding-left: 14px;
-}
-
-.term-out.highlight {
-  color: #79c0ff;
-}
-
-.term-out.success {
-  color: #34d399;
-}
-
-.term-caret {
-  display: inline-block;
-  width: 8px;
-  height: 15px;
-  background: #38bdf8;
-  animation: blinkCursor 1s step-start infinite;
-  vertical-align: middle;
-  margin-left: 2px;
-}
-
-@keyframes blinkCursor {
-  50% { opacity: 0; }
-}
-
-.terminal-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding: 10px 14px;
-  background: rgba(255, 255, 255, 0.02);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.term-chip {
-  padding: 4px 10px;
-  min-height: 28px;
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: #94a3b8;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: var(--radius-xs);
-  cursor: pointer;
-  transition: color var(--transition-fast), background-color var(--transition-fast);
-}
-
-.term-chip:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
 }
 
 /* ============================================================
@@ -2497,8 +2360,8 @@ footer {
 /* Tablet (max-width: 1024px) */
 @media (max-width: 1024px) {
   .hero-content {
-    grid-template-columns: 1fr;
-    gap: var(--space-2xl);
+    grid-template-columns: minmax(220px, 0.68fr) minmax(0, 1.32fr);
+    gap: var(--space-xl);
   }
 
   .about-grid {
@@ -2525,12 +2388,34 @@ footer {
     padding: 0 var(--space-md);
   }
 
+  .nav-inner {
+    padding-inline: var(--space-md);
+  }
+
   .nav-links {
     display: none;
   }
 
   .cmd-trigger {
     display: none;
+  }
+
+  .nav-right > .btn {
+    display: none;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .hero-portrait {
+    width: min(100%, 280px);
+    justify-self: center;
+  }
+
+  .hero-text {
+    max-width: none;
   }
 
   #hamburger {
@@ -2636,24 +2521,6 @@ footer {
     font-size: 0.625rem;
   }
 
-  .terminal-header {
-    padding: 8px 10px;
-  }
-
-  .terminal-tabs {
-    display: none;
-  }
-
-  .terminal-body {
-    padding: 12px;
-    font-size: 0.75rem;
-    min-height: 200px;
-  }
-
-  .terminal-chips {
-    padding: 8px 10px;
-  }
-
   /* Timeline compact spacing on small phones */
   .timeline::before {
     left: 15px;
@@ -2702,7 +2569,4 @@ footer {
     scroll-behavior: auto !important;
   }
 
-  .term-caret {
-    animation: none;
-  }
 }

@@ -20,7 +20,7 @@ const DEFAULT_PROFILE = {
 const DEFAULT_HOMEPAGE = {
   stats: [
     { value: "20+", label: "Projects" },
-    { value: "3.45", label: "GPA" },
+    { value: "3.47", label: "GPA" },
     { value: "'28", label: "Graduation" },
   ],
   skills: [
@@ -32,12 +32,25 @@ const DEFAULT_HOMEPAGE = {
     {
       title: "AI & LLMs",
       color: "#7c3aed",
-      items: ["LLMs", "AI Agents", "RAG", "LangChain", "MCP", "Prompt Engineering"],
+      items: [
+        "LLMs",
+        "AI Agents",
+        "RAG",
+        "LangChain",
+        "MCP",
+        "Prompt Engineering",
+      ],
     },
     {
       title: "Machine Learning",
       color: "#0891b2",
-      items: ["Scikit-learn", "PyTorch", "Deep Learning", "NLP", "Feature Engineering"],
+      items: [
+        "Scikit-learn",
+        "PyTorch",
+        "Deep Learning",
+        "NLP",
+        "Feature Engineering",
+      ],
     },
     {
       title: "Backend & Systems",
@@ -70,7 +83,7 @@ const DEFAULT_HOMEPAGE = {
       title: "Alexandria University",
       subtitle: "BSc in Data Science",
       period: "Sep 2024 - Jun 2028",
-      badges: ["GPA 3.45 / 4.0", "Alexandria, Egypt"],
+      badges: ["GPA 3.47 / 4.0", "Alexandria, Egypt"],
       bullets: [
         "Focusing on machine learning, statistics, and data engineering",
         "Active in AI-related student communities on campus",
@@ -185,8 +198,19 @@ const DEFAULT_PROJECTS = [
     difficulty: "Advanced",
     status: "Completed",
     icon: "MCP",
-    technologies: ["Python", "MCP Protocol", "FastMCP", "ReAct Agent", "MySQL", "Tool Calling"],
-    highlights: ["Collaborative Project", "Role-Based Authorization", "Human-in-the-Loop Elicitation"],
+    technologies: [
+      "Python",
+      "MCP Protocol",
+      "FastMCP",
+      "ReAct Agent",
+      "MySQL",
+      "Tool Calling",
+    ],
+    highlights: [
+      "Collaborative Project",
+      "Role-Based Authorization",
+      "Human-in-the-Loop Elicitation",
+    ],
     github: "https://github.com/AI-0o0/WanderPathA",
     demo: "",
   },
@@ -199,8 +223,19 @@ const DEFAULT_PROJECTS = [
     difficulty: "Advanced",
     status: "In Progress",
     icon: "MCP",
-    technologies: ["Python", "MCP Protocol", "FastMCP", "AsyncIO", "OpenPyXL", "Pandas"],
-    highlights: ["Full MCP Tool Protocol", "Autonomous Spreadsheet Workflows", "Zero-Latency Async Execution"],
+    technologies: [
+      "Python",
+      "MCP Protocol",
+      "FastMCP",
+      "AsyncIO",
+      "OpenPyXL",
+      "Pandas",
+    ],
+    highlights: [
+      "Full MCP Tool Protocol",
+      "Autonomous Spreadsheet Workflows",
+      "Zero-Latency Async Execution",
+    ],
     github: "https://github.com/AI-0o0/excel-mcp",
     demo: "",
   },
@@ -213,8 +248,18 @@ const DEFAULT_PROJECTS = [
     difficulty: "Advanced",
     status: "Completed",
     icon: "ML",
-    technologies: ["Python", "Scikit-learn", "Pandas", "GridSearchCV", "Feature Engineering"],
-    highlights: ["96.0% R² Score", "85.6% Tier Accuracy", "Automated ML Pipeline"],
+    technologies: [
+      "Python",
+      "Scikit-learn",
+      "Pandas",
+      "GridSearchCV",
+      "Feature Engineering",
+    ],
+    highlights: [
+      "96.0% R² Score",
+      "85.6% Tier Accuracy",
+      "Automated ML Pipeline",
+    ],
     github: "https://github.com/AI-0o0/Data-science-projects",
     demo: "",
   },
@@ -227,8 +272,19 @@ const DEFAULT_PROJECTS = [
     difficulty: "Intermediate",
     status: "Completed",
     icon: "MATH",
-    technologies: ["Python", "NumPy", "Matplotlib", "Seaborn", "Vectorization", "Linear Algebra"],
-    highlights: ["Vectorized Gradient Descent", "Closed-Form Normal Equation", "L1 / L2 Regularization"],
+    technologies: [
+      "Python",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn",
+      "Vectorization",
+      "Linear Algebra",
+    ],
+    highlights: [
+      "Vectorized Gradient Descent",
+      "Closed-Form Normal Equation",
+      "L1 / L2 Regularization",
+    ],
     github: "https://github.com/AI-0o0/Regression-Analysis-project-",
     demo: "",
   },
@@ -241,8 +297,18 @@ const DEFAULT_PROJECTS = [
     difficulty: "Advanced",
     status: "In Progress",
     icon: "AI",
-    technologies: ["Python", "FastMCP", "AI Agents", "AsyncIO", "Tool Dispatch"],
-    highlights: ["Autonomous Tool Dispatching", "Multi-Tool Orchestration", "Resilient Task Routing"],
+    technologies: [
+      "Python",
+      "FastMCP",
+      "AI Agents",
+      "AsyncIO",
+      "Tool Dispatch",
+    ],
+    highlights: [
+      "Autonomous Tool Dispatching",
+      "Multi-Tool Orchestration",
+      "Resilient Task Routing",
+    ],
     github: "https://github.com/AI-0o0/greenfieldA",
     demo: "",
   },
@@ -255,8 +321,19 @@ const DEFAULT_PROJECTS = [
     difficulty: "Intermediate",
     status: "Completed",
     icon: "DS",
-    technologies: ["Python", "Pandas", "Scikit-learn", "Statistical Modeling", "Seaborn", "EDA"],
-    highlights: ["CRISP-DM Standard Pipeline", "Hypothesis Testing Validation", "Insight Formulation"],
+    technologies: [
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "Statistical Modeling",
+      "Seaborn",
+      "EDA",
+    ],
+    highlights: [
+      "CRISP-DM Standard Pipeline",
+      "Hypothesis Testing Validation",
+      "Insight Formulation",
+    ],
     github: "https://github.com/AI-0o0/AlexU_DSM_FinalProject",
     demo: "",
   },
@@ -269,8 +346,19 @@ const DEFAULT_PROJECTS = [
     difficulty: "Intermediate",
     status: "Completed",
     icon: "DM",
-    technologies: ["Python", "Scikit-learn", "Apriori / FP-Growth", "K-Means", "PCA", "Pandas"],
-    highlights: ["Unsupervised Clustering", "Association Rule Mining", "PCA Dimensionality Reduction"],
+    technologies: [
+      "Python",
+      "Scikit-learn",
+      "Apriori / FP-Growth",
+      "K-Means",
+      "PCA",
+      "Pandas",
+    ],
+    highlights: [
+      "Unsupervised Clustering",
+      "Association Rule Mining",
+      "PCA Dimensionality Reduction",
+    ],
     github: "https://github.com/AI-0o0/Data-Mining-FCDS-Project-",
     demo: "",
   },
@@ -283,8 +371,19 @@ const DEFAULT_PROJECTS = [
     difficulty: "Intermediate",
     status: "Completed",
     icon: "VIZ",
-    technologies: ["Python", "Pandas", "Matplotlib", "Seaborn", "Data Visualization", "SQL"],
-    highlights: ["DEPI Graduation Project", "Strategic KPI Dashboards", "Statistical Trend Decomposition"],
+    technologies: [
+      "Python",
+      "Pandas",
+      "Matplotlib",
+      "Seaborn",
+      "Data Visualization",
+      "SQL",
+    ],
+    highlights: [
+      "DEPI Graduation Project",
+      "Strategic KPI Dashboards",
+      "Statistical Trend Decomposition",
+    ],
     github: "https://github.com/AI-0o0/DEPI-Final-Project",
     demo: "",
   },
@@ -297,8 +396,19 @@ const DEFAULT_PROJECTS = [
     difficulty: "Intermediate",
     status: "Completed",
     icon: "DS",
-    technologies: ["Python", "Pandas", "Seaborn", "Matplotlib", "Jupyter", "EDA"],
-    highlights: ["100+ Years of Data", "Demographic Trend Analysis", "Data-Driven Visualizations"],
+    technologies: [
+      "Python",
+      "Pandas",
+      "Seaborn",
+      "Matplotlib",
+      "Jupyter",
+      "EDA",
+    ],
+    highlights: [
+      "100+ Years of Data",
+      "Demographic Trend Analysis",
+      "Data-Driven Visualizations",
+    ],
     github: "https://github.com/AI-0o0/Data-science-projects",
     demo: "",
   },
@@ -307,7 +417,8 @@ const DEFAULT_PROJECTS = [
 const DEFAULT_BLOGS = [
   {
     id: 1,
-    title: "Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills",
+    title:
+      "Mastering AI Coding Agents: Essential Habits, AGENTS.md, and Custom Skills",
     date: "2026-08-16",
     category: "AI Agents",
     tags: ["AI Agents", "LLMs", "DevTools", "Best Practices", "Workflows"],
@@ -349,7 +460,12 @@ function readStoredJson(key, fallback) {
     const value = localStorage.getItem(key);
     if (!value) return fallback;
     const parsed = JSON.parse(value);
-    if (Array.isArray(parsed) && parsed.length === 0 && Array.isArray(fallback) && fallback.length > 0) {
+    if (
+      Array.isArray(parsed) &&
+      parsed.length === 0 &&
+      Array.isArray(fallback) &&
+      fallback.length > 0
+    ) {
       return fallback;
     }
     return parsed;
@@ -477,7 +593,9 @@ function updateNavOnScroll() {
   if (backTop) backTop.classList.toggle("visible", scrollY > 450);
 
   if (progressBar) {
-    const max = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const max =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
     progressBar.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
   }
 }
@@ -551,23 +669,29 @@ function showToast(message) {
 }
 
 function copyTextToClipboard(text, successMsg = "Copied to clipboard") {
-  navigator.clipboard.writeText(text).then(() => {
-    showToast(successMsg);
-  }).catch(() => {
-    // Fallback for older browsers
-    const tempInput = document.createElement("input");
-    tempInput.value = text;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
-    showToast(successMsg);
-  });
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      showToast(successMsg);
+    })
+    .catch(() => {
+      // Fallback for older browsers
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      showToast(successMsg);
+    });
 }
 
 function copyEmailToClipboard() {
   const profile = getProfile();
-  copyTextToClipboard(profile.email || "abdelrahmaneslamomar@gmail.com", "Email copied: " + profile.email);
+  copyTextToClipboard(
+    profile.email || "abdelrahmaneslamomar@gmail.com",
+    "Email copied: " + profile.email
+  );
 }
 
 /* ---------------------------------------------------------------
@@ -590,7 +714,7 @@ const TERM_SNIPPETS = {
 <div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"name"</span>: <span style="color:#a5d6ff">"Abdelrahman Eslam"</span>,</div>
 <div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"degree"</span>: <span style="color:#a5d6ff">"BSc in Computer & Data Science"</span>,</div>
 <div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"institution"</span>: <span style="color:#a5d6ff">"Alexandria University ('28)"</span>,</div>
-<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"gpa"</span>: <span style="color:#79c0ff">3.45</span>,</div>
+<div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"gpa"</span>: <span style="color:#79c0ff">3.47</span>,</div>
 <div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"focus"</span>: <span style="color:#a5d6ff">"AI Engineering, LLM Systems, MCP & LangGraph"</span>,</div>
 <div class="term-out">&nbsp;&nbsp;<span style="color:#58a6ff">"status"</span>: <span style="color:#34d399">"Seeking AI/ML Engineering Internships"</span></div>
 <div class="term-out">}</div>
@@ -654,7 +778,8 @@ function runTermCommand(cmd) {
     return;
   }
 
-  terminalScreen.innerHTML = currentLines.replace('<span class="term-caret"></span>', "") + output;
+  terminalScreen.innerHTML =
+    currentLines.replace('<span class="term-caret"></span>', "") + output;
   terminalScreen.scrollTop = terminalScreen.scrollHeight;
 }
 
@@ -738,7 +863,8 @@ function renderProjects() {
 
   const search = searchEl ? searchEl.value.toLowerCase().trim() : "";
   const filtered = PROJECTS.filter((p) => {
-    const matchCat = projectCategory === "All" || p.category === projectCategory;
+    const matchCat =
+      projectCategory === "All" || p.category === projectCategory;
     const matchSearch =
       !search ||
       p.title.toLowerCase().includes(search) ||
@@ -748,7 +874,8 @@ function renderProjects() {
   });
 
   if (filtered.length === 0) {
-    grid.innerHTML = '<div class="no-results">No projects match your search criteria.</div>';
+    grid.innerHTML =
+      '<div class="no-results">No projects match your search criteria.</div>';
     if (moreContainer) moreContainer.innerHTML = "";
     return;
   }
@@ -758,7 +885,9 @@ function renderProjects() {
 
   grid.innerHTML = displayed
     .map((p) => {
-      const techTags = (p.technologies || []).map((t) => `<span class="tag">${t}</span>`).join("");
+      const techTags = (p.technologies || [])
+        .map((t) => `<span class="tag">${t}</span>`)
+        .join("");
       const highlights = (p.highlights || [])
         .map((h) => `<span class="project-highlight">${h}</span>`)
         .join("");
@@ -777,7 +906,11 @@ function renderProjects() {
           </div>
           <h3 class="project-title">${p.title}</h3>
           <p class="project-desc">${p.description}</p>
-          ${highlights ? `<div class="project-highlights">${highlights}</div>` : ""}
+          ${
+            highlights
+              ? `<div class="project-highlights">${highlights}</div>`
+              : ""
+          }
           <div class="project-tech">${techTags}</div>
           <div class="project-links">
             ${
@@ -841,15 +974,27 @@ function renderTimeline(items, containerSelector, fallbackIcon = "briefcase") {
 
   container.innerHTML = (items || [])
     .map((item) => {
-      const badges = (item.badges || []).map((b) => `<span class="badge">${b}</span>`).join("");
+      const badges = (item.badges || [])
+        .map((b) => `<span class="badge">${b}</span>`)
+        .join("");
 
-      const bullets = (item.bullets || []).map((bullet) => `<li>${bullet}</li>`).join("");
+      const bullets = (item.bullets || [])
+        .map((bullet) => `<li>${bullet}</li>`)
+        .join("");
 
       return `
       <div class="timeline-item">
         <div class="timeline-left">
           <div class="timeline-dot">
-            ${getSvgIcon(item.icon === "🎓" ? "graduation" : item.icon === "🧠" ? "brain" : (item.icon === "🤖" || item.icon === "cpu") ? "cpu" : (item.icon || fallbackIcon))}
+            ${getSvgIcon(
+              item.icon === "🎓"
+                ? "graduation"
+                : item.icon === "🧠"
+                ? "brain"
+                : item.icon === "🤖" || item.icon === "cpu"
+                ? "cpu"
+                : item.icon || fallbackIcon
+            )}
           </div>
         </div>
         <div class="card timeline-card">
@@ -875,7 +1020,9 @@ function renderBlogs() {
   if (!grid) return;
 
   const search = searchEl ? searchEl.value.toLowerCase().trim() : "";
-  const allBlogs = [...BLOGS].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const allBlogs = [...BLOGS].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
 
   const filtered = allBlogs.filter((b) => {
     const matchCat = blogCategory === "All" || b.category === blogCategory;
@@ -888,7 +1035,8 @@ function renderBlogs() {
   });
 
   if (filtered.length === 0) {
-    grid.innerHTML = '<div class="no-results">No articles match your search criteria.</div>';
+    grid.innerHTML =
+      '<div class="no-results">No articles match your search criteria.</div>';
     if (moreContainer) moreContainer.innerHTML = "";
     return;
   }
@@ -898,7 +1046,9 @@ function renderBlogs() {
 
   grid.innerHTML = displayed
     .map((b) => {
-      const tags = (b.tags || []).map((t) => `<span class="tag"># ${t}</span>`).join("");
+      const tags = (b.tags || [])
+        .map((t) => `<span class="tag"># ${t}</span>`)
+        .join("");
       const formattedDate = new Date(b.date).toLocaleDateString("en-US", {
         month: "short",
         day: "numeric",
@@ -920,7 +1070,7 @@ function renderBlogs() {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
               ${b.readingTime || "5 min read"}
             </span>
-            <a href="${b.link || 'blog/index.html'}" class="read-more">
+            <a href="${b.link || "blog/index.html"}" class="read-more">
               <span>Read article</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
@@ -949,7 +1099,9 @@ function renderBlogs() {
 }
 
 function setBlogFilter(btn) {
-  document.querySelectorAll("#blog-filters .filter-pill").forEach((b) => b.classList.remove("active"));
+  document
+    .querySelectorAll("#blog-filters .filter-pill")
+    .forEach((b) => b.classList.remove("active"));
   btn.classList.add("active");
   blogCategory = btn.dataset.cat || "All";
   renderBlogs();
@@ -962,14 +1114,25 @@ function filterBlogs() {
 function renderSkills(skills) {
   const grid = document.querySelector(".skills-grid");
   if (!grid || !Array.isArray(skills) || skills.length === 0) return;
-  grid.innerHTML = skills.map(group => {
-    const tags = (group.items || []).map(item => `<span class="skill-tag">${item}</span>`).join("");
-    const iconName = group.title.toLowerCase().includes("llm") || group.title.toLowerCase().includes("agent") ? "cpu" :
-                     group.title.toLowerCase().includes("machine") ? "ml" :
-                     group.title.toLowerCase().includes("data") ? "chart" :
-                     group.title.toLowerCase().includes("program") ? "code" :
-                     group.title.toLowerCase().includes("backend") ? "briefcase" : "code";
-    return `
+  grid.innerHTML = skills
+    .map((group) => {
+      const tags = (group.items || [])
+        .map((item) => `<span class="skill-tag">${item}</span>`)
+        .join("");
+      const iconName =
+        group.title.toLowerCase().includes("llm") ||
+        group.title.toLowerCase().includes("agent")
+          ? "cpu"
+          : group.title.toLowerCase().includes("machine")
+          ? "ml"
+          : group.title.toLowerCase().includes("data")
+          ? "chart"
+          : group.title.toLowerCase().includes("program")
+          ? "code"
+          : group.title.toLowerCase().includes("backend")
+          ? "briefcase"
+          : "code";
+      return `
     <div class="card skill-group">
       <div class="skill-group-head">
         <p class="skill-group-title">
@@ -979,13 +1142,16 @@ function renderSkills(skills) {
       </div>
       <div class="skill-tags">${tags}</div>
     </div>`;
-  }).join("");
+    })
+    .join("");
 }
 
 function renderResearch(research) {
   const grid = document.querySelector(".research-grid");
   if (!grid || !Array.isArray(research) || research.length === 0) return;
-  grid.innerHTML = research.map((r) => `
+  grid.innerHTML = research
+    .map(
+      (r) => `
     <div class="card research-card">
       <div class="research-card-top">
         <div class="research-icon-box" aria-hidden="true">
@@ -995,7 +1161,9 @@ function renderResearch(research) {
       </div>
       <h3>${r.title}</h3>
       <p>${r.text}</p>
-    </div>`).join("");
+    </div>`
+    )
+    .join("");
 }
 
 function applyHomepage() {
@@ -1019,12 +1187,15 @@ function submitContact(e) {
   e.preventDefault();
   const name = document.getElementById("c-name").value;
   const email = document.getElementById("c-email").value;
-  const subject = document.getElementById("c-subject").value || "Portfolio Inquiry";
+  const subject =
+    document.getElementById("c-subject").value || "Portfolio Inquiry";
   const message = document.getElementById("c-message").value;
 
   const profile = getProfile();
   const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-  window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
 
   const btn = document.getElementById("submit-btn");
   if (btn) {
@@ -1050,7 +1221,9 @@ let statsAnimated = false;
 function animateHeroStats() {
   if (statsAnimated) return;
   statsAnimated = true;
-  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersReduced = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
   document.querySelectorAll(".stat-val[data-count]").forEach((el) => {
     const target = parseFloat(el.dataset.count);
@@ -1065,7 +1238,9 @@ function animateHeroStats() {
     function tick(now) {
       const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = (target * eased).toFixed(decimals) + (el.textContent.includes("+") ? "+" : "");
+      el.textContent =
+        (target * eased).toFixed(decimals) +
+        (el.textContent.includes("+") ? "+" : "");
       if (progress < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
@@ -1085,7 +1260,11 @@ async function refreshFromRemoteData() {
   if (!data) return;
 
   REMOTE_DATA = data;
-  if (data.projects && Array.isArray(data.projects) && data.projects.length > 0) {
+  if (
+    data.projects &&
+    Array.isArray(data.projects) &&
+    data.projects.length > 0
+  ) {
     PROJECTS = data.projects;
   } else {
     PROJECTS = readStoredJson(STORAGE_KEYS.projects, DEFAULT_PROJECTS);
@@ -1106,8 +1285,6 @@ async function refreshFromRemoteData() {
 /* ---------------------------------------------------------------
    14. GLOBAL EXPOSURE FOR HTML EVENT HANDLERS
 --------------------------------------------------------------- */
-window.switchTermTab = switchTermTab;
-window.runTermCommand = runTermCommand;
 window.openCmdPalette = openCmdPalette;
 window.closeCmdPalette = closeCmdPalette;
 window.jumpToSection = jumpToSection;
@@ -1122,4 +1299,3 @@ window.toggleTheme = toggleTheme;
 
 refreshFromRemoteData();
 setTimeout(animateHeroStats, 400);
-
