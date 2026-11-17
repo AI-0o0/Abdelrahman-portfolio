@@ -935,27 +935,16 @@ img, svg {
   border-radius: 999px;
   background: #f3f0e6;
   box-shadow: 0 0 6px rgba(243, 240, 230, 0.3);
-  transform: translate(var(--eye-x, 0%), var(--eye-y, 0%)) scale(var(--eye-s, 1));
+  transform: translate(var(--eye-x, 0px), var(--eye-y, 0px)) scale(var(--eye-s, 1));
   will-change: transform;
 }
 
 .shine-left { left: 29%; }
 .shine-right { left: 60%; }
 
-/* Blink lid */
-.mascot-shine::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: inherit;
-  transform: scaleY(1);
-  transition: transform 90ms ease-in;
-  transform-origin: center;
-}
-
-.mascot-orb.blinking .mascot-shine::before {
-  transform: scaleY(0.08);
+/* Blink the actual eye so it disappears instead of shrinking a duplicate overlay. */
+.mascot-orb.blinking .mascot-shine {
+  transform: translate(var(--eye-x, 0px), var(--eye-y, 0px)) scale(var(--eye-s, 1)) scaleY(0.08);
 }
 
 /* Pointer-reactive particle layer (canvas sits above the orb) */
@@ -1008,8 +997,8 @@ img, svg {
   right: 20px;
   bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   z-index: 880;
-  --eye-x: -46%;
-  --eye-y: -4%;
+  --eye-x: -5.5px;
+  --eye-y: -0.5px;
 }
 
 /* Keep the back-to-top FAB clear of the docked mascot */
@@ -2744,7 +2733,7 @@ footer {
 
   .mascot-float,
   .mascot-orb,
-  .mascot-shine::before {
+  .mascot-shine {
     animation: none !important;
     transition: none !important;
   }

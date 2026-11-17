@@ -911,26 +911,41 @@ function copyEmailToClipboard() {
     }
     orbPos.style.transform = "translate3d(" + follow.x.toFixed(2) + "px, " + follow.y.toFixed(2) + "px, 0)";
 
+    /* gaze: calculate from the orb's actual position, then smooth pixel movement.
+       Using the stage center here made the eyes drift when the orb followed the pointer. */
+    const orbRect = orb.getBoundingClientRect();
+    const orbCx = orbRect.left + orbRect.width / 2;
+    const orbCy = orbRect.top + orbRect.height / 2;
+    const gazeNx = pointer.inside && !idle
+      ? clamp((pointer.x - orbCx) / Math.max(orbRect.width * 0.62, 1), -1, 1)
+      : nx;
+    const gazeNy = pointer.inside && !idle
+      ? clamp((pointer.y - orbCy) / Math.max(orbRect.height * 0.62, 1), -1, 1)
+      : ny;
+    const eyeTravelX = Math.max(3, orbRect.width * 0.105);
+    const eyeTravelY = Math.max(3, orbRect.height * 0.085);
+    const gazeEase = 1 - Math.exp(-0.16 * dt);
+
     /* gaze: shine marks track the pointer; docked default = look left */
     const scrolling = now < scrollBiasUntil;
     if (docked) {
-      const near = pointer.inside && Math.hypot(pointer.x - cx, pointer.y - cy) < 160;
+      const near = pointer.inside && Math.hypot(pointer.x - orbCx, pointer.y - orbCy) < 160;
       if (near && !idle) {
-        gaze.x += (nx * 46 - gaze.x) * 0.12 * dt;
-        gaze.y += (ny * 36 - gaze.y) * 0.12 * dt;
+        gaze.x += (gazeNx * eyeTravelX - gaze.x) * gazeEase;
+        gaze.y += (gazeNy * eyeTravelY - gaze.y) * gazeEase;
       } else {
-        gaze.x += (-58 - gaze.x) * 0.1 * dt;
-        gaze.y += (-6 - gaze.y) * 0.1 * dt;
+        gaze.x += (-eyeTravelX * 0.85 - gaze.x) * gazeEase;
+        gaze.y += (-eyeTravelY * 0.12 - gaze.y) * gazeEase;
       }
     } else {
-      gaze.x += (nx * 54 - gaze.x) * 0.11 * dt;
-      gaze.y += ((ny * 40 + (scrolling ? scrollBias : 0)) - gaze.y) * 0.11 * dt;
+      gaze.x += (gazeNx * eyeTravelX - gaze.x) * gazeEase;
+      gaze.y += (gazeNy * eyeTravelY + (scrolling ? scrollBias * 0.18 : 0) - gaze.y) * gazeEase;
     }
-    orb.style.setProperty("--eye-x", gaze.x.toFixed(1) + "%");
-    orb.style.setProperty("--eye-y", gaze.y.toFixed(1) + "%");
+    orb.style.setProperty("--eye-x", gaze.x.toFixed(2) + "px");
+    orb.style.setProperty("--eye-y", gaze.y.toFixed(2) + "px");
 
     /* curious: eyes widen when the pointer hovers the orb */
-    const nearOrb = pointer.inside && Math.hypot(pointer.x - cx, pointer.y - cy) < stageRect.width * 0.36;
+    const nearOrb = pointer.inside && Math.hypot(pointer.x - orbCx, pointer.y - orbCy) < orbRect.width * 0.7;
     if (nearOrb !== curious) {
       curious = nearOrb;
       orb.style.setProperty("--eye-s", curious ? "1.16" : "1");
